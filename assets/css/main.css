@@ -1542,6 +1542,80 @@ p {
     font-weight: 600;
     margin-bottom: 20px; }
 
+
+
+    /* Header Button */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .header .button {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .header .button {
+    display: none !important;
+  }
+}
+
+.header .button {
+  display: inherit !important;
+  margin-left: 60px;
+}
+
+.header .button .login {
+  display: inherit;
+  margin-right: 30px;
+  padding: 0;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 4px;
+  color: #2042e3;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.header .button .login i {
+  display: inherit;
+  margin-right: 5px;
+  font-size: 14px;
+  line-height: 45px;
+  margin-right: 8px;
+}
+
+.header .button .login:hover {
+  color: #081828;
+  border-color: transparent;
+}
+
+.header .button .btn {
+  color: #fff;
+  padding: 0 !important;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  background: #2042e3;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 0 10px;
+  height: 45px;
+  line-height: 42px;
+  width: 130px;
+}
+
+.header .button .btn:hover {
+  color: #fff;
+  background-color: #081828;
+  border-color: transparent;
+  -webkit-transform: none;
+          transform: none;
+}
+
+
+
 /*===========================
     04. About CSS 
 ===========================*/
@@ -1763,6 +1837,7 @@ p {
       color: #fff; }
   .service-section .service-box-style-2 .box-content-style {
     padding: 0 30px 35px; }
+
 
 /*===========================
     06. Process CSS 
