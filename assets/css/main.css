@@ -265,9 +265,7 @@ p {
 .section-title h2 {
   line-height: 55px;
   font-weight: 600;
-  margin-bottom: 10px; 
-  line-height: 1.4; /* Atur jarak antar baris */
-}
+  margin-bottom: 15px; }
   @media (max-width: 767px) {
     .section-title h2 {
       line-height: 41px; } }
@@ -1616,6 +1614,9 @@ p {
           transform: none;
 }
 
+
+
+
 /*====================
   DETAIL TICKET CSS
 ======================*/
@@ -1793,6 +1794,7 @@ h4 {
   width: 35%;
   font-weight: bold;
 }
+
 
 
 /*===========================
@@ -1977,7 +1979,129 @@ h4 {
   .time-line .single-timeline .timeline-img img {
     width: 100%; }
 
-    
+
+
+    /*======================================
+    About Us CSS
+========================================*/
+.about-us .content-left {
+  position: relative;
+  padding-right: 60px;
+}
+
+.about-us .content-left .single-img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.about-us .content-left .single-img.minus-margin {
+  position: relative;
+  top: -20px;
+}
+
+.about-us .content-left::before {
+  position: absolute;
+  content: "";
+  right: 4px;
+  bottom: -36px;
+  height: 200px;
+  width: 200px;
+  background-image: url(../images/hero/pattern.png);
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.about-us .content-left .media-body {
+  padding: 40px 30px;
+  padding-bottom: 40px;
+  border-radius: 5px;
+  background-color: #2042e3;
+  -webkit-box-shadow: 0 1rem 3rem rgba(35, 38, 45, 0.15) !important;
+  box-shadow: 0 1rem 3rem rgba(35, 38, 45, 0.15) !important;
+  display: inline-block;
+  width: 100%;
+  margin-top: 30px;
+  padding-bottom: 48px;
+}
+
+.about-us .content-left .media-body i {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  display: block;
+  color: #fff;
+  background-color: #ffffff45;
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.about-us .content-left .media-body h6 {
+  font-size: 22px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.about-us .content-left .media-body p {
+  color: #fff;
+}
+
+.about-us .content-right {
+  padding-right: 70px;
+  padding-left: 30px;
+}
+
+.about-us .content-right h2 {
+  font-size: 32px;
+  margin-bottom: 50px;
+  line-height: 45px;
+  text-transform: capitalize;
+  position: relative;
+  font-weight: 700;
+}
+
+.about-us .content-right .single-list {
+  position: relative;
+  padding-left: 80px;
+  margin-bottom: 50px;
+}
+
+.about-us .content-right .single-list:last-child {
+  margin-bottom: 0;
+}
+
+.about-us .content-right .single-list i {
+  font-size: 20px;
+  height: 55px;
+  width: 55px;
+  line-height: 55px;
+  text-align: center;
+  display: inline-block;
+  background: #2042e31c;
+  color: #2042e3;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  top: 3px;
+}
+
+.about-us .content-right .single-list .list-bod h5 {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #081828;
+}
+
+.about-us .content-right .single-list .list-bod p {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+
+
 /*===========================
     05. Service CSS 
 ===========================*/
@@ -2019,303 +2143,9 @@ h4 {
     padding: 0 30px 35px; }
 
 
-/*===========================
-    06. Process CSS 
-===========================*/
-.process-section .process-img-wrapper {
-  position: relative;
-  z-index: 1; }
-  .process-section .process-img-wrapper::before {
-    content: '';
-    position: absolute;
-    left: -100px;
-    bottom: -50px;
-    width: 463px;
-    height: 552px;
-    border-radius: 10px 10px 231px 231px;
-    background: linear-gradient(#f37da7 0%, #fed9b4 100%);
-    opacity: 0.1; }
-  .process-section .process-img-wrapper .process-img-top {
-    margin-bottom: 20px;
-    text-align: right; }
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
-      .process-section .process-img-wrapper .process-img-top {
-        text-align: center; } }
-    .process-section .process-img-wrapper .process-img-top .img-1 {
-      border-radius: 275px 275px 0 0; }
-      @media (max-width: 767px) {
-        .process-section .process-img-wrapper .process-img-top .img-1 {
-          width: 100%; } }
-  .process-section .process-img-wrapper .process-img-bottom {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end; }
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
-      .process-section .process-img-wrapper .process-img-bottom {
-        justify-content: center; } }
-    .process-section .process-img-wrapper .process-img-bottom .img-2 {
-      border-radius: 10px;
-      margin-right: 20px;
-      vertical-align: top; }
-    .process-section .process-img-wrapper .process-img-bottom .img-3 {
-      border-radius: 0 0 250px 250px; }
-
-.portfolio-section .portfolio-btn-wrapper {
-  margin-bottom: 50px; }
-  .portfolio-section .portfolio-btn-wrapper button {
-    padding: 10px 24px;
-    font-size: 20px;
-    font-weight: 500;
-    border: none;
-    background: #EFF2F9;
-    color: #051441;
-    border-radius: 50px;
-    margin-right: 30px;
-    margin-bottom: 10px;
-    -webkit-transition: all 0.3s ease-out 0s;
-    -moz-transition: all 0.3s ease-out 0s;
-    -ms-transition: all 0.3s ease-out 0s;
-    -o-transition: all 0.3s ease-out 0s;
-    transition: all 0.3s ease-out 0s; }
-    .portfolio-section .portfolio-btn-wrapper button.active {
-      background-image: linear-gradient(to right, #3763eb 0%, #6f58e8 100%);
-      color: #fff; }
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
-      .portfolio-section .portfolio-btn-wrapper button {
-        margin-right: 10px;
-        padding: 7px 18px;
-        font-size: 16px; } }
-    @media (max-width: 767px) {
-      .portfolio-section .portfolio-btn-wrapper button {
-        margin-right: 10px;
-        padding: 7px 18px;
-        font-size: 16px; } }
-    .portfolio-section .portfolio-btn-wrapper button:last-child {
-      margin-right: 0; }
-
-.portfolio-item-wrapper {
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 30px; }
-  .portfolio-item-wrapper:hover .portfolio-overlay {
-    opacity: 1;
-    visibility: visible;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1); }
-  .portfolio-item-wrapper .portfolio-img img {
-    width: 100%; }
-  .portfolio-item-wrapper .portfolio-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
-    background: linear-gradient(rgba(55, 99, 235, 0.94) 0%, rgba(111, 88, 232, 0.94) 100%);
-    padding: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: all 0.3s ease-out 0s;
-    -moz-transition: all 0.3s ease-out 0s;
-    -ms-transition: all 0.3s ease-out 0s;
-    -o-transition: all 0.3s ease-out 0s;
-    transition: all 0.3s ease-out 0s;
-    -webkit-transform: scale(0.9);
-    -moz-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    -o-transform: scale(0.9);
-    transform: scale(0.9); }
-    @media only screen and (min-width: 992px) and (max-width: 1199px) {
-      .portfolio-item-wrapper .portfolio-overlay {
-        padding: 30px 20px; } }
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
-      .portfolio-item-wrapper .portfolio-overlay {
-        padding: 30px 20px; } }
-    .portfolio-item-wrapper .portfolio-overlay .overlay-content h4 {
-      color: #fff;
-      margin-bottom: 20px; }
-    .portfolio-item-wrapper .portfolio-overlay .overlay-content p {
-      color: #fff;
-      margin-bottom: 35px; }
-    .portfolio-item-wrapper .portfolio-overlay .overlay-content .border-btn {
-      padding: 8px 27px;
-      color: #fff;
-      border: 2px solid #fff; }
-      .portfolio-item-wrapper .portfolio-overlay .overlay-content .border-btn:hover {
-        color: #3763EB;
-        background: #fff; }
-
-.single-portfolio .single-portfolio-img {
-  border-radius: 10px;
-  overflow: hidden; }
-  .single-portfolio .single-portfolio-img img {
-    width: 100%; }
-
-.project-info-box ul li {
-  margin-bottom: 15px;
-  display: flex;
-  font-size: 14px; }
-  .project-info-box ul li:last-child {
-    margin-bottom: 0; }
-  .project-info-box ul li .destination {
-    width: 40%;
-    color: #051441;
-    text-transform: uppercase; }
-
-.section-title-sub {
-  margin-bottom: 30px;
-  text-align: center;  /* Tengahkan teks */
-  font-size: 33px;
-  display: block;      /* Pastikan tampil sebagai blok */
-  font-weight: bold;   /* Tambahkan ketebalan jika diperlukan */
-}
-
-/*===========================
-    09.Team CSS 
-===========================*/
-.team-section {
-  position: relative;
-  z-index: 1; }
-  .team-section.img-bg::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: #EFF2F9;
-    z-index: -1;
-    clip-path: polygon(0 0, 100% 12%, 100% 75%, 0 95%); }
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
-      .team-section.img-bg::before {
-        clip-path: polygon(0 3%, 100% 12%, 100% 88%, 0 97%); } }
-    @media (max-width: 767px) {
-      .team-section.img-bg::before {
-        clip-path: polygon(0 3%, 100% 12%, 100% 88%, 0 97%); } }
-  .team-section .single-team {
-    border-radius: 10px;
-    background: #fff;
-    border: 1px solid #F4EEFB;
-    overflow: hidden;
-    -webkit-transition: all 0.3s ease-out 0s;
-    -moz-transition: all 0.3s ease-out 0s;
-    -ms-transition: all 0.3s ease-out 0s;
-    -o-transition: all 0.3s ease-out 0s;
-    transition: all 0.3s ease-out 0s; }
-    .team-section .single-team:hover {
-      -webkit-box-shadow: 0px 0px 30px rgba(215, 224, 252, 0.45);
-      -moz-box-shadow: 0px 0px 30px rgba(215, 224, 252, 0.45);
-      box-shadow: 0px 0px 30px rgba(215, 224, 252, 0.45); }
-      .team-section .single-team:hover .team-img .team-social {
-        opacity: 1;
-        visibility: visible; }
-    .team-section .single-team .team-img {
-      overflow: hidden;
-      position: relative; }
-      .team-section .single-team .team-img img {
-        width: 100%; }
-      .team-section .single-team .team-img .team-social {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        bottom: 0;
-        left: 0;
-        border-radius: 10px 10px 0px 0px;
-        background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(74, 114, 237, 0.9) 78.23%, #3763eb 100%);
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        padding-bottom: 15px;
-        opacity: 0;
-        visibility: hidden;
-        -webkit-transition: all 0.3s ease-out 0s;
-        -moz-transition: all 0.3s ease-out 0s;
-        -ms-transition: all 0.3s ease-out 0s;
-        -o-transition: all 0.3s ease-out 0s;
-        transition: all 0.3s ease-out 0s; }
-        .team-section .single-team .team-img .team-social ul {
-          display: flex;
-          justify-content: center; }
-          .team-section .single-team .team-img .team-social ul li a {
-            width: 30px;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.2);
-            color: #fff;
-            margin: 0 5px;
-            font-size: 14px; }
-            .team-section .single-team .team-img .team-social ul li a:hover {
-              background: #fff;
-              color: #3763EB; }
-    .team-section .single-team .team-info {
-      padding: 25px; }
-      .team-section .single-team .team-info h4 {
-        margin-bottom: 5px; }
-        @media only screen and (min-width: 992px) and (max-width: 1199px) {
-          .team-section .single-team .team-info h4 {
-            font-size: 20px; } }
-      .team-section .single-team .team-info span {
-        font-size: 16px;
-        display: block;
-        margin-bottom: 5px; }
-
-/*===========================
-    10. Subscribe CSS 
-===========================*/
-.subscribe-section {
-  position: relative; }
-  .subscribe-section .subscribe-form {
-    position: relative; }
-    .subscribe-section .subscribe-form input {
-      border: 2px solid transparent;
-      border-radius: 50px;
-      width: 100%;
-      font-size: 16px;
-      padding: 18px 30px;
-      background: #fff;
-      -webkit-transition: all 0.3s ease-out 0s;
-      -moz-transition: all 0.3s ease-out 0s;
-      -ms-transition: all 0.3s ease-out 0s;
-      -o-transition: all 0.3s ease-out 0s;
-      transition: all 0.3s ease-out 0s; }
-      .subscribe-section .subscribe-form input:focus {
-        -webkit-box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
-        -moz-box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
-        box-shadow: 0 0 30px rgba(255, 255, 255, 0.15); }
-    .subscribe-section .subscribe-form button {
-      border-radius: 50px;
-      color: #fff;
-      font-size: 18px;
-      font-weight: 700;
-      border: none;
-      background: linear-gradient(to left, #3763eb 0%, #6f58e8 50.39%, #3763eb 100%);
-      background-size: 200%;
-      -webkit-transition: all 0.3s ease-out 0s;
-      -moz-transition: all 0.3s ease-out 0s;
-      -ms-transition: all 0.3s ease-out 0s;
-      -o-transition: all 0.3s ease-out 0s;
-      transition: all 0.3s ease-out 0s;
-      position: absolute;
-      height: 54px;
-      width: 54px;
-      top: 5px;
-      right: 5px; }
-      .subscribe-section .subscribe-form button:hover {
-        background-position: right center; }
 
 
-/* FAQ */
+    /* FAQ */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .why-use-section .faq-column {
@@ -2510,6 +2340,293 @@ h4 {
 
 /* END FAQ */
 
+
+/*===========================
+    06. Process CSS 
+===========================*/
+.process-section .process-img-wrapper {
+  position: relative;
+  z-index: 1; }
+  .process-section .process-img-wrapper::before {
+    content: '';
+    position: absolute;
+    left: -100px;
+    bottom: -50px;
+    width: 463px;
+    height: 552px;
+    border-radius: 10px 10px 231px 231px;
+    background: linear-gradient(#f37da7 0%, #fed9b4 100%);
+    opacity: 0.1; }
+  .process-section .process-img-wrapper .process-img-top {
+    margin-bottom: 20px;
+    text-align: right; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .process-section .process-img-wrapper .process-img-top {
+        text-align: center; } }
+    .process-section .process-img-wrapper .process-img-top .img-1 {
+      border-radius: 275px 275px 0 0; }
+      @media (max-width: 767px) {
+        .process-section .process-img-wrapper .process-img-top .img-1 {
+          width: 100%; } }
+  .process-section .process-img-wrapper .process-img-bottom {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .process-section .process-img-wrapper .process-img-bottom {
+        justify-content: center; } }
+    .process-section .process-img-wrapper .process-img-bottom .img-2 {
+      border-radius: 10px;
+      margin-right: 20px;
+      vertical-align: top; }
+    .process-section .process-img-wrapper .process-img-bottom .img-3 {
+      border-radius: 0 0 250px 250px; }
+
+.portfolio-section .portfolio-btn-wrapper {
+  margin-bottom: 50px; }
+  .portfolio-section .portfolio-btn-wrapper button {
+    padding: 10px 24px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    background: #EFF2F9;
+    color: #051441;
+    border-radius: 50px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s; }
+    .portfolio-section .portfolio-btn-wrapper button.active {
+      background-image: linear-gradient(to right, #3763eb 0%, #6f58e8 100%);
+      color: #fff; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .portfolio-section .portfolio-btn-wrapper button {
+        margin-right: 10px;
+        padding: 7px 18px;
+        font-size: 16px; } }
+    @media (max-width: 767px) {
+      .portfolio-section .portfolio-btn-wrapper button {
+        margin-right: 10px;
+        padding: 7px 18px;
+        font-size: 16px; } }
+    .portfolio-section .portfolio-btn-wrapper button:last-child {
+      margin-right: 0; }
+
+.portfolio-item-wrapper {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px; }
+  .portfolio-item-wrapper:hover .portfolio-overlay {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); }
+  .portfolio-item-wrapper .portfolio-img img {
+    width: 100%; }
+  .portfolio-item-wrapper .portfolio-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    background: linear-gradient(rgba(55, 99, 235, 0.94) 0%, rgba(111, 88, 232, 0.94) 100%);
+    padding: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9); }
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .portfolio-item-wrapper .portfolio-overlay {
+        padding: 30px 20px; } }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .portfolio-item-wrapper .portfolio-overlay {
+        padding: 30px 20px; } }
+    .portfolio-item-wrapper .portfolio-overlay .overlay-content h4 {
+      color: #fff;
+      margin-bottom: 20px; }
+    .portfolio-item-wrapper .portfolio-overlay .overlay-content p {
+      color: #fff;
+      margin-bottom: 35px; }
+    .portfolio-item-wrapper .portfolio-overlay .overlay-content .border-btn {
+      padding: 8px 27px;
+      color: #fff;
+      border: 2px solid #fff; }
+      .portfolio-item-wrapper .portfolio-overlay .overlay-content .border-btn:hover {
+        color: #3763EB;
+        background: #fff; }
+
+.single-portfolio .single-portfolio-img {
+  border-radius: 10px;
+  overflow: hidden; }
+  .single-portfolio .single-portfolio-img img {
+    width: 100%; }
+
+.project-info-box ul li {
+  margin-bottom: 15px;
+  display: flex;
+  font-size: 14px; }
+  .project-info-box ul li:last-child {
+    margin-bottom: 0; }
+  .project-info-box ul li .destination {
+    width: 40%;
+    color: #051441;
+    text-transform: uppercase; }
+
+/*===========================
+    09.Team CSS 
+===========================*/
+.team-section {
+  position: relative;
+  z-index: 1; }
+  .team-section.img-bg::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #EFF2F9;
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 12%, 100% 75%, 0 95%); }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .team-section.img-bg::before {
+        clip-path: polygon(0 3%, 100% 12%, 100% 88%, 0 97%); } }
+    @media (max-width: 767px) {
+      .team-section.img-bg::before {
+        clip-path: polygon(0 3%, 100% 12%, 100% 88%, 0 97%); } }
+  .team-section .single-team {
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #F4EEFB;
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s; }
+    .team-section .single-team:hover {
+      -webkit-box-shadow: 0px 0px 30px rgba(215, 224, 252, 0.45);
+      -moz-box-shadow: 0px 0px 30px rgba(215, 224, 252, 0.45);
+      box-shadow: 0px 0px 30px rgba(215, 224, 252, 0.45); }
+      .team-section .single-team:hover .team-img .team-social {
+        opacity: 1;
+        visibility: visible; }
+    .team-section .single-team .team-img {
+      overflow: hidden;
+      position: relative; }
+      .team-section .single-team .team-img img {
+        width: 100%; }
+      .team-section .single-team .team-img .team-social {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        border-radius: 10px 10px 0px 0px;
+        background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(74, 114, 237, 0.9) 78.23%, #3763eb 100%);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 15px;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: all 0.3s ease-out 0s;
+        -moz-transition: all 0.3s ease-out 0s;
+        -ms-transition: all 0.3s ease-out 0s;
+        -o-transition: all 0.3s ease-out 0s;
+        transition: all 0.3s ease-out 0s; }
+        .team-section .single-team .team-img .team-social ul {
+          display: flex;
+          justify-content: center; }
+          .team-section .single-team .team-img .team-social ul li a {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            margin: 0 5px;
+            font-size: 14px; }
+            .team-section .single-team .team-img .team-social ul li a:hover {
+              background: #fff;
+              color: #3763EB; }
+    .team-section .single-team .team-info {
+      padding: 25px; }
+      .team-section .single-team .team-info h4 {
+        margin-bottom: 5px; }
+        @media only screen and (min-width: 992px) and (max-width: 1199px) {
+          .team-section .single-team .team-info h4 {
+            font-size: 20px; } }
+      .team-section .single-team .team-info span {
+        font-size: 16px;
+        display: block;
+        margin-bottom: 5px; }
+
+/*===========================
+    10. Subscribe CSS 
+===========================*/
+.subscribe-section {
+  position: relative; }
+  .subscribe-section .subscribe-form {
+    position: relative; }
+    .subscribe-section .subscribe-form input {
+      border: 2px solid transparent;
+      border-radius: 50px;
+      width: 100%;
+      font-size: 16px;
+      padding: 18px 30px;
+      background: #fff;
+      -webkit-transition: all 0.3s ease-out 0s;
+      -moz-transition: all 0.3s ease-out 0s;
+      -ms-transition: all 0.3s ease-out 0s;
+      -o-transition: all 0.3s ease-out 0s;
+      transition: all 0.3s ease-out 0s; }
+      .subscribe-section .subscribe-form input:focus {
+        -webkit-box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+        -moz-box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.15); }
+    .subscribe-section .subscribe-form button {
+      border-radius: 50px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      border: none;
+      background: linear-gradient(to left, #3763eb 0%, #6f58e8 50.39%, #3763eb 100%);
+      background-size: 200%;
+      -webkit-transition: all 0.3s ease-out 0s;
+      -moz-transition: all 0.3s ease-out 0s;
+      -ms-transition: all 0.3s ease-out 0s;
+      -o-transition: all 0.3s ease-out 0s;
+      transition: all 0.3s ease-out 0s;
+      position: absolute;
+      height: 54px;
+      width: 54px;
+      top: 5px;
+      right: 5px; }
+      .subscribe-section .subscribe-form button:hover {
+        background-position: right center; }
 
 /*===========================
     12. Contact CSS 
@@ -2838,6 +2955,21 @@ h4 {
   z-index: 1;
 }
 
+.modal {
+  overflow-y: auto !important;
+}
+
+.modal-dialog {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-content {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+
 .modal .login-modal-main .or-devider span {
   display: inline-block;
   background: white;
@@ -2904,6 +3036,10 @@ h4 {
 
 .modal .login-modal-main .create-new-account a:hover {
   text-decoration: underline;
+}
+
+.modal-lg {
+  max-width: auto;
 }
 
 .pos-abs-cr {
