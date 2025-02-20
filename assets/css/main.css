@@ -265,7 +265,9 @@ p {
 .section-title h2 {
   line-height: 55px;
   font-weight: 600;
-  margin-bottom: 15px; }
+  margin-bottom: 10px; 
+  line-height: 1.4; /* Atur jarak antar baris */
+}
   @media (max-width: 767px) {
     .section-title h2 {
       line-height: 41px; } }
@@ -1724,6 +1726,7 @@ p {
   .time-line .single-timeline .timeline-img img {
     width: 100%; }
 
+    
 /*===========================
     05. Service CSS 
 ===========================*/
