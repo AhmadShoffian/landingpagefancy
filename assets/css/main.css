@@ -1544,6 +1544,80 @@ p {
     font-weight: 600;
     margin-bottom: 20px; }
 
+
+
+    /* Header Button */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .header .button {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .header .button {
+    display: none !important;
+  }
+}
+
+.header .button {
+  display: inherit !important;
+  margin-left: 60px;
+}
+
+.header .button .login {
+  display: inherit;
+  margin-right: 30px;
+  padding: 0;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 4px;
+  color: #2042e3;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.header .button .login i {
+  display: inherit;
+  margin-right: 5px;
+  font-size: 14px;
+  line-height: 45px;
+  margin-right: 8px;
+}
+
+.header .button .login:hover {
+  color: #081828;
+  border-color: transparent;
+}
+
+.header .button .btn {
+  color: #fff;
+  padding: 0 !important;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  background: #2042e3;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 0 10px;
+  height: 45px;
+  line-height: 42px;
+  width: 130px;
+}
+
+.header .button .btn:hover {
+  color: #fff;
+  background-color: #081828;
+  border-color: transparent;
+  -webkit-transform: none;
+          transform: none;
+}
+
+
+
 /*===========================
     04. About CSS 
 ===========================*/
@@ -1766,6 +1840,7 @@ p {
       color: #fff; }
   .service-section .service-box-style-2 .box-content-style {
     padding: 0 30px 35px; }
+
 
 /*===========================
     06. Process CSS 
@@ -2209,6 +2284,291 @@ p {
   .contact-form-wrapper .contact-form .theme-btn {
     font-weight: 500;
     padding: 18px 90px; }
+
+
+
+    /*======================================
+    Modal CSS
+========================================*/
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+.pos-abs-tr {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.z-index-supper {
+  z-index: 800;
+}
+
+.circle-32 {
+  max-width: 32px;
+  min-width: 32px;
+  max-height: 32px;
+  min-height: 32px;
+  border-radius: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  right: 20px;
+  top: 20px;
+  background: #eee !important;
+  border-radius: 3px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.circle-32:hover {
+  background-color: #081828 !important;
+  color: #fff !important;
+}
+
+.btn-reset {
+  background: transparent;
+  border: 0;
+}
+
+.modal.show .modal-dialog {
+  pointer-events: visible;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.modal .login-modal-main {
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.modal .login-modal-main .heading h3 {
+  color: #081828;
+  font-size: 26px;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  line-height: 32px;
+}
+
+.modal .login-modal-main .heading h3::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 50px;
+  background-color: #2042e3;
+}
+
+.modal .login-modal-main .social-login {
+  margin-top: 30px;
+}
+
+.modal .login-modal-main .social-login ul li {
+  margin-bottom: 10px;
+}
+
+.modal .login-modal-main .social-login ul li:last-child {
+  margin-bottom: 0;
+}
+
+.modal .login-modal-main .social-login ul li a {
+  text-align: center;
+  position: relative;
+  background-color: #2042e3;
+  padding: 13px 30px;
+  color: #fff;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 14px;
+  text-transform: capitalize;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.modal .login-modal-main .social-login ul li a::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.modal .login-modal-main .social-login ul li a:hover::before {
+  opacity: 0.2;
+  visibility: visible;
+}
+
+.modal .login-modal-main .social-login ul li a i {
+  position: absolute;
+  left: 30px;
+  top: 14px;
+  font-size: 20px;
+}
+
+.modal .login-modal-main .social-login ul li .linkedin {
+  background-color: #0077B5;
+}
+
+.modal .login-modal-main .social-login ul li .google {
+  background-color: #dd4b39;
+}
+
+.modal .login-modal-main .social-login ul li .facebook {
+  background-color: #3b5999;
+}
+
+.modal .login-modal-main .or-devider {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.modal .login-modal-main .or-devider span {
+  display: inline-block;
+  background: white;
+  padding: 15px 25px;
+}
+
+.modal .login-modal-main .or-devider::before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  top: 50%;
+  left: 0%;
+  margin-top: 1.5px;
+  position: absolute;
+  background: #eee;
+  z-index: -1;
+}
+
+.modal .login-modal-main .form-group {
+  margin-bottom: 20px;
+}
+
+.modal .login-modal-main .form-group:last-child {
+  margin-bottom: 0;
+}
+
+.modal .login-modal-main .form-group .label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #081828;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.modal .login-modal-main .form-group .form-control {
+  height: 50px;
+  border: 1px solid #eee;
+  padding: 0px 30px;
+  color: #081828;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.modal .login-modal-main .form-group .pass {
+  padding-right: 50px;
+}
+
+.modal .login-modal-main .button {
+  width: 100%;
+}
+
+.modal .login-modal-main .button .btn {
+  width: 100%;
+}
+
+.modal .login-modal-main .create-new-account {
+  color: #081828;
+  font-size: 15px;
+}
+
+.modal .login-modal-main .create-new-account a {
+  color: #2042e3;
+}
+
+.modal .login-modal-main .create-new-account a:hover {
+  text-decoration: underline;
+}
+
+.pos-abs-cr {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 30px;
+  width: 30px;
+  display: block;
+  background-color: transparent;
+  opacity: 1;
+  visibility: visible;
+  line-height: 30px;
+  text-align: center;
+  display: block;
+}
+
+.pos-abs-cr::before {
+  content: "\eab1";
+  font-family: Lineicons;
+  color: #081828;
+  font-size: 17px;
+}
+
+.pos-abs-cr::after {
+  content: "";
+  position: absolute;
+  right: 5px;
+  top: 14px;
+  height: 2px;
+  width: 20px;
+  background-color: #555;
+  z-index: 1;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-radius: 0px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.pos-abs-cr.show::after {
+  opacity: 1;
+  visibility: visible;
+}
+
 
 /*===========================
     13. Footer CSS 
