@@ -1614,6 +1614,74 @@ p {
           transform: none;
 }
 
+/*==================
+DATA TICKET CCS
+====================*/
+body {
+  background-color: #f8f9fa;
+}
+
+.card {
+  border-radius: 10px;
+  background: white;
+}
+
+.status-badge {
+  background-color: #f4d03f;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+hr {
+  border: 1px solid black;
+}
+
+h4, h5 {
+  font-weight: bold;
+}
+
+.history-box {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+}
+
+.btn-data-tiket-chat {
+  background-color: #A646FF; /* Warna ungu */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.btn-data-tiket-detail {
+  background-color: #8401FF; /* Warna ungu */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.btn-data-tiket-edit {
+  background-color: #183AFF; /* Warna biru */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+}
+
 
 
 
@@ -1664,8 +1732,56 @@ h4, h5 {
   margin: auto;
 }
 
+.btn-ticket-closed {
+  background-color: #828282; /* Warna abu-abu */
+  color: white; /* Warna teks */
+  border: none;
+  padding: 12px 20px; /* Padding lebih besar agar lebih proporsional */
+  border-radius: 8px; /* Border lebih melengkung */
+  font-weight: bold;
+  font-size: 25px; /* Ukuran font lebih besar */
+  display: block;
+  width: 250px; /* Lebar tombol */
+  text-align: center;
+  margin: 20px auto; /* Pusatkan tombol */
+  cursor: not-allowed; /* Tampilkan cursor disabled */
+  opacity: 0.7; /* Buat tombol terlihat nonaktif */
+}
+
+
 .btn-close-ticket:hover {
   background-color: #c82333;
+}
+
+.status-open {
+  background-color: #CBEEFF; /* Warna biru*/
+  color: black;
+}
+
+.status-closed {
+  background-color: #FFB1B3; /* Warna pink*/
+  color: red;
+}
+
+.btn-edit-ticket {
+  background-color: #828282; /* Warna abu */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+.btn-edit-ticket-hidup {
+  background-color: #183AFF; /* Warna abu */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 /*=====================
@@ -3164,4 +3280,3 @@ h4 {
       .footer-social-links ul li a:hover {
         background: linear-gradient(#3763eb 0%, #6f58e8 100%);
         color: #fff; }
-
