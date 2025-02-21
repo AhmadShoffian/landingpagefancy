@@ -3087,7 +3087,6 @@ h4 {
   visibility: visible;
 }
 
-
 /*===========================
     13. Footer CSS 
 ===========================*/
@@ -3165,3 +3164,4 @@ h4 {
       .footer-social-links ul li a:hover {
         background: linear-gradient(#3763eb 0%, #6f58e8 100%);
         color: #fff; }
+
