@@ -1685,6 +1685,190 @@ h4, h5 {
 
 
 
+/* Button profile */
+
+.navbar {
+  padding: 0;
+}
+
+.navbar li.active a.nav-link {
+  color: #fff !important;
+  background: #00cc67;
+  border-radius: 4px;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-menu {
+  margin: 0;
+  left: -30px;
+  padding: 10px;
+  display: none;
+  position: absolute;
+  z-index: 99;
+  min-width: 190px;
+  border: none;
+  background-color: #fff;
+  white-space: nowrap;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.4s;
+  -webkit-animation: fadeIn 0.4s;
+  -moz-animation: fadeIn 0.4s;
+  -o-animation: fadeIn 0.4s;
+  -ms-animation: fadeIn 0.4s;
+}
+
+.dropdown-menu:before {
+  position: absolute;
+  top: -8px;
+  left: 22px;
+  display: block;
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0px 9px 8px;
+  border-color: transparent transparent #fff;
+  box-sizing: border-box;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  animation: fadeIn 0.4s;
+  -webkit-animation: fadeIn 0.4s;
+  -moz-animation: fadeIn 0.4s;
+  -o-animation: fadeIn 0.4s;
+  -ms-animation: fadeIn 0.4s;
+  background: #ffffff;
+}
+
+.dropdown .dropdown-menu .dropdown-item {
+  width: 100%;
+  padding: 6px 12px;
+  margin-bottom: 2px;
+  font-size: 14px;
+  color: #666;
+  text-decoration: none;
+  display: inline-block;
+  float: left;
+  letter-spacing: 0.5px;
+  clear: both;
+  position: relative;
+  outline: 0;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+.dropdown .dropdown-item:focus,
+.dropdown .dropdown-item:hover,
+.dropdown .dropdown-item.active {
+  background: #00cc67;
+  color: #fff !important;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  background: transparent;
+}
+
+.tg-btn {
+  color: #ffffff;
+  font-size: 14px;
+  padding: 3px 15px 3px;
+  margin-left: 10px;
+  position: relative;
+  background: #00cc67;
+  text-align: center;
+  border-radius: 4px;
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+.tg-btn:hover {
+  color: #fff !important;
+  background: #02ab55;
+}
+
+.tg-btn i {
+  margin-right: 3px;
+}
+
+
+
+.sign-in {
+  display: inline-table;
+}
+
+.sign-in li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.sign-in li .nav-link {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
+  padding: 3px 10px 3px;
+  background: #02ab55;
+  border-radius: 4px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sign-in li .nav-link:hover {
+  color: #ffffff !important;
+}
+
+.sign-in li .nav-link i {
+  margin-right: 5px;
+}
+
+.sign-in .dropdown .dropdown-menu .dropdown-item i {
+  margin-right: 5px;
+}
+
+.fadeInUpMenu {
+  -webkit-animation-name: fadeInUpMenu;
+  animation-name: fadeInUpMenu;
+}
+
+.slicknav_btn {
+  border-color: #00cc67;
+}
+
+.slicknav_menu .slicknav_icon-bar {
+  background: #00cc67;
+}
+
+
+/* end button profile */
+
+
+
+
+/* menu profile */
+
+
+
+
+
+
+/* end menu profile */
+
+
+
+
 /*====================
   DETAIL TICKET CSS
 ======================*/
