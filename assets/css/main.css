@@ -2139,6 +2139,132 @@ h4, h5 {
   cursor: pointer;
 }
 
+/*================
+  EDIT TIKET MODAL 
+  ================*/
+
+/* Styling modal */
+.modal .modal-content {
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+/* Header modal */
+.modal .modal-header {
+  background-color: #ffffff;
+  border-bottom: 2px solid #dee2e6;
+  padding: 15px;
+  text-align: center;
+}
+
+.modal .modal-title {
+  font-weight: bold;
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Form */
+.modal .modal-body .form-label {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.modal .modal-body .form-control {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 6px;
+  border: 1px solid black;
+  padding: 5px;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  
+}
+
+/* Layout kolom dua */
+.modal .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.modal .col-md-6 {
+  width: calc(50% - 10px);
+}
+
+.modal .col-md-12 {
+  width: 100%;
+}
+
+/* Textarea */
+.modal .modal-body textarea {
+  resize: none;
+  height: 120px;
+}
+
+/* Bagian Lampiran */
+.modal .lampiran-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+/* Styling untuk preview gambar */
+.modal .d-flex .img-thumbnail {
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* Styling teks aksi */
+.modal .text-danger {
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Tombol */
+.modal .modal-footer {
+  border-top: 2px solid #dee2e6;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.modal .modal-footer .btn {
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Tombol Simpan */
+.modal .modal-footer .btn-primary {
+  background-color: #007bff;
+  border: none;
+  width: 100px;
+}
+
+.modal .modal-footer .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Tombol Batal */
+.modal .modal-footer .btn-danger {
+  background-color: #dc3545;
+  border: none;
+  width: 100px;
+}
+
+.modal .modal-footer .btn-danger:hover {
+  background-color: #a71d2a;
+}
+
 /*=====================
     GANTI PASSWORD CSS
 ======================*/
@@ -2450,6 +2576,135 @@ h4 {
   .time-line .single-timeline .timeline-img img {
     width: 100%; }
 
+/* =============== 
+ALUR-TIKETING CSS
+=============== */
+
+    .about-us .content-left{
+      padding: 0 30px; /* Sesuaikan padding agar rata */
+      flex: 1; /* Membuat kedua kolom memiliki lebar yang sama */
+    }
+    
+    .about-us .content-right{
+      padding: 30px; /* Sesuaikan padding agar rata */
+      flex: 1;
+    }
+    
+    .about-us .row.align-items-center {
+      display: flex;
+      align-items: flex-start; /* Menyamakan posisi di atas */
+    }
+    
+    .about-us .content-left .single-img {
+      width: 100%;
+      border-radius: 5px;
+    }
+    
+    .about-us .content-left .single-img.minus-margin {
+      position: relative;
+      top: -20px;
+    }
+    
+    .about-us .content-left::before {
+      position: absolute;
+      content: "";
+      right: 4px;
+      bottom: -36px;
+      height: 200px;
+      width: 200px;
+      background-image: url(../images/hero/pattern.png);
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+    
+    .about-us .content-left .media-body {
+      padding: 40px 30px;
+      padding-bottom: 40px;
+      border-radius: 5px;
+      background-color: #2042e3;
+      -webkit-box-shadow: 0 1rem 3rem rgba(35, 38, 45, 0.15) !important;
+      box-shadow: 0 1rem 3rem rgba(35, 38, 45, 0.15) !important;
+      display: inline-block;
+      width: 100%;
+      margin-top: 30px;
+      padding-bottom: 48px;
+    }
+    
+    .about-us .content-left .media-body i {
+      height: 40px;
+      width: 40px;
+      line-height: 40px;
+      text-align: center;
+      display: block;
+      color: #fff;
+      background-color: #ffffff45;
+      border-radius: 5px;
+      display: block;
+      margin-bottom: 20px;
+    }
+    
+    .about-us .content-left .media-body h6 {
+      font-size: 22px;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 5px;
+      color: #fff;
+    }
+    
+    .about-us .content-left .media-body p {
+      color: #fff;
+    }
+    
+    .about-us .content-right {
+      padding-right: 70px;
+      padding-left: 30px;
+    }
+    
+    .about-us .content-right h2 {
+      font-size: 32px;
+      margin-bottom: 50px;
+      line-height: 45px;
+      text-transform: capitalize;
+      position: relative;
+      font-weight: 700;
+    }
+    
+    .about-us .content-right .single-list {
+      position: relative;
+      padding-left: 80px;
+      margin-bottom: 50px;
+    }
+    
+    .about-us .content-right .single-list:last-child {
+      margin-bottom: 0;
+    }
+    
+    .about-us .content-right .single-list i {
+      font-size: 20px;
+      height: 55px;
+      width: 55px;
+      line-height: 55px;
+      text-align: center;
+      display: inline-block;
+      background: #2042e31c;
+      color: #2042e3;
+      border-radius: 4px;
+      position: absolute;
+      left: 0;
+      top: 3px;
+    }
+    
+    .about-us .content-right .single-list .list-bod h5 {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #081828;
+    }
+    
+    .about-us .content-right .single-list .list-bod p {
+      font-size: 14px;
+      line-height: 24px;
+    }
 
     /*===========================
     03. Hero CSS
@@ -2870,8 +3125,6 @@ h4 {
   display: block;
   margin-bottom: 20px;
 }
-
-
 
 /* FAQ */
 
