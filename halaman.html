@@ -2,103 +2,125 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Pengguna</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alur Ticketing</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
     <style>
         body {
+            font-family: Arial, sans-serif;
             background-color: #f8f9fa;
         }
-        .profile-card {
-            max-width: 700px;
-            margin: 30px auto;
-            background: #fff;
-            padding: 20px;
+        .section-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #001f3f;
+        }
+        .ticket-section {
+            padding: 60px 0;
+        }
+        .ticket-card {
+            background: white;
+            padding: 25px;
             border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            text-align: center;
         }
-        .profile-photo {
-            width: 100px;
-            height: 100px;
-            border-radius: 10px;
-            background-color: #e9ecef;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
+        .ticket-card:hover {
+            transform: translateY(-5px);
         }
-        .profile-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .icon {
+            font-size: 40px;
+            color: #007bff;
+            margin-bottom: 10px;
         }
-        #file-input {
-            display: none;
+        .ticket-step {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .ticket-desc {
+            color: #6c757d;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="profile-card p-4">
-        <h4 class="mb-3">Profil Pengguna</h4>
-        <hr>
+<!-- Section: Alur Ticketing -->
+<section class="ticket-section">
+    <div class="container">
+        <h2 class="section-title">Alur Ticketing</h2>
 
-        <!-- Foto Diri -->
-        <div class="mb-3">
-            <label class="form-label"><strong>Foto Diri</strong></label>
-            <div class="d-flex align-items-center">
-                <div class="profile-photo me-3" id="photo-preview">
-                    <img src="https://via.placeholder.com/100" alt="Foto Profil" id="profile-img">
+        <div class="row justify-content-center">
+            <!-- Login Section -->
+            <div class="col-md-5">
+                <h3 class="text-primary text-center fw-bold">Login</h3>
+
+                <div class="ticket-card mb-4">
+                    <i class="fa fa-ticket icon"></i>
+                    <p class="ticket-step">1. Open Ticket</p>
+                    <p class="ticket-desc">Mengajukan atau mengubah permohonan.</p>
                 </div>
-                <label for="file-input" class="btn btn-dark">Pilih Foto</label>
-                <input type="file" id="file-input" accept="image/*" onchange="previewImage(event)">
+
+                <div class="ticket-card mb-4">
+                    <i class="fa fa-spinner icon"></i>
+                    <p class="ticket-step">2. Proses Ticket</p>
+                    <p class="ticket-desc">Permohonan ditelaah dan dikerjakan.</p>
+                </div>
+
+                <div class="ticket-card mb-4">
+                    <i class="fa fa-comments icon"></i>
+                    <p class="ticket-step">3. Diskusi</p>
+                    <p class="ticket-desc">Melakukan diskusi apabila ada pertanyaan.</p>
+                </div>
+
+                <div class="ticket-card mb-4">
+                    <i class="fa fa-check-circle icon"></i>
+                    <p class="ticket-step">4. Close Ticket</p>
+                    <p class="ticket-desc">Mengakhiri tiket permohonan.</p>
+                </div>
+
+                <div class="ticket-card mb-4">
+                    <i class="fa fa-clock icon"></i>
+                    <p class="ticket-step">5. Riwayat</p>
+                    <p class="ticket-desc">Melihat riwayat permohonan.</p>
+                </div>
             </div>
-            <small class="text-muted">Gambar Profile Anda sebaiknya memiliki rasio 1:1 dan tidak lebih dari 2MB.</small>
-        </div>
 
-        <!-- Nama Lengkap -->
-        <div class="mb-3">
-            <label class="form-label"><strong>Nama Lengkap *</strong></label>
-            <input type="text" class="form-control" value="Ahmad Shoffian">
-        </div>
+            <!-- Kirim Cepat Section -->
+            <div class="col-md-5">
+                <h3 class="text-success text-center fw-bold">Kirim Cepat</h3>
 
-        <!-- Username -->
-        <div class="mb-3">
-            <label class="form-label"><strong>Username *</strong></label>
-            <input type="text" class="form-control" value="ahmad_shoffian_6zdl">
-        </div>
+                <div class="ticket-card mb-4">
+                    <i class="fa fa-ticket icon"></i>
+                    <p class="ticket-step">1. Open Ticket</p>
+                    <p class="ticket-desc">Mengajukan atau mengubah permohonan.</p>
+                </div>
 
-        <!-- Email -->
-        <div class="mb-3">
-            <label class="form-label"><strong>Email</strong></label>
-            <input type="email" class="form-control bg-light" value="ahmadshof45@gmail.com" readonly>
-            <small class="text-muted">Anda dapat mengubah alamat email melalui menu <a href="#">Akun</a>.</small>
-        </div>
+                <div class="ticket-card mb-4">
+                    <i class="fa fa-history icon"></i>
+                    <p class="ticket-step">2. Riwayat</p>
+                    <p class="ticket-desc">Melihat riwayat permohonan.</p>
+                </div>
 
-        <!-- Headline -->
-        <div class="mb-3">
-            <label class="form-label"><strong>Headline</strong></label>
-            <input type="text" class="form-control" placeholder="Tulis headline Anda...">
+                <div class="ticket-card mb-4">
+                    <i class="fa fa-check-circle icon"></i>
+                    <p class="ticket-step">3. Selesai</p>
+                    <p class="ticket-desc">Permohonan telah ditangani dan selesai.</p>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- JavaScript untuk Preview Gambar -->
-<script>
-    function previewImage(event) {
-        const reader = new FileReader();
-        reader.onload = function(){
-            const output = document.getElementById('profile-img');
-            output.src = reader.result;
-        }
-        reader.readAsDataURL(event.target.files[0]);
-    }
-</script>
 
 </body>
 </html>
