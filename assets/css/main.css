@@ -2409,32 +2409,32 @@ h4 {
 ALUR-TIKETING CSS
 =============== */
 
-    .alur .content-left{
+    .about-us .content-left{
       padding: 0 30px; /* Sesuaikan padding agar rata */
       flex: 1; /* Membuat kedua kolom memiliki lebar yang sama */
     }
     
-    .alur .content-right{
+    .about-us .content-right{
       padding: 30px; /* Sesuaikan padding agar rata */
       flex: 1;
     }
     
-    .alur .row.align-items-center {
+    .about-us .row.align-items-center {
       display: flex;
       align-items: flex-start; /* Menyamakan posisi di atas */
     }
     
-    .alur .content-left .single-img {
+    .about-us .content-left .single-img {
       width: 100%;
       border-radius: 5px;
     }
     
-    .alur .content-left .single-img.minus-margin {
+    .about-us .content-left .single-img.minus-margin {
       position: relative;
       top: -20px;
     }
     
-    .alur .content-left::before {
+    .about-us .content-left::before {
       position: absolute;
       content: "";
       right: 4px;
@@ -2446,7 +2446,7 @@ ALUR-TIKETING CSS
       z-index: -1;
     }
     
-    .alur .content-left .media-body {
+    .about-us .content-left .media-body {
       padding: 40px 30px;
       padding-bottom: 40px;
       border-radius: 5px;
@@ -2459,7 +2459,7 @@ ALUR-TIKETING CSS
       padding-bottom: 48px;
     }
     
-    .alur .content-left .media-body i {
+    .about-us .content-left .media-body i {
       height: 40px;
       width: 40px;
       line-height: 40px;
@@ -2472,7 +2472,7 @@ ALUR-TIKETING CSS
       margin-bottom: 20px;
     }
     
-    .alur .content-left .media-body h6 {
+    .about-us .content-left .media-body h6 {
       font-size: 22px;
       font-weight: 600;
       display: block;
@@ -2480,16 +2480,16 @@ ALUR-TIKETING CSS
       color: #fff;
     }
     
-    .alur .content-left .media-body p {
+    .about-us .content-left .media-body p {
       color: #fff;
     }
     
-    .alur .content-right {
+    .about-us .content-right {
       padding-right: 70px;
       padding-left: 30px;
     }
     
-    .alur .content-right h2 {
+    .about-us .content-right h2 {
       font-size: 32px;
       margin-bottom: 50px;
       line-height: 45px;
@@ -2498,17 +2498,17 @@ ALUR-TIKETING CSS
       font-weight: 700;
     }
     
-    .alur .content-right .single-list {
+    .about-us .content-right .single-list {
       position: relative;
       padding-left: 80px;
       margin-bottom: 50px;
     }
     
-    .alur .content-right .single-list:last-child {
+    .about-us .content-right .single-list:last-child {
       margin-bottom: 0;
     }
     
-    .alur .content-right .single-list i {
+    .about-us .content-right .single-list i {
       font-size: 20px;
       height: 55px;
       width: 55px;
@@ -2523,14 +2523,14 @@ ALUR-TIKETING CSS
       top: 3px;
     }
     
-    .alur .content-right .single-list .list-bod h5 {
+    .about-us .content-right .single-list .list-bod h5 {
       display: block;
       margin-bottom: 10px;
       font-size: 20px;
       color: #081828;
     }
     
-    .alur .content-right .single-list .list-bod p {
+    .about-us .content-right .single-list .list-bod p {
       font-size: 14px;
       line-height: 24px;
     }
