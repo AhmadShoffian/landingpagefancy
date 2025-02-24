@@ -1889,7 +1889,156 @@ h4, h5 {
 /* end menu profile */
 
 
+/* Halaman FAQ */
 
+
+
+/*======================================
+    Faq CSS
+========================================*/
+.faq .nav-tabs {
+  border: none;
+  background: #F4F7FA;
+  margin-bottom: 50px;
+}
+
+.faq .nav-tabs .nav-link {
+  padding: 15px 30px;
+  border: none;
+  background: transparent;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 0;
+  margin-right: 5px;
+  position: relative;
+}
+
+.faq .nav-tabs .nav-link::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  margin-left: -10px;
+  bottom: -14px;
+  border: 10px solid #0EDC8D;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.faq .nav-tabs .nav-link.active:before {
+  bottom: -19px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.faq .nav-tabs .nav-link:last-child {
+  margin-right: 0;
+}
+
+.faq .nav-tabs .nav-link.active {
+  color: #fff;
+  background: #0EDC8D;
+}
+
+.faq .nav-tabs .nav-link:hover {
+  color: #fff;
+  background: #0EDC8D;
+}
+
+.accordion-item .accordion-button {
+  /* border-radius: 0px;
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  border: none;
+  border: 1px solid #eee; */
+
+  font-size: 16px; /* Ukuran teks lebih besar */
+  font-weight: 600; /* Membuat teks lebih tebal */
+  padding: 20px 25px; /* Menambah padding agar lebih besar */
+  text-align: left; /* Menjaga teks tetap kiri */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-radius: 8px; /* Tambahkan radius agar lebih modern */
+  border: 1px solid #ddd; /* Tambahkan border untuk kontras */
+  background: #fff; /* Warna default putih */
+  color: #333; /* Warna teks gelap untuk kontras */
+  transition: all 0.3s ease;
+}
+
+.accordion-item .accordion-button span {
+  float: left;
+}
+
+.accordion-item .accordion-button i {
+  float: right;
+  font-size: 13px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #0EDC8D;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-button:not(.collapsed) i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.accordion-item:first-of-type .accordion-button {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.accordion-item:last-of-type .accordion-button.collapsed {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.accordion-button::after {
+  display: none;
+}
+
+.accordion-collapse {
+  border: none;
+}
+
+.accordion-body {
+  border: 1px solid #eee;
+  border-radius: 0;
+  padding: 30px 20px;
+}
+
+.accordion-body p {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.accordion-body p:last-child {
+  margin: 0;
+}
+
+.accordion-item {
+  margin-bottom: 20px;
+}
+
+
+/* END halaman FAQ */
 
 /*====================
   DETAIL TICKET CSS
