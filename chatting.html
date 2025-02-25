@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Chat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f0f2f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .chat-container {
+            width: 100%;
+            max-width: 500px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .chat-header {
+            background: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        .chat-box {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            max-height: 500px;
+            background: #f9f9f9;
+        }
+        .chat-message {
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 15px;
+            animation: fadeIn 0.4s ease-out;
+        }
+        .chat-message.sent {
+            flex-direction: row-reverse;
+        }
+        .chat-message .avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            margin: 0 10px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .chat-message .avatar:hover {
+            transform: scale(1.1);
+        }
+        .chat-bubble {
+            padding: 12px;
+            border-radius: 18px;
+            max-width: 70%;
+            word-wrap: break-word;
+            font-size: 0.95rem;
+            position: relative;
+        }
+        .sent .chat-bubble {
+            background: #4CAF50;
+            color: white;
+            border-radius: 18px 18px 0 18px;
+        }
+        .received .chat-bubble {
+            background: #e4e6eb;
+            color: #333;
+            border-radius: 18px 18px 18px 0;
+        }
+        .message-meta {
+            font-size: 0.75rem;
+            color: #888;
+            margin-top: 5px;
+            text-align: right;
+        }
+        .input-group {
+            padding: 10px;
+            background: #fff;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .input-group input {
+            width: 80%;
+            padding: 10px 15px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            outline: none;
+        }
+        .input-group button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 12px;
+            cursor: pointer;
+            font-size: 20px;
+            position: relative;
+            transition: background 0.3s;
+        }
+        .input-group button:hover {
+            background: #45a049;
+        }
+        .input-group button::after {
+            content: "Kirim Pesan";
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.75rem;
+            color: #4CAF50;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .input-group button:hover::after {
+            opacity: 1;
+        }
+        .input-group input:focus {
+            border-color: #4CAF50;
+        }
+        .input-group input::placeholder {
+            color: #888;
+        }
+        .input-group input[type="file"] {
+            display: none;
+        }
+        .attachment-btn {
+            font-size: 22px;
+            cursor: pointer;
+            margin-left: 10px;
+            position: relative;
+        }
+        .attachment-btn:hover {
+            color: #4CAF50;
+        }
+        .attachment-btn::after {
+            content: "Lampiran";
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.75rem;
+            color: #4CAF50;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .attachment-btn:hover::after {
+            opacity: 1;
+        }
+        .preview-img {
+            max-width: 150px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="chat-container">
+        <!-- Header -->
+        <div class="chat-header">
+            Chat Modern
+        </div>
+
+        <!-- Chat Box -->
+        <div class="chat-box" id="chatBox">
+            <!-- Example Messages -->
+            <div class="chat-message received">
+                <img src="https://via.placeholder.com/45" alt="User Avatar" class="avatar">
+                <div class="chat-bubble">
+                    Hai, apa kabar? 
+                    <div class="message-meta">12:30 PM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="chat-bubble">
+                    Baik, terima kasih! 😊
+                    <div class="message-meta">12:31 PM</div>
+                </div>
+                <img src="https://via.placeholder.com/45" alt="User Avatar" class="avatar">
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-group">
+            <input type="text" id="messageInput" placeholder="Tulis pesan..." />
+            <button onclick="sendMessage()">➤</button>
+            <button class="attachment-btn" onclick="document.getElementById('fileInput').click()">📎</button>
+            <input type="file" id="fileInput" accept="image/*, .pdf, .doc, .docx, .txt" />
+        </div>
+    </div>
+
+    <script>
+        function getFormattedDate() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            return `${hours}:${minutes}`;
+        }
+
+        function sendMessage() {
+            const input = document.getElementById("messageInput");
+            let message = input.value.trim();
+            const fileInput = document.getElementById("fileInput");
+
+            if (message !== "" || fileInput.files.length > 0) {
+                const chatBox = document.getElementById("chatBox");
+                const msgElement = document.createElement("div");
+                msgElement.classList.add("chat-message", "sent");
+
+                const chatBubble = document.createElement("div");
+                chatBubble.classList.add("chat-bubble");
+
+                // Add text message
+                if (message !== "") {
+                    chatBubble.textContent = message;
+                }
+
+                // Add file attachment if present
+                if (fileInput.files.length > 0) {
+                    const file = fileInput.files[0];
+                    const fileURL = URL.createObjectURL(file);
+
+                    if (file.type.startsWith("image/")) {
+                        const imgElement = document.createElement("img");
+                        imgElement.src = fileURL;
+                        imgElement.classList.add("preview-img");
+                        chatBubble.appendChild(imgElement);
+                    } else {
+                        const linkElement = document.createElement("a");
+                        linkElement.href = fileURL;
+                        linkElement.textContent = `📎 ${file.name}`;
+                        linkElement.download = file.name;
+                        chatBubble.appendChild(linkElement);
+                    }
+
+                    fileInput.value = ""; // Reset file input
+                }
+
+                const avatar = document.createElement("img");
+                avatar.src = "https://via.placeholder.com/45";
+                avatar.alt = "User Avatar";
+                avatar.classList.add("avatar");
+
+                const messageMeta = document.createElement("div");
+                messageMeta.classList.add("message-meta");
+                messageMeta.textContent = getFormattedDate();
+
+                msgElement.appendChild(chatBubble);
+                msgElement.appendChild(avatar);
+                msgElement.appendChild(messageMeta);
+                chatBox.appendChild(msgElement);
+
+                chatBox.scrollTop = chatBox.scrollHeight; // Auto scroll to bottom
+                input.value = ""; // Reset input field
+            }
+        }
+    </script>
+
+</body>
+</html>
