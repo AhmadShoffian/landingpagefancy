@@ -2040,6 +2040,86 @@ h4, h5 {
 
 /* END halaman FAQ */
 
+/*===================
+  APA BEDANYA CSS
+  ===================*/
+
+/* Perbesar judul */
+.section-title h2 {
+  font-size: 36px; /* Ukuran lebih besar */
+  font-weight: bold;
+}
+
+/* Perbesar teks di dalam tabel */
+.table th, .table td {
+  font-size: 18px; /* Ukuran teks lebih besar */
+  padding: 15px; /* Perbesar padding */
+  height: 60px; /* Tinggi baris lebih besar */
+}
+
+/* Buat tabel lebih besar */
+.table {
+  width: 100%; /* Pastikan tabel melebar sepenuhnya */
+  table-layout: fixed; /* Distribusi kolom lebih proporsional */
+}
+
+/* Background putih */
+.service-section {
+  background-color: white; /* Ubah background jadi putih */
+  padding: 50px 0; /* Tambahkan padding agar tidak terlalu mepet */
+}
+
+/* Pastikan container penuh */
+.container {
+  max-width: 100%; 
+  width: 100%;
+}
+
+/* Buat tabel melebar penuh */
+.table-responsive {
+  width: 100%;
+}
+
+/* Atur lebar setiap kolom */
+.table th:first-child {
+  width: 60%; /* Kolom "Fitur" lebih besar */
+  text-align: center; /* Judul "Fitur" tetap di tengah */
+}
+
+.table td:first-child {
+  width: 60%; /* Kolom "Fitur" lebih besar */
+  text-align: left; /* Isi teks dalam "Fitur" rata kiri */
+  padding-left: 20px; /* Tambahkan padding kiri agar tidak terlalu mepet */
+}
+
+.table th:nth-child(2), 
+.table td:nth-child(2),
+.table th:nth-child(3), 
+.table td:nth-child(3) {
+  width: 20%; /* Kolom "Log In" dan "Kirim Cepat" lebih lebar */
+}
+
+/* Pastikan tabel tetap proporsional di layar kecil */
+@media (max-width: 768px) {
+  .table th, .table td {
+      font-size: 16px;
+      padding: 10px;
+  }
+
+  /* Sesuaikan lebar kolom di layar kecil */
+  .table th:first-child, 
+  .table td:first-child {
+    width: 50%; /* Fitur lebih kecil di layar kecil */
+  }
+
+  .table th:nth-child(2), 
+  .table td:nth-child(2),
+  .table th:nth-child(3), 
+  .table td:nth-child(3) {
+    width: 25%; /* Log In dan Kirim Cepat tetap seimbang */
+  }
+}
+
 /*====================
   DETAIL TICKET CSS
 ======================*/
