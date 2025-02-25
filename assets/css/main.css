@@ -3324,7 +3324,7 @@ h4 {
   font-weight: bold;
   font-size: 2rem;
   margin-bottom: 30px;
-  color: #001f3f;
+  color: #000000;
 }
 .ticket-section {
   padding: 60px 0;
@@ -3345,11 +3345,6 @@ h4 {
   color: #007bff;
   margin-bottom: 10px;
 }
-.login .icon {
-  font-size: 40px;
-  color: #007bff;
-  margin-bottom: 10px;
-}
 .kirim-cepat .icon {
   font-size: 40px;
   color: #d448ff;
@@ -3359,9 +3354,10 @@ h4 {
   font-size: 1.2rem;
   font-weight: bold;
   margin-top: 10px;
+  color: black;
 }
 .ticket-desc {
-  color: #6c757d;
+  color: black;
 }
 /* end alur */
 
