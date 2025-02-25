@@ -2908,6 +2908,225 @@ ALUR-TIKETING CSS
       line-height: 24px;
     }
 
+
+
+
+    /* breadcrumb */
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .page-banner-section {
+        margin-top: 94px;
+      }
+    }
+    
+    .page-banner-section .banner-content h2 {
+      margin-bottom: 20px;
+    }
+    
+    .page-banner-section .banner-content .page-breadcrumb nav ol {
+      background: none;
+      padding: 0;
+    }
+    
+    .page-banner-section .banner-content .page-breadcrumb nav ol li {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 20px;
+      font-weight: 500;
+    }
+    
+    .page-banner-section .banner-content .page-breadcrumb nav ol li::before {
+      color: #fff;
+    }
+    
+    .page-banner-section .banner-content .page-breadcrumb nav ol li a {
+      color: #fff;
+    }
+    
+    .carousel-section-wrapper {
+      position: relative;
+      z-index: 3;
+    }
+    
+    .carousel-section-wrapper .carousel-section {
+      position: relative;
+      z-index: 3;
+    }
+    
+    .carousel-section-wrapper .carousel-section.clip-bg {
+      -webkit-clip-path: polygon(0 11%, 100% 0, 100% 100%, 0 89%);
+              clip-path: polygon(0 11%, 100% 0, 100% 100%, 0 89%);
+    }
+    
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .carousel-section-wrapper .carousel-section.clip-bg {
+        -webkit-clip-path: polygon(0% 8%, 100% 2%, 100% 98%, 0 92%);
+                clip-path: polygon(0% 8%, 100% 2%, 100% 98%, 0 92%);
+      }
+    }
+    
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .carousel-section-wrapper .carousel-section.clip-bg {
+        -webkit-clip-path: polygon(0% 8%, 100% 2%, 100% 98%, 0 92%);
+                clip-path: polygon(0% 8%, 100% 2%, 100% 98%, 0 92%);
+      }
+    }
+    
+    @media (max-width: 767px) {
+      .carousel-section-wrapper .carousel-section.clip-bg {
+        -webkit-clip-path: polygon(0% 8%, 100% 2%, 100% 98%, 0 92%);
+                clip-path: polygon(0% 8%, 100% 2%, 100% 98%, 0 92%);
+      }
+    }
+    
+    .carousel-section-wrapper .carousel-section.clip-bg::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: -webkit-gradient(linear, left top, right top, from(rgba(111, 88, 232, 0.8)), to(#3763eb));
+      background: linear-gradient(to right, rgba(111, 88, 232, 0.8) 0%, #3763eb 100%);
+    }
+    
+    .carousel-section-wrapper .carousel-section.carousel-item .carousel-content .section-title h2 {
+      margin-bottom: 25px;
+    }
+    
+    .carousel-section-wrapper .carousel-section.carousel-item .carousel-content .section-title p {
+      margin-bottom: 40px;
+    }
+    
+    .carousel-section-wrapper .carousel-section.carousel-item .carousel-content .border-btn {
+      border-color: #fff;
+      color: #fff;
+    }
+    
+    .carousel-section-wrapper .carousel-section.carousel-item .carousel-content .border-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    
+    .carousel-section-wrapper .carousel-control {
+      background: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 1px solid #F4EEFB;
+      color: #fff;
+      top: 50%;
+      left: 30px;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      z-index: 99;
+    }
+    
+    .carousel-section-wrapper .carousel-control:hover {
+      background: #fff;
+      color: #3763EB;
+    }
+    
+    .carousel-section-wrapper .carousel-control.carousel-control-next {
+      left: auto;
+      right: 30px;
+    }
+    
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .carousel-section-wrapper .carousel-control {
+        top: auto;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        bottom: 80px;
+        margin: auto;
+      }
+      .carousel-section-wrapper .carousel-control.carousel-control-prev {
+        left: 42%;
+      }
+      .carousel-section-wrapper .carousel-control.carousel-control-next {
+        left: 10%;
+      }
+    }
+    
+    @media (max-width: 767px) {
+      .carousel-section-wrapper .carousel-control {
+        top: auto;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        bottom: 80px;
+        margin: auto;
+      }
+      .carousel-section-wrapper .carousel-control.carousel-control-prev {
+        left: 37%;
+      }
+      .carousel-section-wrapper .carousel-control.carousel-control-next {
+        left: 23%;
+      }
+    }
+    
+    .carousel-section-wrapper .carousel-control span {
+      background: none;
+    }
+    
+    .map-section {
+      margin-top: -130px;
+    }
+    
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .map-section {
+        margin-top: 130px;
+      }
+    }
+    
+    @media (max-width: 767px) {
+      .map-section {
+        margin-top: 130px;
+      }
+    }
+    
+    .accordion-style .single-accordion {
+      border: 1px solid #F4EEFB;
+      border-radius: 5px;
+    }
+    
+    .accordion-style .single-accordion .accordion-btn button {
+      background: #fff;
+      border: none;
+      padding: 12px 30px;
+      font-weight: 500;
+      border-radius: 5px;
+      position: relative;
+    }
+    
+    .accordion-style .single-accordion .accordion-btn button::after {
+      content: "\ea5e";
+      font: normal normal normal 1em/1 "LineIcons";
+      position: absolute;
+      right: 30px;
+      top: 15px;
+      -webkit-transition: all 0.3s ease-out 0s;
+      transition: all 0.3s ease-out 0s;
+    }
+    
+    .accordion-style .single-accordion .accordion-btn button.collapsed::after {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+    
+    .accordion-style .single-accordion .accordion-content {
+      padding: 20px 30px;
+    }
+    
+    .accordion-style.theme-accordion .single-accordion .accordion-btn button {
+      background: -webkit-gradient(linear, right top, left top, from(#3763eb), to(#6f58e8));
+      background: linear-gradient(to left, #3763eb 0%, #6f58e8 100%);
+      color: #fff;
+    }
+    
+    .accordion-style.theme-accordion .single-accordion .accordion-btn button::after {
+      color: #fff;
+    }
+    
+
+
     /*===========================
     03. Hero CSS
 ===========================*/
@@ -3560,6 +3779,8 @@ ALUR-TIKETING CSS
   color: #6c757d;
 }
 /* end alur */
+
+
 
 
 
