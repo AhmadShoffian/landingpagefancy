@@ -73,7 +73,7 @@
                                       <a class="dropdown-item" href="profile.html"><i class="lni lni-briefcase"></i>Profile</a>
                                     <a class="dropdown-item" href="akun.html"><i class="lni lni-rocket"></i> Account</a>
                                     <!-- <a class="dropdown-item" href="#"><i class="lni lni-close"></i>Logout</a> -->
-                                    <a class="dropdown-item" title="Delete" data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?" data-confirm-yes="alert('Deleted')"><i class="lni lni-close"></i>Logout</a>
+                                    <a class="dropdown-item logout-btn" href="#"><i class="lni lni-close"></i>Logout</a>
                                   </div>
                                 </li>
                               </ul>
@@ -365,5 +365,20 @@
         <script src="assets/js/wow.min.js"></script>
         <script src="assets/js/imagesloaded.min.js"></script>
 		<script src="assets/js/main.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const logoutBtn = document.querySelector(".logout-btn");
+                
+                logoutBtn.addEventListener("click", function (event) {
+                    event.preventDefault(); // Mencegah link langsung bekerja
+                    
+                    const confirmLogout = confirm("Are you sure you want to logout?");
+                    if (confirmLogout) {
+                        alert("You have successfully logged out!");
+                        window.location.href = "index.html"; // Nanti ke Index
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
