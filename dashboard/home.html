@@ -18,6 +18,7 @@
 		<link rel="stylesheet" href="../assets/css/glightbox.min.css">
 		<link rel="stylesheet" href="../assets/css/main.css">
 		<link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     </head>
     <body>
@@ -70,10 +71,10 @@
                                         <a class="page-scroll" href="#about">About</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#services">Alur ticketing</a>
+                                        <a class="page-scroll" href="#alur-tiketing">Alur ticketing</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#portfolio">FAQS</a>
+                                        <a class="page-scroll" href="#faq">FAQS</a>
                                     </li>
                                     <!-- <li class="nav-item">
                                         <a class="page-scroll" href="#team">Team</a>
@@ -106,39 +107,8 @@
         <!-- ========================= header end ========================= -->
 
         <!-- ========================= carousel-section end ========================= -->
-        <!-- <section id="home" class="carousel-section-wrapper">
-            <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-section carousel-item active clip-bg pt-50 pb-50 img-bg"
-                        style="background-image: url('../assets/img/carousel/2.jpg');">
-                        <div class="container">
-                            <div class="row align-items-center">
-                               
-                                <div class="col-xl-6 col-lg-6">
-                                    <div class="hero-content wow fadeInLeft">
-                                        <h2 class="text-white">Helpdesk UPA TIK <br> ISI Yogyakarta</h2><br><br>
-                                    </div>
-                                    <div class="subscribe-section">
-                                        <form action="#" class="subscribe-form wow fadeInRight" data-wow-delay=".4s">
-                                            <input type="text" name="subs-email" id="subs-email" placeholder="Cari Ticket">
-                                            <button type="submit"><i class="lni lni-search-alt"></i></button>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6 col-lg-6 pb-400">
-                                    <div class="hero-image wow fadeInRight" data-wow-delay=".4s">
-                                        <img src="woman-image.png" alt="#" class="hide-on-mobile">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
 
-
-         <section id="home" class="hero-area style2">
+        <section id="home" class="hero-area style2">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-12 col-12">
@@ -153,7 +123,7 @@
                                     </form>
                                 </div>
                                 <div class="button text-center mt-3">
-                                    <button type="submit" class="theme-btn">Buat Ticket Permohonan</button>
+                                    <a href="../input_form.html"><button type="submit" class="theme-btn">Buat Ticket Permohonan</button></a>
                                 </div>
                         </div>
                     </div>
@@ -166,6 +136,53 @@
             </div>
         </section>
         <!-- ========================= carousel-section end ========================= -->
+
+        <!--========================= about-section start========================= -->
+        <section id="about" class="pt-100">
+            <div class="about-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="about-img-wrapper">
+                                <div class="about-img position-relative d-inline-block wow fadeInLeft" data-wow-delay=".3s">
+                                    <img src="../assets/img/about/about-img.png" alt="">
+
+                                    <div class="about-experience">
+                                        <h3>5 Year Of Working Experience</h3>
+                                        <p>We Crafted an aweso design library that is robust and intuitive to use.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="about-content-wrapper">
+                                <div class="section-title">
+                                    <span class="wow fadeInUp" data-wow-delay=".2s">Tentang Kami</span>
+                                    <h2 class="mb-40 wow fadeInRight" data-wow-delay=".4s">Helpdesk Ticketing ISI Yogyakarta</h2>
+                                </div>
+                                <div class="about-content">
+                                    <p class="mb-45 wow fadeInUp" data-wow-delay=".6s">Helpdesk UPA TIK ISI Yogyakarta merupakan sistem  layanan bantuan permasalahan  di bidang TIK yang ditujukan bagi civitas akademika, tenaga kependidikan, dan masyarakat umum. Pengguna dapat mengajukan permasalahan dengan <b>Log In</b> atau <b>Kirim Cepat.</b> </p>
+                                    <div class="counter-up wow fadeInUp" data-wow-delay=".5s">
+                                        <div class="counter">
+                                            <span id="secondo" class="countup count color-1" cup-end="30" cup-append="k">10</span>
+                                            <h4>Happy Client</h4>
+                                            <p>We Crafted an awesome design <br class="d-none d-md-block d-lg-none d-xl-block"> library that is robust and</p>
+                                        </div>
+                                        <div class="counter">
+                                            <span id="secondo" class="countup count color-2" cup-end="42" cup-append="k">5</span>
+                                            <h4>Project Done</h4>
+                                            <p>We Crafted an awesome design <br class="d-none d-md-block d-lg-none d-xl-block"> library that is robust and</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--========================= about-section end========================= -->
+
 
         <!-- ========================= feature-section start ========================= -->
         <section id="features" class="feature-section pt-100">
@@ -219,160 +236,79 @@
         </section>
         <!-- ========================= feature-section end ========================= -->
 
-        <!--========================= about-section start========================= -->
-        <section id="about" class="pt-100">
-            <div class="about-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6">
-                            <div class="about-img-wrapper">
-                                <div class="about-img position-relative d-inline-block wow fadeInLeft" data-wow-delay=".3s">
-                                    <img src="../assets/img/about/about-img.png" alt="">
-
-                                    <div class="about-experience">
-                                        <h3>5 Year Of Working Experience</h3>
-                                        <p>We Crafted an aweso design library that is robust and intuitive to use.</p>
-                                    </div>
-                                </div>
-                            </div>
+        <!-- =============== alur-tiketing start =============== -->
+        <section id="alur-tiketing" class="ticket-section">
+            <div class="container">
+                <h2 class="section-title">Alur Ticketing</h2>
+        
+                <div class="row justify-content-center">
+                    <!-- Login Section -->
+                    <div class="col-md-5 login">
+                        <h3 class="text-primary text-center fw-bold mb-5">Login</h3>
+        
+                        <div class="ticket-card mb-4">
+                            <i class="fa fa-ticket icon"></i>
+                            <p class="ticket-step">1. Open Ticket</p>
+                            <p class="ticket-desc">Mengajukan atau mengubah permohonan.</p>
                         </div>
-                        <div class="col-xl-6 col-lg-6">
-                            <div class="about-content-wrapper">
-                                <div class="section-title">
-                                    <span class="wow fadeInUp" data-wow-delay=".2s">Tentang Kami</span>
-                                    <h2 class="mb-40 wow fadeInRight" data-wow-delay=".4s">Helpdesk Ticketing ISI Yogyakarta</h2>
-                                </div>
-                                <div class="about-content">
-                                    <p class="mb-45 wow fadeInUp" data-wow-delay=".6s">Helpdesk UPA TIK ISI Yogyakarta merupakan sistem  layanan bantuan permasalahan  di bidang TIK yang ditujukan bagi civitas akademika, tenaga kependidikan, dan masyarakat umum. Pengguna dapat mengajukan permasalahan dengan <b>Log In</b> atau <b>Kirim Cepat.</b> </p>
-                                    <div class="counter-up wow fadeInUp" data-wow-delay=".5s">
-                                        <div class="counter">
-                                            <span id="secondo" class="countup count color-1" cup-end="30" cup-append="k">10</span>
-                                            <h4>Happy Client</h4>
-                                            <p>We Crafted an awesome design <br class="d-none d-md-block d-lg-none d-xl-block"> library that is robust and</p>
-                                        </div>
-                                        <div class="counter">
-                                            <span id="secondo" class="countup count color-2" cup-end="42" cup-append="k">5</span>
-                                            <h4>Project Done</h4>
-                                            <p>We Crafted an awesome design <br class="d-none d-md-block d-lg-none d-xl-block"> library that is robust and</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+        
+                        <div class="ticket-card mb-4">
+                            <i class="fa fa-spinner icon"></i>
+                            <p class="ticket-step">2. Proses Ticket</p>
+                            <p class="ticket-desc">Permohonan ditelaah dan dikerjakan.</p>
+                        </div>
+        
+                        <div class="ticket-card mb-4">
+                            <i class="fa fa-comments icon"></i>
+                            <p class="ticket-step">3. Diskusi</p>
+                            <p class="ticket-desc">Melakukan diskusi apabila ada pertanyaan.</p>
+                        </div>
+        
+                        <div class="ticket-card mb-4">
+                            <i class="fa fa-window-close icon"></i>
+                            <p class="ticket-step">4. Close Ticket</p>
+                            <p class="ticket-desc">Mengakhiri tiket permohonan.</p>
+                        </div>
+        
+                        <div class="ticket-card mb-4">
+                            <i class="fa fa-clock icon"></i>
+                            <p class="ticket-step">5. Riwayat</p>
+                            <p class="ticket-desc">Melihat riwayat permohonan.</p>
+                        </div>
+                        <div class="ticket-card mb-4">
+                            <i class="fa fa-check-circle icon"></i>
+                            <p class="ticket-step">6. Selesai</p>
+                            <p class="ticket-desc">Permohonan telah ditangani dan selesai.</p>
+                        </div>
+                    </div>
+        
+                    <!-- Kirim Cepat Section -->
+                    <div class="col-md-5 kirim-cepat">
+                        <h3 class="text-center fw-bold mb-5">Kirim Cepat</h3>
+        
+                        <div class="ticket-card mb-4">
+                            <i class="fa fa-ticket icon"></i>
+                            <p class="ticket-step">1. Open Ticket</p>
+                            <p class="ticket-desc">Mengajukan atau mengubah permohonan.</p>
+                        </div>
+        
+                        <div class="ticket-card mb-4">
+                            <i class="fa fa-history icon"></i>
+                            <p class="ticket-step">2. Riwayat</p>
+                            <p class="ticket-desc">Melihat riwayat permohonan.</p>
+                        </div>
+        
+                        <div class="ticket-card mb-4">
+                            <i class="fa fa-check-circle icon"></i>
+                            <p class="ticket-step">3. Selesai</p>
+                            <p class="ticket-desc">Permohonan telah ditangani dan selesai.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--========================= about-section end========================= -->
+        <!-- =============== alur-tiketing end =============== -->
 
-
-        <!-- Start About Area -->
-    <section class="about-us section pt-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 col-lg-7 col-md-9 mx-auto">
-                    <div class="section-title text-center mb-55">
-                        <span class="wow fadeInDown" data-wow-delay=".2s">Features</span>
-                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Kenapa Helpdesk Ticketing ISI Yogyakarta ?</h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s">At vero eos et accusamus et iusto odio dignissimos ducimus quiblanditiis praesentium</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row align-items-center justify-content-center">
-                <div class="col-lg-6 col-md-10 col-12">
-                    <div class="content-left wow fadeInLeft" data-wow-delay=".3s">
-                        <!-- content-1 start -->
-                        <div class="content-right wow fadeInRight" data-wow-delay=".5s">
-                            <!-- Heading -->
-                            <h2>Help you to get the <br>
-                                best job that fits you</h2>
-                            <!-- End Heading -->
-                            <!-- Single List -->
-                            <div class="single-list">
-                                <i class="lni lni-grid-alt"></i>
-                                <!-- List body start -->
-                                <div class="list-bod">
-                                    <h5>#1 Jobs site in UK</h5>
-                                    <p>Leverage agile frameworks to provide a
-                                        robust synopsis for high level overviews. Iterative</p>
-                                </div>
-                                <!-- List body start -->
-                            </div>
-                            <!-- End Single List -->
-                            <!-- Single List -->
-                            <div class="single-list">
-                                <i class="lni lni-search"></i>
-                                <!-- List body start -->
-                                <div class="list-bod">
-                                    <h5>Seamless searching</h5>
-                                    <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta
-                                        test.</p>
-                                </div>
-                                <!-- List body start -->
-                            </div>
-                            <!-- End Single List -->
-                            <!-- Single List -->
-                            <div class="single-list">
-                                <i class="lni lni-stats-up"></i>
-                                <!-- List body start -->
-                                <div class="list-bod">
-                                    <h5>Hired in top companies</h5>
-                                    <p>Podcasting operational change management inside of workflows to establish.</p>
-                                </div>
-                                <!-- List body start -->
-                            </div>
-                            <!-- End Single List -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-10 col-12">
-                    <!-- content-1 start -->
-                    <div class="content-right wow fadeInRight" data-wow-delay=".5s">
-                        <!-- Heading -->
-                        <h2>Help you to get the <br>
-                            best job that fits you</h2>
-                        <!-- End Heading -->
-                        <!-- Single List -->
-                        <div class="single-list">
-                            <i class="lni lni-grid-alt"></i>
-                            <!-- List body start -->
-                            <div class="list-bod">
-                                <h5>#1 Jobs site in UK</h5>
-                                <p>Leverage agile frameworks to provide a
-                                    robust synopsis for high level overviews. Iterative</p>
-                            </div>
-                            <!-- List body start -->
-                        </div>
-                        <!-- End Single List -->
-                        <!-- Single List -->
-                        <div class="single-list">
-                            <i class="lni lni-search"></i>
-                            <!-- List body start -->
-                            <div class="list-bod">
-                                <h5>Seamless searching</h5>
-                                <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta
-                                    test.</p>
-                            </div>
-                            <!-- List body start -->
-                        </div>
-                        <!-- End Single List -->
-                        <!-- Single List -->
-                        <div class="single-list">
-                            <i class="lni lni-stats-up"></i>
-                            <!-- List body start -->
-                            <div class="list-bod">
-                                <h5>Hired in top companies</h5>
-                                <p>Podcasting operational change management inside of workflows to establish.</p>
-                            </div>
-                            <!-- List body start -->
-                        </div>
-                        <!-- End Single List -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End About Area -->
 
 
         <!-- ========================= service-section start ========================= -->
@@ -381,88 +317,56 @@
                 <div class="row">
                     <div class="col-xl-6 col-lg-7 col-md-9 mx-auto">
                         <div class="section-title text-center mb-55">
-                            <span class="wow fadeInDown" data-wow-delay=".2s">Services</span>
-                            <h2 class="wow fadeInUp" data-wow-delay=".4s">Our Best Services</h2>
-                            <p class="wow fadeInUp" data-wow-delay=".6s">At vero eos et accusamus et iusto odio
-                                dignissimos ducimus quiblanditiis praesentium</p>
+                            <h2 class="wow fadeInUp" data-wow-delay=".4s">Apa Bedanya ?</h2>
                         </div>
                     </div>
                 </div>
-        
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-box box-style">
-                            <div class="service-icon box-icon-style">
-                                <i class="lni lni-leaf"></i>
-                            </div>
-                            <div class="box-content-style service-content">
-                                <h4>Clean & Refreshing</h4>
-                                <p>Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy eirmod tempor ividunt
-                                    labor dolore magna.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-box box-style">
-                            <div class="service-icon box-icon-style">
-                                <i class="lni lni-bootstrap"></i>
-                            </div>
-                            <div class="box-content-style service-content">
-                                <h4>Solid Bootstrap 5</h4>
-                                <p>Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy eirmod tempor ividunt
-                                    labor dolore magna.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-box box-style">
-                            <div class="service-icon box-icon-style">
-                                <i class="lni lni-briefcase"></i>
-                            </div>
-                            <div class="box-content-style service-content">
-                                <h4>Crafted for Business</h4>
-                                <p>Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy eirmod tempor ividunt
-                                    labor dolore magna.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-box box-style">
-                            <div class="service-icon box-icon-style">
-                                <i class="lni lni-bolt"></i>
-                            </div>
-                            <div class="box-content-style service-content">
-                                <h4>Speed Optimized</h4>
-                                <p>Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy eirmod tempor ividunt
-                                    labor dolore magna.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-box box-style">
-                            <div class="service-icon box-icon-style">
-                                <i class="lni lni-infinite"></i>
-                            </div>
-                            <div class="box-content-style service-content">
-                                <h4>Fully Customizable</h4>
-                                <p>Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy eirmod tempor ividunt
-                                    labor dolore magna.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-box box-style">
-                            <div class="service-icon box-icon-style">
-                                <i class="lni lni-reload"></i>
-                            </div>
-                            <div class="box-content-style service-content">
-                                <h4>Regular Updates</h4>
-                                <p>Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy eirmod tempor ividunt
-                                    labor dolore magna.</p>
-                            </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-10"> 
+                        <div class="table-responsive wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                            <table class="table table-bordered text-center">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Fitur</th>
+                                        <th class="text-primary">Log In</th>
+                                        <th class="text-purple" style="color: #8401FF;">Kirim Cepat</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="">Pengguna dapat mengubah keterangan pada tiket yang sudah dibuat</td>
+                                        <td class="text-primary">✔</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pengguna dapat mengakhiri tiket jika permasalahan telah teratasi</td>
+                                        <td class="text-primary">✔</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pengguna dapat mengirim dan merespon pesan untuk berdikusi secara realtime</td>
+                                        <td class="text-primary">✔</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pengguna dapat melihat detail tiket dan riwayat penyelesaian tiket</td>
+                                        <td class="text-primary">✔</td>
+                                        <td class="text-purple"style="color:purple;">✔</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
+    
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-8 col-sm-10">
+                        <div class="single_pricing text-center pricing_color_1 mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-8 col-sm-10">
+                    </div>
             </div>
         </section>
         <!-- ========================= service-section end ========================= -->
@@ -470,7 +374,7 @@
 
 
                 <!-- ========================= process-section start ========================= -->
-                <section id="process" class="process-section pt-100 pb-100">
+                <!-- <section id="process" class="process-section pt-100 pb-100">
                     <div class="container">
                         <div class="row">
                             <div class="col-xl-6 col-lg-7 col-md-9 mx-auto">
@@ -619,11 +523,11 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> -->
                 <!-- ========================= process-section end ========================= -->
 
 
-
+        <!-- =============== FAQ start ============= -->
         <section id="faq" class="ud-faq pt-150">
             <!-- <div class="shape">
                 <img src="assets/img/shape.svg" alt="shape" />
@@ -720,12 +624,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <a class="main-btn" style="margin-left: auto;" href="faqs.html">Selengkapnya</a>
+                            <a class="main-btn" style="margin-left: auto;" href="../faqs.html">Selengkapnya</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- =============== FAQ end =============== -->
 
 
         <!-- ========================= portfolio-section start ========================= -->
@@ -761,13 +666,13 @@
                     <div class="col-lg-4 col-md-6 grid-item branding marketing">
                         <div class="portfolio-item-wrapper">
                             <div class="portfolio-img">
-                                <img src="assets/img/portfolio/portfolio-1.jpg" alt="">
+                                <img src="../assets/img/portfolio/portfolio-1.jpg" alt="">
                             </div>
                             <div class="portfolio-overlay">
                                 <div class="overlay-content">
                                     <h4>Product Design</h4>
                                     <p>We Crafted an awesome design library that is robust and intuitive to business presentation.</p>
-                                    <a href="assets/img/portfolio/portfolio-1.jpg" class="theme-btn border-btn glightbox">Full View</a>
+                                    <a href="../assets/img/portfolio/portfolio-1.jpg" class="theme-btn border-btn glightbox">Full View</a>
                                 </div>
                             </div>
                         </div>
@@ -775,13 +680,13 @@
                     <div class="col-lg-4 col-md-6 grid-item marketing web">
                         <div class="portfolio-item-wrapper">
                             <div class="portfolio-img">
-                                <img src="assets/img/portfolio/portfolio-2.jpg" alt="">
+                                <img src="../assets/img/portfolio/portfolio-2.jpg" alt="">
                             </div>
                             <div class="portfolio-overlay">
                                 <div class="overlay-content">
                                     <h4>Product Design</h4>
                                     <p>We Crafted an awesome design library that is robust and intuitive to business presentation.</p>
-                                    <a href="assets/img/portfolio/portfolio-2.jpg" class="theme-btn border-btn glightbox">Full View</a>
+                                    <a href="../assets/img/portfolio/portfolio-2.jpg" class="theme-btn border-btn glightbox">Full View</a>
                                 </div>
                             </div>
                         </div>
@@ -789,13 +694,13 @@
                     <div class="col-lg-4 col-md-6 grid-item web graphic">
                         <div class="portfolio-item-wrapper">
                             <div class="portfolio-img">
-                                <img src="assets/img/portfolio/portfolio-3.jpg" alt="">
+                                <img src="../assets/img/portfolio/portfolio-3.jpg" alt="">
                             </div>
                             <div class="portfolio-overlay">
                                 <div class="overlay-content">
                                     <h4>Product Design</h4>
                                     <p>We Crafted an awesome design library that is robust and intuitive to business presentation.</p>
-                                    <a href="assets/img/portfolio/portfolio-3.jpg" class="theme-btn border-btn glightbox">Full View</a>
+                                    <a href="../assets/img/portfolio/portfolio-3.jpg" class="theme-btn border-btn glightbox">Full View</a>
                                 </div>
                             </div>
                         </div>
@@ -803,13 +708,13 @@
                     <div class="col-lg-4 col-md-6 grid-item branding web">
                         <div class="portfolio-item-wrapper">
                             <div class="portfolio-img">
-                                <img src="assets/img/portfolio/portfolio-4.jpg" alt="">
+                                <img src="../assets/img/portfolio/portfolio-4.jpg" alt="">
                             </div>
                             <div class="portfolio-overlay">
                                 <div class="overlay-content">
                                     <h4>Product Design</h4>
                                     <p>We Crafted an awesome design library that is robust and intuitive to business presentation.</p>
-                                    <a href="assets/img/portfolio/portfolio-4.jpg" class="theme-btn border-btn glightbox">Full View</a>
+                                    <a href="../assets/img/portfolio/portfolio-4.jpg" class="theme-btn border-btn glightbox">Full View</a>
                                 </div>
                             </div>
                         </div>
@@ -817,13 +722,13 @@
                     <div class="col-lg-4 col-md-6 grid-item web marketing">
                         <div class="portfolio-item-wrapper">
                             <div class="portfolio-img">
-                                <img src="assets/img/portfolio/portfolio-6.jpg" alt="">
+                                <img src="../assets/img/portfolio/portfolio-6.jpg" alt="">
                             </div>
                             <div class="portfolio-overlay">
                                 <div class="overlay-content">
                                     <h4>Product Design</h4>
                                     <p>We Crafted an awesome design library that is robust and intuitive to business presentation.</p>
-                                    <a href="assets/img/portfolio/portfolio-6.jpg" class="theme-btn border-btn glightbox">Full View</a>
+                                    <a href="../assets/img/portfolio/portfolio-6.jpg" class="theme-btn border-btn glightbox">Full View</a>
                                 </div>
                             </div>
                         </div>
@@ -831,13 +736,13 @@
                     <div class="col-lg-4 col-md-6 grid-item marketing graphic">
                         <div class="portfolio-item-wrapper">
                             <div class="portfolio-img">
-                                <img src="assets/img/portfolio/portfolio-5.jpg" alt="">
+                                <img src="../assets/img/portfolio/portfolio-5.jpg" alt="">
                             </div>
                             <div class="portfolio-overlay">
                                 <div class="overlay-content">
                                     <h4>Product Design</h4>
                                     <p>We Crafted an awesome design library that is robust and intuitive to business presentation.</p>
-                                    <a href="assets/img/portfolio/portfolio-5.jpg" class="theme-btn border-btn glightbox">Full View</a>
+                                    <a href="../assets/img/portfolio/portfolio-5.jpg" class="theme-btn border-btn glightbox">Full View</a>
                                 </div>
                             </div>
                         </div>
