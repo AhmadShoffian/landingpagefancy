@@ -1228,6 +1228,13 @@ p {
     max-height: 350px;
     overflow-y: scroll; } }
 
+    @media (min-width: 992px) {
+      .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+        margin-right: auto;
+      }
+    }
+
 .navbar-nav .nav-item {
   position: relative;
   z-index: 1; }
@@ -1923,6 +1930,14 @@ body {
 .form-container {
   background: white;
   padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container-inputform {
+  background: white;
+  padding: 20px;
+  width: 100%;
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
@@ -3039,8 +3054,8 @@ ALUR-TIKETING CSS
     }
     
     .carousel-section-wrapper .carousel-section.clip-bg {
-      -webkit-clip-path: polygon(0 11%, 100% 0, 100% 100%, 0 89%);
-              clip-path: polygon(0 11%, 100% 0, 100% 100%, 0 89%);
+      -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 89%);
+              clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 89%);
     }
     
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -3060,7 +3075,7 @@ ALUR-TIKETING CSS
     @media (max-width: 767px) {
       .carousel-section-wrapper .carousel-section.clip-bg {
         -webkit-clip-path: polygon(0% 8%, 100% 2%, 100% 98%, 0 92%);
-                clip-path: polygon(0% 8%, 100% 2%, 100% 98%, 0 92%);
+                clip-path: polygon(0% 0%, 100% 0%, 100% 98%, 0 100%);
       }
     }
     
@@ -3841,16 +3856,12 @@ ALUR-TIKETING CSS
 ========================================*/
 .hero-area {
   position: relative;
-  padding: 150px 0 120px 0;
+  padding: 10px 0 120px 0;
   background: #fff;
 }
 
 .hero-area.style1 .hero-image img {
   border-radius: 10px;
-}
-
-.hero-area.style2 {
-  background-color: #061E5C;
 }
 
 .hero-area.style2 .hero-content h1 {
@@ -4321,7 +4332,7 @@ ALUR-TIKETING CSS
 
 @media (max-width: 767px) {
   .hero-area {
-    padding: 120px 0 50px 0;
+    padding: 10px 0 50px 0;
   }
 }
 
