@@ -91,7 +91,7 @@
                             <div class="button">
                                 <a href="javacript:" data-toggle="modal" data-target="#login" class="login"><i
                                         class="lni lni-lock-alt"></i> Login</a>
-                                <a href="javacript:" data-toggle="modal" data-target="#kircep" class="btn">Kirim cepat</a>
+                                <a href="input_form.html" class="btn">Kirim cepat</a>
                             </div>
                         </nav> <!-- navbar -->
                     </div>
@@ -232,129 +232,71 @@
 
 
         <!-- =============== ALUR-TIKETING START =============== -->
-        <section id="alur-tiketing" class="alur section pt-100">
+        <section id="alur-tiketing" class="ticket-section">
             <div class="container">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-7 col-md-9 mx-auto">
-                        <div class="section-title text-center mb-55">
-                            <h2 class="wow fadeInUp" data-wow-delay=".4s">Alur Tiketing</h2>
+                <h2 class="section-title">Alur Ticketing</h2>
+        
+                <div class="row justify-content-center">
+                    <!-- Login Section -->
+                    <div class="col-md-5 login">
+                        <h3 class="text-primary text-center fw-bold mb-5">Login</h3>
+        
+                        <div class="ticket-card mb-4">
+                            <i class="fa fa-ticket icon"></i>
+                            <p class="ticket-step">1. Open Ticket</p>
+                            <p class="ticket-desc">Mengajukan atau mengubah permohonan.</p>
+                        </div>
+        
+                        <div class="ticket-card mb-4">
+                            <i class="fa fa-spinner icon"></i>
+                            <p class="ticket-step">2. Proses Ticket</p>
+                            <p class="ticket-desc">Permohonan ditelaah dan dikerjakan.</p>
+                        </div>
+        
+                        <div class="ticket-card mb-4">
+                            <i class="fa fa-comments icon"></i>
+                            <p class="ticket-step">3. Diskusi</p>
+                            <p class="ticket-desc">Melakukan diskusi apabila ada pertanyaan.</p>
+                        </div>
+        
+                        <div class="ticket-card mb-4">
+                            <i class="fa fa-window-close icon"></i>
+                            <p class="ticket-step">4. Close Ticket</p>
+                            <p class="ticket-desc">Mengakhiri tiket permohonan.</p>
+                        </div>
+        
+                        <div class="ticket-card mb-4">
+                            <i class="fa fa-clock icon"></i>
+                            <p class="ticket-step">5. Riwayat</p>
+                            <p class="ticket-desc">Melihat riwayat permohonan.</p>
+                        </div>
+                        <div class="ticket-card mb-4">
+                            <i class="fa fa-check-circle icon"></i>
+                            <p class="ticket-step">6. Selesai</p>
+                            <p class="ticket-desc">Permohonan telah ditangani dan selesai.</p>
                         </div>
                     </div>
-                </div>
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-lg-6 col-md-10 col-12 d-flex align-self-start">
-                        <div class="content-left wow fadeInLeft" data-wow-delay=".3s">
-                            <!-- content-1 start -->
-                            <div class="content-right wow fadeInRight" data-wow-delay=".5s">
-                                <!-- Heading -->
-                                <h2 style="color: #3763EB;">Login<br></h2>
-                                <!-- End Heading -->
-                                <!-- Single List -->
-                                <div class="single-list">
-                                    <i class="lni lni-ticket-alt"></i>
-                                    <!-- List body start -->
-                                    <div class="list-bod">
-                                        <h5>1.Open Tiket</h5>
-                                        <p>Mengajukan atau mengubah permohonan.</p>
-                                    </div>
-                                    <!-- List body start -->
-                                </div>
-                                <!-- End Single List -->
-                                <!-- Single List -->
-                                <div class="single-list">
-                                    <i class="lni lni-spinner"></i>
-                                    <!-- List body start -->
-                                    <div class="list-bod">
-                                        <h5>2.Proses Tiket</h5>
-                                        <p>Permohonan ditelaah dan dikerjakan.</p>
-                                    </div>
-                                    <!-- List body start -->
-                                </div>
-                                <!-- End Single List -->
-                                <!-- Single List -->
-                                <div class="single-list">
-                                    <i class="lni lni-comments"></i>
-                                    <!-- List body start -->
-                                    <div class="list-bod">
-                                        <h5>3.Diskusi</h5>
-                                        <p>Melakukan diskusi apabila ada pertanyaan.</p>
-                                    </div>
-                                    <!-- List body start -->
-                                </div>
-                                <!-- End Single List -->
-                                <!-- Single List -->
-                                <div class="single-list">
-                                    <i class="lni lni-close"></i>
-                                    <!-- List body start -->
-                                    <div class="list-bod">
-                                        <h5>4.Close Tiket</h5>
-                                        <p>Mengakhiri tiket permohonan.</p>
-                                    </div>
-                                    <!-- List body start -->
-                                </div>
-                                <!-- End Single List -->
-                                <!-- Single List -->
-                                <div class="single-list">
-                                    <i class="lni lni-timer"></i>
-                                    <!-- List body start -->
-                                    <div class="list-bod">
-                                        <h5>5.Riwayat</h5>
-                                        <p>Melihat riwayat permohonan.</p>
-                                    </div>
-                                    <!-- List body start -->
-                                </div>
-                                <!-- End Single List -->
-                                <!-- Single List -->
-                                <div class="single-list">
-                                    <i class="lni lni-checkmark-circle"></i>
-                                    <!-- List body start -->
-                                    <div class="list-bod">
-                                        <h5>6.Selesai</h5>
-                                    </div>
-                                    <!-- List body start -->
-                                </div>
-                                <!-- End Single List -->
-                            </div>
+        
+                    <!-- Kirim Cepat Section -->
+                    <div class="col-md-5 kirim-cepat">
+                        <h3 class="text-center fw-bold mb-5">Kirim Cepat</h3>
+        
+                        <div class="ticket-card mb-4">
+                            <i class="fa fa-ticket icon"></i>
+                            <p class="ticket-step">1. Open Ticket</p>
+                            <p class="ticket-desc">Mengajukan atau mengubah permohonan.</p>
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-md-10 col-12 d-flex align-self-start">
-                        <!-- content-1 start -->
-                        <div class="content-right wow fadeInRight" data-wow-delay=".5s">
-                            <!-- Heading -->
-                            <h2 style="color: #8A2BE2;">Kirim Cepat<br></h2>
-                            <!-- End Heading -->
-                            <!-- Single List -->
-                            <div class="single-list">
-                                <i class="lni lni-ticket-alt"></i>
-                                <!-- List body start -->
-                                <div class="list-bod">
-                                    <h5>1.Open Tiket</h5>
-                                    <p>Mengajukan atau mengubah permohonan</p>
-                                </div>
-                                <!-- List body start -->
-                            </div>
-                            <!-- End Single List -->
-                            <!-- Single List -->
-                            <div class="single-list">
-                                <i class="lni lni-timer"></i>
-                                <!-- List body start -->
-                                <div class="list-bod">
-                                    <h5>2.Riwayat</h5>
-                                    <p>Melihat riwayat permohonan.</p>
-                                </div>
-                                <!-- List body start -->
-                            </div>
-                            <!-- End Single List -->
-                            <!-- Single List -->
-                            <div class="single-list">
-                                <i class="lni lni-checkmark-circle"></i>
-                                <!-- List body start -->
-                                <div class="list-bod">
-                                    <h5>3.Selesai</h5>
-                                </div>
-                                <!-- List body start -->
-                            </div>
-                            <!-- End Single List -->
+        
+                        <div class="ticket-card mb-4">
+                            <i class="fa fa-history icon"></i>
+                            <p class="ticket-step">2. Riwayat</p>
+                            <p class="ticket-desc">Melihat riwayat permohonan.</p>
+                        </div>
+        
+                        <div class="ticket-card mb-4">
+                            <i class="fa fa-check-circle icon"></i>
+                            <p class="ticket-step">3. Selesai</p>
+                            <p class="ticket-desc">Permohonan telah ditangani dan selesai.</p>
                         </div>
                     </div>
                 </div>
@@ -363,223 +305,6 @@
         <!-- =============== ALUR-TIKETING END =============== -->
 
 
-
-
-        <!-- Alur ticketing -->
-
-        <!-- Start Services Area -->
-    <section class="services style3 section pt-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-title text-center">
-                        <span class="wow fadeInDown" data-wow-delay=".2s">Alur</span>
-                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Alur Ticketing</h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of Lorem
-                            Ipsum available, but the majority have suffered alteration in some form.</p>
-                        <h3 class="overlay-text">Log In</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="single-head">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="single-service wow fadeInUp" data-wow-delay=".2s">
-                            <span class="serial">01</span>
-                            <h3><a href="service-single.html">Digital Product Development</a></h3>
-                            <p>We dejoy working with discerning clients, people for whom qualuty, service, integrity &
-                                aesthetics.</p>
-                            <div class="button">
-                                <a href="service-single.html" class="btn">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="single-service wow fadeInUp" data-wow-delay=".4s">
-                            <span class="serial">02</span>
-                            <h3><a href="service-single.html">General Consulting Process</a></h3>
-                            <p>We dejoy working with discerning clients, people for whom qualuty, service, integrity &
-                                aesthetics.</p>
-                            <div class="button">
-                                <a href="service-single.html" class="btn">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="single-service wow fadeInUp" data-wow-delay=".6s">
-                            <span class="serial">03</span>
-                            <h3><a href="service-single.html">Hire in Fixed Contracting</a></h3>
-                            <p>We dejoy working with discerning clients, people for whom qualuty, service, integrity &
-                                aesthetics.</p>
-                            <div class="button">
-                                <a href="service-single.html" class="btn">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="single-service wow fadeInUp" data-wow-delay=".2s">
-                            <span class="serial">04</span>
-                            <h3><a href="service-single.html">Marketing Solutions</a></h3>
-                            <p>We dejoy working with discerning clients, people for whom qualuty, service, integrity &
-                                aesthetics.</p>
-                            <div class="button">
-                                <a href="service-single.html" class="btn">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="single-service wow fadeInUp" data-wow-delay=".4s">
-                            <span class="serial">05</span>
-                            <h3><a href="service-single.html">Business Analytics</a></h3>
-                            <p>We dejoy working with discerning clients, people for whom qualuty, service, integrity &
-                                aesthetics.</p>
-                            <div class="button">
-                                <a href="service-single.html" class="btn">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="single-service wow fadeInUp" data-wow-delay=".6s">
-                            <span class="serial">06</span>
-                            <h3><a href="service-single.html">UX & UI Design</a></h3>
-                            <p>We dejoy working with discerning clients, people for whom qualuty, service, integrity &
-                                aesthetics.</p>
-                            <div class="button">
-                                <a href="service-single.html" class="btn">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="services style3 section pt-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-title text-center">
-                        <span class="wow fadeInDown" data-wow-delay=".2s">Alur</span>
-                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Alur Ticketing</h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of Lorem
-                            Ipsum available, but the majority have suffered alteration in some form.</p>
-                        <h3 class="overlay-text">Kirim Cepat</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="single-head">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="single-service wow fadeInUp" data-wow-delay=".2s">
-                            <span class="serial">01</span>
-                            <h3><a href="service-single.html">Digital Product Development</a></h3>
-                            <p>We dejoy working with discerning clients, people for whom qualuty, service, integrity &
-                                aesthetics.</p>
-                            <div class="button">
-                                <a href="service-single.html" class="btn">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="single-service wow fadeInUp" data-wow-delay=".4s">
-                            <span class="serial">02</span>
-                            <h3><a href="service-single.html">General Consulting Process</a></h3>
-                            <p>We dejoy working with discerning clients, people for whom qualuty, service, integrity &
-                                aesthetics.</p>
-                            <div class="button">
-                                <a href="service-single.html" class="btn">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="single-service wow fadeInUp" data-wow-delay=".6s">
-                            <span class="serial">03</span>
-                            <h3><a href="service-single.html">Hire in Fixed Contracting</a></h3>
-                            <p>We dejoy working with discerning clients, people for whom qualuty, service, integrity &
-                                aesthetics.</p>
-                            <div class="button">
-                                <a href="service-single.html" class="btn">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Services Area -->
-
-
-
-    <!-- Section: Alur Ticketing -->
-<section class="ticket-section">
-    <div class="container">
-        <h2 class="section-title">Alur Ticketing</h2>
-
-        <div class="row justify-content-center">
-            <!-- Login Section -->
-            <div class="col-md-5">
-                <h3 class="text-primary text-center fw-bold">Login</h3>
-
-                <div class="ticket-card mb-4">
-                    <i class="fa fa-ticket icon"></i>
-                    <p class="ticket-step">1. Open Ticket</p>
-                    <p class="ticket-desc">Mengajukan atau mengubah permohonan.</p>
-                </div>
-
-                <div class="ticket-card mb-4">
-                    <i class="fa fa-spinner icon"></i>
-                    <p class="ticket-step">2. Proses Ticket</p>
-                    <p class="ticket-desc">Permohonan ditelaah dan dikerjakan.</p>
-                </div>
-
-                <div class="ticket-card mb-4">
-                    <i class="fa fa-comments icon"></i>
-                    <p class="ticket-step">3. Diskusi</p>
-                    <p class="ticket-desc">Melakukan diskusi apabila ada pertanyaan.</p>
-                </div>
-
-                <div class="ticket-card mb-4">
-                    <i class="fa fa-check-circle icon"></i>
-                    <p class="ticket-step">4. Close Ticket</p>
-                    <p class="ticket-desc">Mengakhiri tiket permohonan.</p>
-                </div>
-
-                <div class="ticket-card mb-4">
-                    <i class="fa fa-clock icon"></i>
-                    <p class="ticket-step">5. Riwayat</p>
-                    <p class="ticket-desc">Melihat riwayat permohonan.</p>
-                </div>
-                <div class="ticket-card mb-4">
-                    <i class="fa fa-clock icon"></i>
-                    <p class="ticket-step">6. Selesai</p>
-                    <p class="ticket-desc">Permohonan telah ditangani dan selesai.</p>
-                </div>
-            </div>
-
-            <!-- Kirim Cepat Section -->
-            <div class="col-md-5">
-                <h3 class="text-success text-center fw-bold">Kirim Cepat</h3>
-
-                <div class="ticket-card mb-4">
-                    <i class="fa fa-ticket icon"></i>
-                    <p class="ticket-step">1. Open Ticket</p>
-                    <p class="ticket-desc">Mengajukan atau mengubah permohonan.</p>
-                </div>
-
-                <div class="ticket-card mb-4">
-                    <i class="fa fa-history icon"></i>
-                    <p class="ticket-step">2. Riwayat</p>
-                    <p class="ticket-desc">Melihat riwayat permohonan.</p>
-                </div>
-
-                <div class="ticket-card mb-4">
-                    <i class="fa fa-check-circle icon"></i>
-                    <p class="ticket-step">3. Selesai</p>
-                    <p class="ticket-desc">Permohonan telah ditangani dan selesai.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 
         <!-- ========================= service-section start ========================= -->
