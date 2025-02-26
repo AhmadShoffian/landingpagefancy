@@ -2248,7 +2248,7 @@ h4, h5 {
 /* Form */
 .modal .modal-body .form-label {
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 5px;
 }
 
@@ -2256,9 +2256,9 @@ h4, h5 {
   width: 100%;
   max-width: 100%;
   border-radius: 6px;
-  border: 1px solid black;
+  border: 1px solid #ccc;
   padding: 5px;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   font-size: 14px;
   
 }
@@ -2778,135 +2778,55 @@ h4 {
   .time-line .single-timeline .timeline-img img {
     width: 100%; }
 
-/* =============== 
+/* =============== f
 ALUR-TIKETING CSS
 =============== */
+/* Alur  */
+.section-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  color: #001f3f;
+}
+.ticket-section {
+  padding: 60px 0;
+}
+.kirim-cepat h3{
+  color: #8401FF;
+}
+.ticket-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+.ticket-card:hover {
+  transform: translateY(-5px);
+}
+.login .icon {
+  font-size: 40px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+.kirim-cepat .icon {
+  font-size: 40px;
+  color: #8401FF;
+  margin-bottom: 10px;
+}
+.ticket-step {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: black;
+}
+.ticket-desc {
+  color: #6c757d;
+}
+/* end alur */
 
-    .about-us .content-left{
-      padding: 0 30px; /* Sesuaikan padding agar rata */
-      flex: 1; /* Membuat kedua kolom memiliki lebar yang sama */
-    }
-    
-    .about-us .content-right{
-      padding: 30px; /* Sesuaikan padding agar rata */
-      flex: 1;
-    }
-    
-    .about-us .row.align-items-center {
-      display: flex;
-      align-items: flex-start; /* Menyamakan posisi di atas */
-    }
-    
-    .about-us .content-left .single-img {
-      width: 100%;
-      border-radius: 5px;
-    }
-    
-    .about-us .content-left .single-img.minus-margin {
-      position: relative;
-      top: -20px;
-    }
-    
-    .about-us .content-left::before {
-      position: absolute;
-      content: "";
-      right: 4px;
-      bottom: -36px;
-      height: 200px;
-      width: 200px;
-      background-image: url(../images/hero/pattern.png);
-      background-repeat: no-repeat;
-      z-index: -1;
-    }
-    
-    .about-us .content-left .media-body {
-      padding: 40px 30px;
-      padding-bottom: 40px;
-      border-radius: 5px;
-      background-color: #2042e3;
-      -webkit-box-shadow: 0 1rem 3rem rgba(35, 38, 45, 0.15) !important;
-      box-shadow: 0 1rem 3rem rgba(35, 38, 45, 0.15) !important;
-      display: inline-block;
-      width: 100%;
-      margin-top: 30px;
-      padding-bottom: 48px;
-    }
-    
-    .about-us .content-left .media-body i {
-      height: 40px;
-      width: 40px;
-      line-height: 40px;
-      text-align: center;
-      display: block;
-      color: #fff;
-      background-color: #ffffff45;
-      border-radius: 5px;
-      display: block;
-      margin-bottom: 20px;
-    }
-    
-    .about-us .content-left .media-body h6 {
-      font-size: 22px;
-      font-weight: 600;
-      display: block;
-      margin-bottom: 5px;
-      color: #fff;
-    }
-    
-    .about-us .content-left .media-body p {
-      color: #fff;
-    }
-    
-    .about-us .content-right {
-      padding-right: 70px;
-      padding-left: 30px;
-    }
-    
-    .about-us .content-right h2 {
-      font-size: 32px;
-      margin-bottom: 50px;
-      line-height: 45px;
-      text-transform: capitalize;
-      position: relative;
-      font-weight: 700;
-    }
-    
-    .about-us .content-right .single-list {
-      position: relative;
-      padding-left: 80px;
-      margin-bottom: 50px;
-    }
-    
-    .about-us .content-right .single-list:last-child {
-      margin-bottom: 0;
-    }
-    
-    .about-us .content-right .single-list i {
-      font-size: 20px;
-      height: 55px;
-      width: 55px;
-      line-height: 55px;
-      text-align: center;
-      display: inline-block;
-      background: #2042e31c;
-      color: #2042e3;
-      border-radius: 4px;
-      position: absolute;
-      left: 0;
-      top: 3px;
-    }
-    
-    .about-us .content-right .single-list .list-bod h5 {
-      display: block;
-      margin-bottom: 10px;
-      font-size: 20px;
-      color: #081828;
-    }
-    
-    .about-us .content-right .single-list .list-bod p {
-      font-size: 14px;
-      line-height: 24px;
-    }
 
 
 
@@ -3743,42 +3663,6 @@ ALUR-TIKETING CSS
 /* END FAQ */
 
 
-/* Alur  */
-.section-title {
-  text-align: center;
-  font-weight: bold;
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: #001f3f;
-}
-.ticket-section {
-  padding: 60px 0;
-}
-.ticket-card {
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-  text-align: center;
-}
-.ticket-card:hover {
-  transform: translateY(-5px);
-}
-.icon {
-  font-size: 40px;
-  color: #007bff;
-  margin-bottom: 10px;
-}
-.ticket-step {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-top: 10px;
-}
-.ticket-desc {
-  color: #6c757d;
-}
-/* end alur */
 
 
 
