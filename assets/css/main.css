@@ -1165,7 +1165,7 @@ p {
 .navbar-brand {
   padding: 0; }
   .navbar-brand img {
-    max-width: 150px; }
+    max-width: 275px; }
 
 .navbar-toggler {
   padding: 0px; }
@@ -1803,7 +1803,7 @@ h4, h5 {
 .dropdown .dropdown-item:focus,
 .dropdown .dropdown-item:hover,
 .dropdown .dropdown-item.active {
-  background: #00cc67;
+  background: #007bff;
   color: #fff !important;
 }
 
@@ -1817,7 +1817,7 @@ h4, h5 {
   padding: 3px 15px 3px;
   margin-left: 10px;
   position: relative;
-  background: #00cc67;
+  background: #007bff;
   text-align: center;
   border-radius: 4px;
   display: inline-block;
@@ -1826,14 +1826,12 @@ h4, h5 {
 
 .tg-btn:hover {
   color: #fff !important;
-  background: #02ab55;
+  background: #8401FF;
 }
 
 .tg-btn i {
   margin-right: 3px;
 }
-
-
 
 .sign-in {
   display: inline-table;
@@ -1845,19 +1843,19 @@ h4, h5 {
 }
 
 .sign-in li .nav-link {
-  color: #ffffff;
+  color: #007bff;
   font-weight: 400;
   font-size: 14px;
   display: inline-block;
   padding: 3px 10px 3px;
-  background: #02ab55;
+  background: #fff;
   border-radius: 4px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
 .sign-in li .nav-link:hover {
-  color: #ffffff !important;
+  color: #8401FF !important;
 }
 
 .sign-in li .nav-link i {
@@ -1874,11 +1872,11 @@ h4, h5 {
 }
 
 .slicknav_btn {
-  border-color: #00cc67;
+  border-color: #007bff;
 }
 
 .slicknav_menu .slicknav_icon-bar {
-  background: #00cc67;
+  background: #007bff;
 }
 
 
@@ -6254,7 +6252,7 @@ ALUR-TIKETING CSS
 .footer {
   position: relative;
   z-index: 2;
-  background: #EFF2F9; }
+  background: #FFFFFF; }
   .footer .footer-widget .footer-desc {
     line-height: 30px; }
   .footer .footer-widget h4 {
