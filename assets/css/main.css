@@ -1898,6 +1898,324 @@ h4, h5 {
 
 
 
+/*======================================
+    Hero Area CSS
+========================================*/
+.hero-area {
+  position: relative;
+  background: #F4F7FA;
+  overflow: hidden;
+}
+
+.hero-area .hero-inner {
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 3;
+  padding-bottom: 120px;
+}
+
+.hero-area.style2 .tns-controls {
+  width: 100%;
+}
+
+.hero-area.style2 .tns-controls button:first-child {
+  left: 30px;
+}
+
+.hero-area.style2 .tns-controls button:last-child {
+  right: 30px;
+}
+
+.hero-area.style2 .tns-controls button {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 2;
+  color: #081828;
+  font-size: 17px;
+  background: #fff;
+  border: none;
+  padding: 2px 5px;
+  border-radius: 4px;
+  -webkit-transition: all .3s ease-out 0s;
+  transition: all .3s ease-out 0s;
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  margin-top: -25px;
+}
+
+.hero-area.style2 .tns-controls button:hover {
+  color: #473BF0;
+}
+
+.hero-area.style2 .hero-inner {
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 3;
+  padding-bottom: 120px;
+}
+
+.hero-area.style2 .hero-inner.style2 {
+  background-color: #473BF0 !important;
+}
+
+.hero-area.style2 .hero-inner.overlay::before {
+  background-color: #473BF0;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+.hero-area.style2 .hero-inner .hero-text {
+  margin-top: 220px;
+  padding-right: 100px;
+}
+
+.hero-area.style2 .hero-inner .hero-text h5 {
+  color: #fff;
+}
+
+.hero-area.style2 .hero-inner .hero-text h1 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.hero-area.style2 .hero-inner .hero-text p {
+  color: #fff;
+}
+
+.hero-area.style2 .hero-inner .hero-text .button .btn {
+  background-color: #fff;
+  color: #081828;
+}
+
+.hero-area.style2 .hero-inner .hero-text .button .btn:hover {
+  color: #473BF0;
+}
+
+.hero-area.style3 {
+  position: relative;
+}
+
+.hero-area.style3 .hero-inner::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0)), to(#473BF0));
+  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, #473BF0 100%);
+  z-index: -1;
+  opacity: 1;
+}
+
+.hero-area.style3 .hero-inner .hero-text {
+  margin-top: 220px;
+  margin-left: 10%;
+}
+
+.hero-area.style3 .hero-inner .hero-text h5 {
+  background-color: #fff;
+  padding: 6px 15px;
+  display: inline-block;
+  border-radius: 4px;
+  font-weight: 400;
+  color: #081828;
+}
+
+.hero-area.style3 .hero-inner .hero-text h1 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.hero-area.style3 .hero-inner .hero-text p {
+  color: #fff;
+}
+
+.hero-area.style3 .hero-inner .hero-text .button .btn {
+  background-color: #fff;
+  color: #081828;
+}
+
+.hero-area.style3 .hero-inner .hero-text .button .btn:hover {
+  background-color: #fff;
+  color: #473BF0;
+}
+
+.hero-area .hero-text {
+  float: none;
+  margin-top: 275px;
+}
+
+.hero-area .hero-text h5 {
+  color: #473BF0;
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.hero-area .hero-text h1 {
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #081828;
+  font-size: 50px;
+  line-height: 62px;
+  letter-spacing: -1px;
+  color: #081828;
+}
+
+.hero-area .hero-text p {
+  font-size: 14px;
+  color: #081828;
+}
+
+.hero-area .hero-text .button {
+  margin-top: 35px;
+}
+
+.hero-area .hero-text .button .btn {
+  margin-right: 10px;
+}
+
+.hero-area .hero-text .button .btn:hover {
+  color: #fff;
+}
+
+.hero-area .hero-text .button .btn:last-child {
+  margin-right: 0px;
+}
+
+.hero-area .hero-image {
+  float: right;
+  margin-top: 200px;
+  height: 500px;
+  width: 500px;
+  display: block;
+  border-radius: 50%;
+  background-image: url("../images/hero/04.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 5;
+}
+
+.hero-area .hero-image::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background-image: url("../images/hero/shape2.png");
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 100px;
+  z-index: -1;
+  background-size: contain;
+  background-position: center;
+}
+
+.hero-area .hero-image .shape3 {
+  position: absolute;
+  bottom: 35px;
+  right: 60px;
+  z-index: -1;
+}
+
+.hero-area .verticle-lines .vlines {
+  width: 3px;
+  height: 100%;
+  background: #473BF036;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-animation-name: lineanim;
+  animation-name: lineanim;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  opacity: 0.2;
+}
+
+.hero-area .verticle-lines .vlines.one {
+  left: 20%;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.hero-area .verticle-lines .vlines.two {
+  left: 40%;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.hero-area .verticle-lines .vlines.three {
+  left: 60%;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.hero-area .verticle-lines .vlines.four {
+  left: 80%;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
+@-webkit-keyframes lineanim {
+  50% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+  }
+  50.1% {
+    -webkit-transform-origin: bottom left;
+    transform-origin: bottom left;
+  }
+  100% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: bottom left;
+    transform-origin: bottom left;
+  }
+}
+
+@keyframes lineanim {
+  50% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+  }
+  50.1% {
+    -webkit-transform-origin: bottom left;
+    transform-origin: bottom left;
+  }
+  100% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: bottom left;
+    transform-origin: bottom left;
+  }
+}
+
+
+
+
 /*=======================================
     Halaman Input Form
   ======================================*/
@@ -3903,7 +4221,7 @@ ALUR-TIKETING CSS
 .hero-area.style3 {
   background-color: #5034FC;
   padding-bottom: 0;
-  padding-top: 230px;
+  padding-top: 0px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
