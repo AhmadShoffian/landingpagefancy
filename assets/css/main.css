@@ -23,7 +23,7 @@ html {
   scroll-behavior: smooth; }
 
 body {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 400;
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -126,7 +126,7 @@ ul, ol {
   list-style-type: none; }
 
 p {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 26px;
   color: #6A7C92;
@@ -3755,7 +3755,7 @@ ALUR-TIKETING CSS
 }
 
 .faq-item .faq-header .faq-btn span {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 70;
   color: #313450;
   display: block;
@@ -6246,6 +6246,31 @@ ALUR-TIKETING CSS
   visibility: visible;
 }
 
+.button .signup-modal {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding: 13px 30px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.button .login-modal {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding: 13px 30px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  justify-content: center;
+}
 /*===========================
     13. Footer CSS 
 ===========================*/
