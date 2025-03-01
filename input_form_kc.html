@@ -47,12 +47,9 @@
                                 <li class="nav-item">
                                     <a class="page-scroll" href="#alur-tiketing">Alur Tiketing</a>
                                 </li>
-                                <!-- <li class="nav-item">
-                                    <a class="page-scroll" href="#portfolio">Portfolio</a>
-                                </li>
                                 <li class="nav-item">
-                                    <a class="page-scroll" href="#team">Team</a>
-                                </li> -->
+                                    <a class="page-scroll" href="#portfolio">FAQS</a>
+                                </li>
                                 <li class="nav-item">
                                     <a class="page-scroll" href="#contact">Contact</a>
                                 </li>
@@ -64,7 +61,7 @@
                         <div class="button">
                             <a href="javacript:" data-toggle="modal" data-target="#login" class="login"><i
                                     class="lni lni-lock-alt"></i> Login</a>
-                            <a href="input_form_kc.html" class="btn">Kirim cepat</a>
+                            <!-- <a href="input_form.html" class="btn">Kirim cepat</a> -->
                         </div>
                     </nav> <!-- navbar -->
                 </div>
@@ -151,19 +148,18 @@
                             <input type="file" id="fileInput" accept=".png,.jpg,.jpeg,.pdf" onchange="previewFile()">
                         </div>
                     </div>
-        
-                    <div class="button-container">
-                        <button type="submit" class="btn-submit">Kirim</button>
-                    </div>
                 </form>
+                <div class="button-container">
+                    <button type="submit" class="btn-submit" id="swal-6">Kirim</button>
+                </div>
             </div>
         </div>
-        
+           
         
                 <!--===========================form isian end =========================-->
 
-                <!-- ========================= footer start ========================= -->
-                <footer class="footer pt-100">
+                 <!-- ========================= footer start ========================= -->
+                 <footer class="footer pt-100">
                     <div class="container">
                         <div class="row">
                             <div class="col-xl-3 col-lg-4 col-md-6">
@@ -254,133 +250,7 @@
                     </div>
                 </footer>
                 <!-- ========================= footer end ========================= -->
-
-                <!-- Login Modal -->
-                <div class="modal fade form-modal" id="login" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog max-width-px-840 position-relative">
-                        <button type="button"
-                            class="circle-32 btn-reset bg-white pos-abs-tr mt-md-n6 mr-lg-n6 focus-reset z-index-supper"
-                            data-dismiss="modal"><i class="lni lni-close"></i></button>
-                        <div class="login-modal-main">
-                            <div class="row no-gutters">
-                                <div class="col-12">
-                                    <div class="row">
-                                        <div class="heading">
-                                            <h3>Login From Here</h3>
-                                            <p>Log in to continue your account <br> and explore new jobs.</p>
-                                        </div>
-                                        <div class="social-login">
-                                            <ul>
-                                                <li><a class="linkedin" href="#"><i class="lni lni-linkedin-original"></i> Log in
-                                                        with LinkedIn</a></li>
-                                                <li><a class="google" href="#"><i class="lni lni-google"></i> Log in with
-                                                        Google</a></li>
-                                                <li><a class="facebook" href="#"><i class="lni lni-facebook-original"></i> Log in
-                                                        with Facebook</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="or-devider">
-                                            <span>Or</span>
-                                        </div>
-                                        <form action="/">
-                                            <div class="form-group">
-                                                <label for="email" class="label">E-mail</label>
-                                                <input type="email" class="form-control" placeholder="example@gmail.com" id="email">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="password" class="label">Password</label>
-                                                <div class="position-relative">
-                                                    <input type="password" class="form-control" id="password"
-                                                        placeholder="Enter password">
-                                                </div>
-                                            </div>
-                                            <div class="form-group d-flex flex-wrap justify-content-between">
-                                                <!-- Default checkbox -->
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="flexCheckDefault" />
-                                                    <label class="form-check-label" for="flexCheckDefault">Remember password</label>
-                                                </div>
-                                                <a href="" class="font-size-3 text-dodger line-height-reset">Forget Password</a>
-                                            </div>
-                                            <div class="form-group mb-8 button">
-                                                <button class="login-modal" onclick="window.location.href='landingpagefancy/dashboard/home.html'">Log In</button>
-                                            </div>
-                                            <p class="text-center create-new-account">Don't have an account? <a href="#" data-toggle="modal" data-target="#signup" data-dismiss="modal">Create a free account</a></p>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Login Modal -->
-
-
-                <!-- Signup Modal -->
-                <div class="modal fade form-modal" id="signup" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog max-width-px-840 position-relative">
-                        <button type="button"
-                            class="circle-32 btn-reset bg-white pos-abs-tr mt-md-n6 mr-lg-n6 focus-reset z-index-supper"
-                            data-dismiss="modal"><i class="lni lni-close"></i></button>
-                        <div class="login-modal-main">
-                            <div class="row no-gutters">
-                                <div class="col-12">
-                                    <div class="row">
-                                        <div class="heading">
-                                            <h3>Create a free Account <br> Today</h3>
-                                            <p>Create your account to continue <br> and explore new jobs.</p>
-                                        </div>
-                                        <div class="social-login">
-                                            <ul>
-                                                <li><a class="linkedin" href="#"><i class="lni lni-linkedin-original"></i> Import from LinkedIn</a></li>
-                                                <li><a class="google" href="#"><i class="lni lni-google"></i> Import from
-                                                        Google</a></li>
-                                                <li><a class="facebook" href="#"><i class="lni lni-facebook-original"></i> Import from Facebook</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="or-devider">
-                                            <span>Or</span>
-                                        </div>
-                                        <form action="/">
-                                            <div class="form-group">
-                                                <label for="email" class="label">E-mail</label>
-                                                <input type="email" class="form-control" placeholder="example@gmail.com">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="password" class="label">Password</label>
-                                                <div class="position-relative">
-                                                    <input type="password" class="form-control"
-                                                        placeholder="Enter password">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="password" class="label">Confirm Password</label>
-                                                <div class="position-relative">
-                                                    <input type="password" class="form-control"
-                                                        placeholder="Enter password">
-                                                </div>
-                                            </div>
-                                            <div class="form-group d-flex flex-wrap justify-content-between">
-                                                <!-- Default checkbox -->
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="">
-                                                    <label class="form-check-label" for="flexCheckDefault">Agree to the <a
-                                                            href="#">Terms & Conditions</a></label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group mb-8 button">
-                                                <button class="signup-modal" onclick="window.location.href='dashboard/home.html'">Sign Up</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Signup Modal -->
-
+        
         
                 <!-- ========================= scroll-top ========================= -->
                 <a href="#" class="scroll-top">
@@ -398,5 +268,162 @@
                 <script src="assets/js/imagesloaded.min.js"></script>
                 <script src="assets/js/main.js"></script>
                 <script src="input_form.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                <script>
+                    document.getElementById("swal-6").addEventListener("click", function () {
+                        Swal.fire({
+                            title: "Data Sudah Lengkap dan Benar?",
+                            text: "Pastikan data yang Anda inputkan sudah lengkap!",
+                            icon: "warning",
+                            showCancelButton: true,
+                            confirmButtonColor: "#3085d6",
+                            cancelButtonColor: "#d33",
+                            confirmButtonText: "Sudah",
+                            showDenyButton: false,
+                            showConfirmButton: true,
+                            showLoaderOnConfirm: true,
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                Swal.fire({
+                                    title: "Berhasil Dikirim",
+                                    text: "Data Berhasil Dikirim",
+                                    icon: "success",
+                                    timer: 2000,
+                                    showConfirmButton: false 
+                                });
+                                setTimeout(() => {
+                                    window.location.href = "detail_ticket_kc.html";
+                                }, 2000);
+                            }
+                        });
+                    });
+
+               </script>
+
+                <!-- Login Modal -->
+    <div class="modal fade form-modal" id="login" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog max-width-px-840 position-relative">
+            <button type="button"
+                class="circle-32 btn-reset bg-white pos-abs-tr mt-md-n6 mr-lg-n6 focus-reset z-index-supper"
+                data-dismiss="modal"><i class="lni lni-close"></i></button>
+            <div class="login-modal-main">
+                <div class="row no-gutters">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="heading">
+                                <h3>Login From Here</h3>
+                                <p>Log in to continue your account <br> and explore new jobs.</p>
+                            </div>
+                            <div class="social-login">
+                                <ul>
+                                    <li><a class="linkedin" href="#"><i class="lni lni-linkedin-original"></i> Log in
+                                            with LinkedIn</a></li>
+                                    <li><a class="google" href="#"><i class="lni lni-google"></i> Log in with
+                                            Google</a></li>
+                                    <li><a class="facebook" href="#"><i class="lni lni-facebook-original"></i> Log in
+                                            with Facebook</a></li>
+                                </ul>
+                            </div>
+                            <div class="or-devider">
+                                <span>Or</span>
+                            </div>
+                            <form action="/">
+                                <div class="form-group">
+                                    <label for="email" class="label">E-mail</label>
+                                    <input type="email" class="form-control" placeholder="example@gmail.com" id="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="label">Password</label>
+                                    <div class="position-relative">
+                                        <input type="password" class="form-control" id="password"
+                                            placeholder="Enter password">
+                                    </div>
+                                </div>
+                                <div class="form-group d-flex flex-wrap justify-content-between">
+                                    <!-- Default checkbox -->
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckDefault" />
+                                        <label class="form-check-label" for="flexCheckDefault">Remember password</label>
+                                    </div>
+                                    <a href="" class="font-size-3 text-dodger line-height-reset">Forget Password</a>
+                                </div>
+                                <div class="form-group mb-8 button">
+                                    <button class="btn "> <a href="dashboard/home.html">Log In</a></button>
+                                </div>
+                                <p class="text-center create-new-account">Don't have an account? <a href="#" data-toggle="modal" data-target="#signup" data-dismiss="modal">Create a free account</a></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Login Modal -->
+
+
+    <!-- Signup Modal -->
+    <div class="modal fade form-modal" id="signup" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog max-width-px-840 position-relative">
+            <button type="button"
+                class="circle-32 btn-reset bg-white pos-abs-tr mt-md-n6 mr-lg-n6 focus-reset z-index-supper"
+                data-dismiss="modal"><i class="lni lni-close"></i></button>
+            <div class="login-modal-main">
+                <div class="row no-gutters">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="heading">
+                                <h3>Create a free Account <br> Today</h3>
+                                <p>Create your account to continue <br> and explore new jobs.</p>
+                            </div>
+                            <div class="social-login">
+                                <ul>
+                                    <li><a class="linkedin" href="#"><i class="lni lni-linkedin-original"></i> Import from LinkedIn</a></li>
+                                    <li><a class="google" href="#"><i class="lni lni-google"></i> Import from
+                                            Google</a></li>
+                                    <li><a class="facebook" href="#"><i class="lni lni-facebook-original"></i> Import from Facebook</a></li>
+                                </ul>
+                            </div>
+                            <div class="or-devider">
+                                <span>Or</span>
+                            </div>
+                            <form action="/">
+                                <div class="form-group">
+                                    <label for="email" class="label">E-mail</label>
+                                    <input type="email" class="form-control" placeholder="example@gmail.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="label">Password</label>
+                                    <div class="position-relative">
+                                        <input type="password" class="form-control"
+                                            placeholder="Enter password">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="label">Confirm Password</label>
+                                    <div class="position-relative">
+                                        <input type="password" class="form-control"
+                                            placeholder="Enter password">
+                                    </div>
+                                </div>
+                                <div class="form-group d-flex flex-wrap justify-content-between">
+                                    <!-- Default checkbox -->
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        <label class="form-check-label" for="flexCheckDefault">Agree to the <a
+                                                href="#">Terms & Conditions</a></label>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-8 button">
+                                    <button class="signup-modal" onclick="window.location.href='dashboard/home.html'">Sign Up</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Signup Modal -->
     </body>
 </html>

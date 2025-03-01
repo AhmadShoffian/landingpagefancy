@@ -17,6 +17,7 @@
 		<link rel="stylesheet" href="assets/css/tiny-slider.css">
 		<link rel="stylesheet" href="assets/css/glightbox.min.css">
 		<link rel="stylesheet" href="assets/css/main.css">
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css"> -->
     </head>
     <body>
           <!-- ========================= header start ========================= -->
@@ -64,10 +65,10 @@
                              <!-- button profile -->
                              <ul class="sign-in">
                                 <li class="nav-item dropdown">
-                                  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni lni-user"></i> My Account</a>
+                                  <a class="nav-link dropdown-toggle" href="profile.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni lni-user"></i> My Account</a>
                                   <div class="dropdown-menu">
-                                      <a class="dropdown-item" href="dashboard/profile.html"><i class="lni lni-briefcase"></i>Profile</a>
-                                    <a class="dropdown-item" href="dashboard/akun.html"><i class="lni lni-rocket"></i> Account</a>
+                                      <a class="dropdown-item" href="profile.html"><i class="lni lni-briefcase"></i>Profile</a>
+                                    <a class="dropdown-item" href="akun.html"><i class="lni lni-rocket"></i> Account</a>
                                     <!-- <a class="dropdown-item" href="#"><i class="lni lni-close"></i>Logout</a> -->
                                     <a class="dropdown-item logout-btn" href="#"><i class="lni lni-close"></i>Logout</a>
                                   </div>
@@ -158,10 +159,18 @@
                         </div>
                     </div>
         
-                    <div class="button-container">
-                        <button type="submit" class="btn-submit">Kirim</button>
-                    </div>
                 </form>
+                <div class="button-container">
+                    <button type="submit" class="btn btn-primary" id="swal-2">Kirim</button>
+                </div>
+                <!-- <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card">
+                      <div class="card-body text-center">
+                        <div class="mb-2">Success Message</div>
+                        <button class="btn btn-primary" id="toastr-2">Launch</button>
+                      </div>
+                    </div>
+                </div> -->
             </div>
         </div>
            
@@ -276,8 +285,11 @@
                 <script src="assets/js/glightbox.min.js"></script>
                 <script src="assets/js/wow.min.js"></script>
                 <script src="assets/js/imagesloaded.min.js"></script>
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
                 <script src="assets/js/main.js"></script>
                 <script src="input_form.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                <!-- <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script> -->
                 <script>
                     document.addEventListener("DOMContentLoaded", function () {
                         const logoutBtn = document.querySelector(".logout-btn");
@@ -293,6 +305,54 @@
                         });
                     });
                 </script>
+                <!-- <script>
+                    $(document).ready(function() {
+                        $("#toastr-2").click(function() {
+                            console.log("Button clicked!"); // Debugging untuk memastikan event berjalan
+                            iziToast.success({
+                                title: 'Hello, world!',
+                                message: 'This awesome plugin is made by iziToast',
+                                position: 'topRight'
+                            });
+                        });
+                    });
+                </script> -->
+               
+
+                <script>
+                   document.getElementById("swal-2").addEventListener("click", function() {
+                        Swal.fire({
+                            title: 'Data Berhasil Dikirim!',
+                            text: 'Mohon tunggu konfirmasi dari kami.',
+                            icon: 'success',
+                            confirmButtonText: 'OK',
+                            confirmButtonColor: '#4CAF50',
+                            allowOutsideClick: false,
+                            allowEscapeKey: false,
+                            allowEnterKey: false,
+                            showCloseButton: true,
+                            showCancelButton: false,
+                            showDenyButton: false,
+                            showConfirmButton: true,
+                            showLoaderOnConfirm: true,
+                            preConfirm: () => {
+                                return new Promise((resolve) => {
+                                    setTimeout(() => {
+                                        resolve();
+                                    }, 2000);
+                                });
+                            }
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                // alert("Redirecting to detail_ticket.html");
+                                window.location.href = "data_ticket_login.html";
+                            }
+                            
+                        });
+
+                    });
+               </script>
+
                 
     </body>
 </html>

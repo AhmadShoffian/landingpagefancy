@@ -50,7 +50,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="home.html">
+                            <a class="navbar-brand" href="index.html">
                                 <img src="../assets/img/logo-isi-black.svg" alt="Logo">
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -70,13 +70,10 @@
                                         <a class="page-scroll" href="#about">About</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#services">Services</a>
+                                        <a class="page-scroll" href="#services">Alur Ticketing</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#portfolio">Portfolio</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#team">Team</a>
+                                        <a class="page-scroll" href="#portfolio">FAQS</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#contact">Contact</a>
@@ -94,7 +91,8 @@
                                   <div class="dropdown-menu">
                                       <a class="dropdown-item" href="profile.html"><i class="lni lni-layers"></i> Profile</a>
                                     <a class="dropdown-item" href="akun.html"><i class="lni lni-rocket"></i> Account</a>
-                                    <a class="dropdown-item logout-btn" href="index.html"><i class="lni lni-close"></i>Logout</a>
+                                    <a class="dropdown-item" id="logout"><i class="lni lni-close"></i>Account close</a>
+                                    
                                   </div>
                                 </li>
                               </ul>
@@ -138,7 +136,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="../index.html">
+                        <a href="#">
                           <i class="lni lni-lock-alt"></i>
                           <span>Logout</span>
                         </a>
@@ -560,21 +558,35 @@
         <script src="../assets/js/wow.min.js"></script>
         <script src="../assets/js/imagesloaded.min.js"></script>
 		<script src="../assets/js/main.js"></script>
-        <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+        <!-- <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
         <script>
             CKEDITOR.replace( 'ckeditor' );
-        </script>
-          <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const logoutBtn = document.querySelector(".logout-btn");
-                
-                logoutBtn.addEventListener("click", function (event) {
-                    event.preventDefault(); // Mencegah link langsung bekerja
-                    
-                    const confirmLogout = confirm("Are you sure you want to logout?");
-                    if (confirmLogout) {
-                        alert("You have successfully logged out!");
-                        window.location.href = "../index.html"; // Nanti ke Index
+        </script> -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            document.getElementById("logout").addEventListener("click", function() {
+                Swal.fire({
+                    title: "Apakah Anda yakin?",
+                    text: "Tindakan ini tidak bisa dibatalkan!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#d33",
+                    cancelButtonColor: "#3085d6",
+                    confirmButtonText: "Ya, Keluar!",
+                    cancelButtonText: "Batal"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Logout",
+                        showConfirmButton: false,
+                        timer: 1500
+                        });
+                        setTimeout(() => {
+                            window.location.href = "../index.html";
+                        }, 1500);
+                        
                     }
                 });
             });
