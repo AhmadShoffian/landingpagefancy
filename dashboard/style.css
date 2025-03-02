@@ -1906,12 +1906,6 @@ Dashboard My Ads
 /*======================================
     Hero Area CSS
 ========================================*/
-.about-section {
-  background: #ffffff;
-  padding: 180px 0;
-  position: relative;
-}
-
 .hero-area {
   position: relative;
   background: #F4F7FA;
@@ -1924,7 +1918,7 @@ Dashboard My Ads
   background-position: center;
   position: relative;
   z-index: 3;
-  padding-bottom: auto;
+  padding-bottom: 120px;
 }
 
 .hero-area.style2 .tns-controls {
@@ -1968,7 +1962,7 @@ Dashboard My Ads
   background-position: center;
   position: relative;
   z-index: 3;
-  padding-bottom: auto;
+  padding-bottom: 120px;
 }
 
 .hero-area.style2 .hero-inner.style2 {
@@ -1982,7 +1976,7 @@ Dashboard My Ads
 }
 
 .hero-area.style2 .hero-inner .hero-text {
-  margin-top: auto;
+  margin-top: 220px;
   padding-right: 100px;
 }
 
@@ -1992,7 +1986,7 @@ Dashboard My Ads
 
 .hero-area.style2 .hero-inner .hero-text h1 {
   color: #fff;
-  font-size: 45px;
+  font-size: 40px;
   font-weight: 700;
 }
 
@@ -2027,7 +2021,8 @@ Dashboard My Ads
 }
 
 .hero-area.style3 .hero-inner .hero-text {
-  margin-top: auto;
+  margin-top: 220px;
+  margin-left: 10%;
 }
 
 .hero-area.style3 .hero-inner .hero-text h5 {
@@ -2042,7 +2037,7 @@ Dashboard My Ads
 .hero-area.style3 .hero-inner .hero-text h1 {
   color: #fff;
   font-weight: 700;
-  font-size: 45px;
+  font-size: 40px;
 }
 
 .hero-area.style3 .hero-inner .hero-text p {
@@ -2061,7 +2056,7 @@ Dashboard My Ads
 
 .hero-area .hero-text {
   float: none;
-  margin-top: 100px;
+  margin-top: 275px;
 }
 
 .hero-area .hero-text h5 {
@@ -2105,12 +2100,12 @@ Dashboard My Ads
 
 .hero-area .hero-image {
   float: right;
-  margin-top: auto;
+  margin-top: 200px;
   height: 500px;
   width: 500px;
   display: block;
   border-radius: 50%;
-  background-image: url("../assets/img/04.jpg");
+  background-image: url("../images/hero/04.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2123,7 +2118,7 @@ Dashboard My Ads
   content: "";
   left: 0;
   top: 0;
-  background-image: url("../assets/img/shape2.png");
+  background-image: url("../images/hero/shape2.png");
   background-repeat: no-repeat;
   height: 100px;
   width: 100px;
@@ -2222,53 +2217,6 @@ Dashboard My Ads
     transform-origin: bottom left;
   }
 }
-
-.hero-area .hero-text .button .btn:last-child {
-  margin-right: 0px;
-}
-.hero-area .hero-text .button .btn {
-  margin-right: 10px;
-}
-.button .btn {
-  display: inline-block;
-  text-transform: capitalize;
-  font-size: 14px;
-  font-weight: 600;
-  padding: 15px 30px;
-  background-color: #473BF0;
-  color: #fff;
-  border: none;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  border-radius: 5px;
-}
-.btn {
-  display: inline-block;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  border: 1px solid transparent;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  border-radius: .25rem;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-}
-span, a {
-  display: inline-block;
-  text-decoration: none;
-  transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-}
-
 
 
 /* ==========================================================================
@@ -3094,4 +3042,137 @@ blockquote {
 .subscribe .btn {
   padding: 14px 26px;
   border-radius: 0;
+}
+
+/*======================================
+    Faq CSS
+========================================*/
+.accordion-item .accordion-button {
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  border: none;
+  border: 1px solid #eee;
+}
+
+.accordion-item .accordion-button span {
+  float: left;
+}
+
+.accordion-item .accordion-button i {
+  float: right;
+  font-size: 13px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #fff;
+  background-color: #473BF0;
+  border-color: transparent;
+  border-radius: 5px 5px 0 0;
+}
+
+.accordion-button:not(.collapsed) i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.accordion-button::after {
+  display: none;
+}
+
+.accordion-collapse {
+  border: none;
+}
+
+.accordion-body {
+  border: 1px solid #eee;
+  border-radius: 0 0 5px 5px;
+  padding: 30px 20px;
+}
+
+.accordion-body p {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.accordion-body p:last-child {
+  margin: 0;
+}
+
+.accordion-item {
+  margin-bottom: 20px;
+}
+
+/*==================
+DATA TICKET CCS
+====================*/
+body {
+  background-color: #f8f9fa;
+}
+
+.card {
+  border-radius: 10px;
+  background: white;
+}
+
+.status-badge {
+  background-color: #f4d03f;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+hr {
+  border: 1px solid black;
+}
+
+h4, h5 {
+  font-weight: bold;
+}
+
+.history-box {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+}
+
+.btn-data-tiket-chat {
+  background-color: #A646FF; /* Warna ungu */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.btn-data-tiket-detail {
+  background-color: #8401FF; /* Warna ungu */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.btn-data-tiket-edit {
+  background-color: #183AFF; /* Warna biru */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
 }

@@ -3,30 +3,28 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Data Tiket Login</title>
+        <title>Input Form Log In</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
         <!-- Place favicon.ico in the root directory -->
-
+        
 		<!-- ========================= CSS here ========================= -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-        <!-- <link rel="stylesheet" href="assets/css/bootstrap-5.0.0-alpha.min.css"> -->
+		<link rel="stylesheet" href="assets/css/bootstrap-5.0.0-alpha.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/LineIcons.2.0.css">
         <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css">
-        <!-- <link rel="stylesheet" href="assets/css/LineIcons.2.0.css"> -->
 		<link rel="stylesheet" href="assets/css/animate.css">
 		<link rel="stylesheet" href="assets/css/tiny-slider.css">
 		<link rel="stylesheet" href="assets/css/glightbox.min.css">
 		<link rel="stylesheet" href="assets/css/main.css">
-        <link rel="stylesheet" href="dashboard/style.css">
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css"> -->
     </head>
     <body>
-
-
-        <!-- ========================= header start ========================= -->
-        <header class="header navbar-area bg-white">
+          <!-- ========================= header start ========================= -->
+          <header class="header navbar-area bg-white">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-12">
@@ -45,22 +43,22 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ml-auto">
                                     <li class="nav-item">
-                                        <a class="page-scroll active" href="#home">Home</a>
+                                        <a class="page-scroll active" href="dashboard/home.html">Home</a>
                                     </li>
-                                    <li class="nav-item">
+                                    <!-- <li class="nav-item">
                                         <a class="page-scroll" href="#about">About</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#services">Alur ticketing</a>
-                                    </li>
+                                    </li> -->
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#portfolio">FAQS</a>
+                                        <a class="page-scroll" href="faqs.html">FAQS</a>
                                     </li>
                                     <!-- <li class="nav-item">
                                         <a class="page-scroll" href="#team">Team</a>
                                     </li> -->
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#contact">Contact</a>
+                                        <a class="page-scroll" href="contact.html">Contact</a>
                                     </li>
                                 </ul>
                                 <!-- <div class="header-btn">
@@ -70,12 +68,12 @@
                              <!-- button profile -->
                              <ul class="sign-in">
                                 <li class="nav-item dropdown">
-                                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni lni-user"></i> My Account</a>
+                                  <a class="nav-link dropdown-toggle" href="dashboard/profile.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni lni-user"></i> My Account</a>
                                   <div class="dropdown-menu">
                                       <a class="dropdown-item" href="dashboard/profile.html"><i class="lni lni-briefcase"></i>Profile</a>
                                     <a class="dropdown-item" href="dashboard/akun.html"><i class="lni lni-rocket"></i> Account</a>
                                     <!-- <a class="dropdown-item" href="#"><i class="lni lni-close"></i>Logout</a> -->
-                                    <a class="dropdown-item logout-btn" href="index.html"><i class="lni lni-close"></i>Logout</a>
+                                    <a class="dropdown-item logout-btn" href="#"><i class="lni lni-close"></i>Logout</a>
                                   </div>
                                 </li>
                               </ul>
@@ -134,106 +132,107 @@
         </div>
         <!-- =============== main content end =============== -->
 
-        <!-- ========================= footer start ========================= -->
-        <footer class="footer mt-40">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="footer-widget mb-60 wow fadeInLeft" data-wow-delay=".2s">
-                            <a href="index.html" class="logo mb-30"><img src="assets/img/logo/logo.svg" alt="logo"></a>
-                            <p class="mb-30 footer-desc">We Crafted an awesome desig library that is robust and intuitive to use. No matter you're building a business presentation websit.</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 offset-xl-1 col-lg-2 col-md-6">
-                        <div class="footer-widget mb-60 wow fadeInUp" data-wow-delay=".4s">
-                            <h4>Quick Link</h4>
-                            <ul class="footer-links">
-                                <li>
-                                    <a href="javascript:void(0)">Home</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">Alur Ticekting</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">FAQs</a>
-                                </li> 
-                                <li>
-                                    <a href="javascript:void(0)">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6">
-                        <div class="footer-widget mb-60 wow fadeInUp" data-wow-delay=".6s">
-                            <h4>Service</h4>
-                            <ul class="footer-links">
-                                <li>
-                                    <a href="javascript:void(0)">Marketing</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">Branding</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">Web Design</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">Graphics Design</a>
-                                </li> 
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6">
-                        <div class="footer-widget mb-60 wow fadeInRight" data-wow-delay=".8s">
-                            <h4>Contact</h4>
-                            <ul class="footer-contact">
-                                <li>
-                                    <p>0274-379133, 373659</p>
-                                </li>
-                                <li>
-                                    <p>isiyogyakarta@example.com</p>
-                                </li>
-                                <li>
-                                    <p>Jl. Parangtritis Km. 6.5 Sewon, Bantul, Yogyakarta, 55188</br>
-                                    Indonesia</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="copyright-area">
-                    <p class="mb-0 text-black text-center">Copyright © 2025. UPA. Teknologi Informasi dan Komunikasi</p>
-                </div>
-
-                <div class="copyright-area">
-                    <div class="row align-items-center">
-                        <div class="col-md-6">
-                            <div class="footer-social-links">
-                                <ul class="d-flex">
-                                    <li><a href="javascript:void(0)"><i class="lni lni-facebook-original"></i></a></li>
-                                    <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
-                                    <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
-                                    <li><a href="javascript:void(0)"><i class="lni lni-instagram-original"></i></a></li>
-                                </ul>
+                 <!-- ========================= footer start ========================= -->
+                 <footer class="footer pt-100">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                <div class="footer-widget mb-60 wow fadeInLeft" data-wow-delay=".2s">
+                                    <a href="index.html" class="logo mb-30"><img src="assets/img/logo-isi-black.svg" alt="logo"></a>
+                                    <p class="mb-30 footer-desc">We Crafted an awesome desig library that is robust and intuitive to use. No matter you're building a business presentation websit.</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 offset-xl-1 col-lg-2 col-md-6">
+                                <div class="footer-widget mb-60 wow fadeInUp" data-wow-delay=".4s">
+                                    <h4>Quick Link</h4>
+                                    <ul class="footer-links">
+                                        <li>
+                                            <a href="javascript:void(0)">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">Alur Ticekting</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">FAQs</a>
+                                        </li> 
+                                        <li>
+                                            <a href="javascript:void(0)">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6">
+                                <div class="footer-widget mb-60 wow fadeInUp" data-wow-delay=".6s">
+                                    <h4>Service</h4>
+                                    <ul class="footer-links">
+                                        <li>
+                                            <a href="javascript:void(0)">Marketing</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">Branding</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">Web Design</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">Graphics Design</a>
+                                        </li> 
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6">
+                                <div class="footer-widget mb-60 wow fadeInRight" data-wow-delay=".8s">
+                                    <h4>Contact</h4>
+                                    <ul class="footer-contact">
+                                        <li>
+                                            <p>0274-379133, 373659</p>
+                                        </li>
+                                        <li>
+                                            <p>isiyogyakarta@example.com</p>
+                                        </li>
+                                        <li>
+                                            <p>Jl. Parangtritis Km. 6.5 Sewon, Bantul, Yogyakarta, 55188</br>
+                                            Indonesia</p>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <p class="wow fadeInUp" data-wow-delay=".3s">Template by <a
-                                    href="https://uideck.com" rel="nofollow">UIdeck</a></p>
+        
+                        <div class="copyright-area">
+                            <p class="mb-0 text-black text-center">Copyright © 2025. UPA. Teknologi Informasi dan Komunikasi</p>
+                        </div>
+        
+                        <div class="copyright-area">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                     <div class="footer-social-links">
+                                        <ul class="d-flex">
+                                            <li><a href="javascript:void(0)"><i class="lni lni-facebook-original"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="lni lni-instagram-original"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-md-6">
+                                    <p class="wow fadeInUp" data-wow-delay=".3s">Template by <a
+                                            href="https://uideck.com" rel="nofollow">UIdeck</a></p>
+                                </div> -->
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </footer>
-        <!-- ========================= footer end ========================= -->
-
-        <!-- ========================= scroll-top ========================= -->
-        <a href="#" class="scroll-top">
-            <i class="lni lni-arrow-up"></i>
-        </a>
+                </footer>
+                <!-- ========================= footer end ========================= -->
         
+        
+                <!-- ========================= scroll-top ========================= -->
+                <a href="#" class="scroll-top">
+                    <i class="lni lni-arrow-up"></i>
+                </a>
 
-         <!-- ========================= Chat Start ========================= -->
+                <!-- ========================= Chat Start ========================= -->
          <div class="modal fade" id="chatTiketModal" tabindex="-1" aria-labelledby="chatTiketModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -359,33 +358,52 @@
         </div>
         <!-- ========================= Edit Tiket End ===================== -->
 
-		<!-- ========================= JS here ========================= -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- <script src="assets/js/bootstrap.bundle-5.0.0.alpha-min.js"></script> -->
-		<script src="assets/js/contact-form.js"></script>
-        <script src="assets/js/count-up.min.js"></script>
-        <script src="assets/js/tiny-slider.js"></script>
-        <script src="assets/js/isotope.min.js"></script>
-        <script src="assets/js/glightbox.min.js"></script>
-        <script src="assets/js/wow.min.js"></script>
-        <script src="assets/js/imagesloaded.min.js"></script>
-		<script src="assets/js/main.js"></script>
-        <script src="script.js"></script>
-        <script src="input_form.js"></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const logoutBtn = document.querySelector(".logout-btn");
+        <!-- ========================= JS here ========================= -->
+        
+        
+        <!-- ========================= JS here ========================= -->
+                <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
                 
-                logoutBtn.addEventListener("click", function (event) {
-                    event.preventDefault(); // Mencegah link langsung bekerja
-                    
-                    const confirmLogout = confirm("Are you sure you want to logout?");
-                    if (confirmLogout) {
-                        alert("You have successfully logged out!");
-                        window.location.href = "index.html"; // Nanti ke Index
-                    }
-                });
-            });
-        </script>
+                <!-- <script src="assets/js/bootstrap.bundle-5.0.0.alpha-min.js"></script> -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+                <script src="assets/js/bootstrap.bundle-5.0.0.alpha-min.js"></script>
+                <script src="assets/js/contact-form.js"></script>
+                <script src="assets/js/count-up.min.js"></script>
+                <script src="assets/js/tiny-slider.js"></script>
+                <script src="assets/js/isotope.min.js"></script>
+                <script src="assets/js/glightbox.min.js"></script>
+                <script src="assets/js/wow.min.js"></script>
+                <script src="assets/js/imagesloaded.min.js"></script>
+                <script src="assets/js/main.js"></script>
+                <script src="script.js"></script>
+                <script src="input_form.js"></script>
+                <!-- <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script> -->
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const logoutBtn = document.querySelector(".logout-btn");
+                        
+                        logoutBtn.addEventListener("click", function (event) {
+                            event.preventDefault(); // Mencegah link langsung bekerja
+                            
+                            const confirmLogout = confirm("Are you sure you want to logout?");
+                            if (confirmLogout) {
+                                alert("You have successfully logged out!");
+                                window.location.href = "index.html"; // Nanti ke Index
+                            }
+                        });
+                    });
+                </script>
+                <!-- <script>
+                    $(document).ready(function() {
+                        $("#toastr-2").click(function() {
+                            console.log("Button clicked!"); // Debugging untuk memastikan event berjalan
+                            iziToast.success({
+                                title: 'Hello, world!',
+                                message: 'This awesome plugin is made by iziToast',
+                                position: 'topRight'
+                            });
+                        });
+                    });
+                </script> -->
     </body>
 </html>

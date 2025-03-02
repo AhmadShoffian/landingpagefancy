@@ -64,19 +64,19 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent" style="margin-right: 100px;">
                                 <ul id="nav" class="navbar-nav ml-auto">
                                     <li class="nav-item">
-                                        <a class="page-scroll active" href="#home">Home</a>
+                                        <a class="page-scroll active" href="home.html">Home</a>
                                     </li>
-                                    <li class="nav-item">
+                                    <!-- <li class="nav-item">
                                         <a class="page-scroll" href="#about">About</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#services">Alur Ticketing</a>
+                                    </li> -->
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="../faqs.html">FAQS</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#portfolio">FAQS</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#contact">Contact</a>
+                                        <a class="page-scroll" href="../contact.html">Contact</a>
                                     </li>
                                 </ul>
                                 <!-- <div class="header-btn">
@@ -91,7 +91,7 @@
                                   <div class="dropdown-menu">
                                       <a class="dropdown-item" href="profile.html"><i class="lni lni-layers"></i> Profile</a>
                                       <a class="dropdown-item" href="akun.html"><i class="lni lni-rocket"></i> Account</a>
-                                    <a class="dropdown-item" href="account-close.html"><i class="lni lni-close"></i>Account close</a>
+                                    <a class="dropdown-item" href="#" id="logout"><i class="lni lni-close"></i>Account close</a>
                                   </div>
                                 </li>
                               </ul>
@@ -135,7 +135,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#" id="logout1">
                           <i class="lni lni-lock-alt"></i>
                           <span>Logout</span>
                         </a>
@@ -166,12 +166,32 @@
                                         <label class="form-label"><strong>Foto Diri</strong></label>
                                         <div class="d-flex align-items-center">
                                             <div class="profile-photo me-3">
-                                                <img src="https://via.placeholder.com/80" alt="Foto Profil">
+                                                <img id="profileImage" src="../assets/img/client-logo/avatar-1.png" alt="Foto Profil" width="110" height="110" style="border-radius: 0%; object-fit: cover; border: 1px solid #ccc;">
                                             </div>
-                                            <button class="btn btn-dark ml-3">Pilih Foto</button>
+                                            <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                                            <button class="btn btn-dark ml-3" onclick="document.getElementById('fileInput').click();">Pilih Foto</button>
                                         </div>
                                         <small class="text-muted">Gambar Profile Anda sebaiknya memiliki rasio 1:1 dan tidak lebih dari 2MB.</small>
                                     </div>
+                                    
+                                    <script>
+                                    document.getElementById("fileInput").addEventListener("change", function(event) {
+                                        const file = event.target.files[0];
+                                        if (file) {
+                                            if (file.size > 2 * 1024 * 1024) {
+                                                alert("Ukuran gambar tidak boleh lebih dari 2MB!");
+                                                return;
+                                            }
+                                            
+                                            const reader = new FileReader();
+                                            reader.onload = function(e) {
+                                                document.getElementById("profileImage").src = e.target.result;
+                                            };
+                                            reader.readAsDataURL(file);
+                                        }
+                                    });
+                                    </script>
+                                    
                             
                                     <!-- Nama Lengkap -->
                                     <div class="mb-3">
@@ -215,7 +235,7 @@
                 <div class="row">
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="footer-widget mb-60 wow fadeInLeft" data-wow-delay=".2s">
-                            <a href="index.html" class="logo mb-30"><img src="assets/img/logo/logo.svg" alt="logo"></a>
+                            <a href="index.html" class="logo mb-30"><img src="../assets/img/logo-isi-black.svg" alt="logo"></a>
                             <p class="mb-30 footer-desc">We Crafted an awesome desig library that is robust and intuitive to use. No matter you're building a business presentation websit.</p>
                         </div>
                     </div>
@@ -311,7 +331,7 @@
                                 <h3>Login From Here</h3>
                                 <p>Log in to continue your account <br> and explore new jobs.</p>
                             </div>
-                            <div class="social-login">
+                            <!-- <div class="social-login">
                                 <ul>
                                     <li><a class="linkedin" href="#"><i class="lni lni-linkedin-original"></i> Log in
                                             with LinkedIn</a></li>
@@ -320,7 +340,7 @@
                                     <li><a class="facebook" href="#"><i class="lni lni-facebook-original"></i> Log in
                                             with Facebook</a></li>
                                 </ul>
-                            </div>
+                            </div> -->
                             <div class="or-devider">
                                 <span>Or</span>
                             </div>
@@ -374,14 +394,14 @@
                                 <h3>Create a free Account <br> Today</h3>
                                 <p>Create your account to continue <br> and explore new jobs.</p>
                             </div>
-                            <div class="social-login">
+                            <!-- <div class="social-login">
                                 <ul>
                                     <li><a class="linkedin" href="#"><i class="lni lni-linkedin-original"></i> Import from LinkedIn</a></li>
                                     <li><a class="google" href="#"><i class="lni lni-google"></i> Import from
                                             Google</a></li>
                                     <li><a class="facebook" href="#"><i class="lni lni-facebook-original"></i> Import from Facebook</a></li>
                                 </ul>
-                            </div>
+                            </div> -->
                             <div class="or-devider">
                                 <span>Or</span>
                             </div>
@@ -506,5 +526,34 @@
         <!-- <script>
             CKEDITOR.replace( 'ckeditor' );
         </script> -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            document.getElementById("logout1").addEventListener("click", function() {
+                Swal.fire({
+                    title: "Apakah Anda yakin?",
+                    text: "Tindakan ini tidak bisa dibatalkan!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#d33",
+                    cancelButtonColor: "#3085d6",
+                    confirmButtonText: "Ya, Keluar!",
+                    cancelButtonText: "Batal"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Logout",
+                        showConfirmButton: false,
+                        timer: 1500
+                        });
+                        setTimeout(() => {
+                            window.location.href = "../index.html";
+                        }, 1500);
+                        
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
