@@ -70,7 +70,7 @@
                                       <a class="dropdown-item" href="dashboard/profile.html"><i class="lni lni-briefcase"></i>Profile</a>
                                     <a class="dropdown-item" href="dashboard/akun.html"><i class="lni lni-rocket"></i> Account</a>
                                     <!-- <a class="dropdown-item" href="#"><i class="lni lni-close"></i>Logout</a> -->
-                                    <a class="dropdown-item logout-btn" href="#"><i class="lni lni-close"></i>Logout</a>
+                                    <a class="dropdown-item logout-btn" id="logoutButton" href="#"><i class="lni lni-close"></i>Logout</a>
                                   </div>
                                 </li>
                               </ul>
@@ -187,7 +187,7 @@
                                     <p class="mb-30 footer-desc">We Crafted an awesome desig library that is robust and intuitive to use. No matter you're building a business presentation websit.</p>
                                 </div>
                             </div>
-                            <div class="col-xl-2 offset-xl-1 col-lg-2 col-md-6">
+                            <div class="col-xl-3 offset-xl-1 col-lg-3 col-md-6">
                                 <div class="footer-widget mb-60 wow fadeInUp" data-wow-delay=".4s">
                                     <h4>Quick Link</h4>
                                     <ul class="footer-links">
@@ -206,7 +206,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-lg-3 col-md-6">
+                            <!-- <div class="col-xl-3 col-lg-3 col-md-6">
                                 <div class="footer-widget mb-60 wow fadeInUp" data-wow-delay=".6s">
                                     <h4>Service</h4>
                                     <ul class="footer-links">
@@ -224,8 +224,8 @@
                                         </li> 
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-3 col-md-6">
+                            </div> -->
+                            <div class="col-xl-5 col-lg-6 col-md-6">
                                 <div class="footer-widget mb-60 wow fadeInRight" data-wow-delay=".8s">
                                     <h4>Contact</h4>
                                     <ul class="footer-contact">
@@ -291,16 +291,32 @@
                 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
                 <!-- <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script> -->
                 <script>
-                    document.addEventListener("DOMContentLoaded", function () {
-                        const logoutBtn = document.querySelector(".logout-btn");
-                        
-                        logoutBtn.addEventListener("click", function (event) {
-                            event.preventDefault(); // Mencegah link langsung bekerja
-                            
-                            const confirmLogout = confirm("Are you sure you want to logout?");
-                            if (confirmLogout) {
-                                alert("You have successfully logged out!");
-                                window.location.href = "index.html"; // Nanti ke Index
+                    document.getElementById("logoutButton").addEventListener("click", function (event) {
+                        event.preventDefault(); // Mencegah link langsung dijalankan
+                
+                        Swal.fire({
+                            title: "Konfirmasi Logout",
+                            text: "Apakah Anda yakin ingin keluar?",
+                            icon: "warning",
+                            showCancelButton: true,
+                            confirmButtonColor: "#d33",
+                            cancelButtonColor: "#3085d6",
+                            confirmButtonText: "Ya, Logout!",
+                            cancelButtonText: "Batal"
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                Swal.fire({
+                                    title: "Berhasil Logout",
+                                    text: "Anda akan diarahkan ke halaman login.",
+                                    icon: "success",
+                                    timer: 2000,
+                                    showConfirmButton: false
+                                });
+                
+                                // Simulasi logout (bisa diganti dengan AJAX atau redirect ke backend logout)
+                                setTimeout(() => {
+                                    window.location.href = "index.html"; // Redirect ke halaman login
+                                }, 2000);
                             }
                         });
                     });
