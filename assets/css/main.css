@@ -1644,6 +1644,89 @@ p {
           transform: none;
 }
 
+/* ===============
+  Notifikasi CSS
+=============== */
+
+.notification {
+  position: relative;
+  display: inline-block;
+  transform: translateX(-15px);
+  cursor: pointer;
+  z-index: 1050;
+}
+
+.notification i {
+  font-size: 24px;
+  color: #333;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 3px 6px;
+  border-radius: 50%;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  left: -300px; /* Geser ke kiri */
+  width: 300px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1050; /* Pastikan berada di atas elemen lain */
+}
+
+
+.dropdown-header, .dropdown-footer {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-footer {
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.notification-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.notification-list li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.notification-list i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.notification-list p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.notification-list small {
+  color: gray;
+}
+
 
 /*======================================
     Hero Area CSS
