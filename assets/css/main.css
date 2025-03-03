@@ -1644,6 +1644,33 @@ p {
           transform: none;
 }
 
+/* ===============
+  Notifikasi CSS
+=============== */
+
+.notification {
+  position: relative;
+  display: inline-block;
+  transform: translateX(-15px);
+}
+
+.notification i {
+  font-size: 24px;
+  color: #333;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 3px 6px;
+  border-radius: 50%;
+}
+
+
 
 /*======================================
     Hero Area CSS
