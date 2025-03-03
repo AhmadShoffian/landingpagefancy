@@ -83,11 +83,42 @@
                                     <a href="javascript:void(0)" class="theme-btn">Get Started</a>
                                 </div> -->
                             </div> <!-- navbar collapse -->
+
                             <!-- Notification -->
                             <div class="notification">
-                                <i class="lni lni-alarm"></i>
-                                <span class="badge">3</span>
+                                <div class="nav-item">
+                                    <i class="lni lni-alarm" id="notificationIcon"></i>
+                                    <span class="badge">3</span>
+                                </div>
+                                <div class="dropdown-menu" id="notificationDropdown">
+                                    <div class="dropdown-header">
+                                        <span>Notifications</span>
+                                        <a href="#" class="mark-read">Mark All As Read</a>
+                                    </div>
+                                    <ul class="notification-list">
+                                        <li>
+                                            <i class="lni lni-code"></i>
+                                            <div class="notification-text">
+                                                <p>Permohonan ditutup</p>
+                                                <small>2 MIN AGO</small>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="lni lni-user"></i>
+                                            <div class="notification-text">
+                                                <p>Permohonan sedang diproses</p>
+                                                <small>10 HOURS AGO</small>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="dropdown-footer">
+                                        <a href="#">View All</a>
+                                    </div>
+                                </div>
                             </div>
+
+
+
                             <!-- button profile -->
                             <ul class="sign-in">
                                 <li class="nav-item dropdown">
