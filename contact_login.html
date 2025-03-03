@@ -3,11 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Ticketing | ISI Yogyakarta</title>
+        <title>Tiketing</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/icon-isi.png">
+		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
         <!-- Place favicon.ico in the root directory -->
 
 		<!-- ========================= CSS here ========================= -->
@@ -65,10 +65,10 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ml-auto">
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="index.html">Home</a>
+                                        <a class="page-scroll" href="dashboard/home.html">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="faqs.html">FAQ</a>
+                                        <a class="page-scroll" href="faqs_login.html">FAQ</a>
                                     </li>
                                     <!-- <li class="nav-item">
                                         <a class="page-scroll" href="#alur-tiketing">Alur Tiketing</a>
@@ -80,18 +80,23 @@
                                         <a class="page-scroll" href="#team">Team</a>
                                     </li> -->
                                     <li class="nav-item">
-                                        <a class="page-scroll active" href="contact.html">Contact</a>
+                                        <a class="page-scroll active" href="contact_login.html">Contact</a>
                                     </li>
                                 </ul>
                                 <!-- <div class="header-btn">
                                     <a href="javascript:void(0)" class="theme-btn">Get Started</a>
                                 </div> -->
                             </div> <!-- navbar collapse -->
-                            <div class="button">
-                                <a href="javacript:" data-toggle="modal" data-target="#login" class="login"><i
-                                        class="lni lni-lock-alt"></i> Login</a>
-                                <a href="input_form_kc.html" class="btn">Kirim cepat</a>
-                            </div>
+                            <ul class="sign-in">
+                                <li class="nav-item dropdown">
+                                  <a class="nav-link dropdown-toggle" href="profile.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni lni-user"></i> My Account</a>
+                                  <div class="dropdown-menu">
+                                      <a class="dropdown-item" href="dashboard/profile.html"><i class="lni lni-briefcase"></i>Profile</a>
+                                    <a class="dropdown-item" href="dashboard/akun.html"><i class="lni lni-rocket"></i> Account</a>
+                                    <a class="dropdown-item logout-btn" id="logoutButton" href="#"><i class="lni lni-close"></i>Logout</a>
+                                  </div>
+                                </li>
+                              </ul>
                         </nav> <!-- navbar -->
                     </div>
                 </div> <!-- row -->
@@ -319,11 +324,6 @@
         </footer>
         <!-- ========================= footer end ========================= -->
 
-        <!-- ========================= scroll-top ========================= -->
-        <a href="#" class="scroll-top">
-            <i class="lni lni-arrow-up"></i>
-        </a>
-
         <!-- Login Modal -->
     <div class="modal fade form-modal" id="login" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog max-width-px-840 position-relative">
@@ -529,6 +529,7 @@
         <script src="assets/js/wow.min.js"></script>
         <script src="assets/js/imagesloaded.min.js"></script>
 		<script src="assets/js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <!-- <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script> -->
         <!-- <script>
             CKEDITOR.replace( 'ckeditor' );
@@ -537,6 +538,37 @@
         <script>
             document.addEventListener("DOMContentLoaded", function() {
                 new WOW().init();
+            });
+        </script>
+        <script>
+            document.getElementById("logoutButton").addEventListener("click", function (event) {
+                event.preventDefault(); // Mencegah link langsung dijalankan
+        
+                Swal.fire({
+                    title: "Konfirmasi Logout",
+                    text: "Apakah Anda yakin ingin keluar?",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#d33",
+                    cancelButtonColor: "#3085d6",
+                    confirmButtonText: "Ya, Logout!",
+                    cancelButtonText: "Batal"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire({
+                            title: "Berhasil Logout",
+                            text: "Anda akan diarahkan ke halaman login.",
+                            icon: "success",
+                            timer: 2000,
+                            showConfirmButton: false
+                        });
+        
+                        // Simulasi logout (bisa diganti dengan AJAX atau redirect ke backend logout)
+                        setTimeout(() => {
+                            window.location.href = "index.html"; // Redirect ke halaman login
+                        }, 2000);
+                    }
+                });
             });
         </script>
          <script type="text/javascript">
