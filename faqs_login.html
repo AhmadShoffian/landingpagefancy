@@ -701,7 +701,22 @@
             <!-- Bootstrap JavaScript and dependencies -->
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            <script>
+                document.getElementById("notificationIcon").addEventListener("click", function () {
+                    var dropdown = document.getElementById("notificationDropdown");
+                    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+                });
 
+                // Menutup dropdown jika klik di luar elemen
+                document.addEventListener("click", function (event) {
+                    var dropdown = document.getElementById("notificationDropdown");
+                    var icon = document.getElementById("notificationIcon");
+                    if (!icon.contains(event.target) && !dropdown.contains(event.target)) {
+                        dropdown.style.display = "none";
+                    }
+                });
+
+            </script>
             <script>
                 document.getElementById("logoutButton").addEventListener("click", function (event) {
                     event.preventDefault(); // Mencegah link langsung dijalankan
@@ -733,20 +748,4 @@
                     });
                 });
             </script>
-            <script>
-                document.getElementById("notificationIcon").addEventListener("click", function () {
-                    var dropdown = document.getElementById("notificationDropdown");
-                    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-                });
-
-                // Menutup dropdown jika klik di luar elemen
-                document.addEventListener("click", function (event) {
-                    var dropdown = document.getElementById("notificationDropdown");
-                    var icon = document.getElementById("notificationIcon");
-                    if (!icon.contains(event.target) && !dropdown.contains(event.target)) {
-                        dropdown.style.display = "none";
-                    }
-                });
-
-               </script>
     </body>

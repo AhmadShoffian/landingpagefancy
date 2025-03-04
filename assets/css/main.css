@@ -1654,6 +1654,7 @@ p {
   transform: translateX(-15px);
   cursor: pointer;
   z-index: 1050;
+  overflow: visible !important;
 }
 
 .notification i {
@@ -1675,13 +1676,17 @@ p {
 .dropdown-menu {
   position: absolute;
   top: 40px;
-  left: -300px; /* Geser ke kiri */
+  right: 0; /* Pastikan dropdown tetap di dalam area */
+  min-width: 300px;  
   width: 300px;
+  transform: translateX(-30%);
   background: white;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: none;
-  z-index: 1050; /* Pastikan berada di atas elemen lain */
+  z-index: 1050;
+  white-space: normal; /* Pastikan teks tidak terpotong */
+  overflow: visible; /* Hindari pemotongan */
 }
 
 
@@ -1724,7 +1729,7 @@ p {
 }
 
 .notification-list small {
-  color: gray;
+  color: gray;
 }
 
 
