@@ -1654,11 +1654,10 @@ p {
   transform: translateX(-15px);
   cursor: pointer;
   z-index: 1050;
-  overflow: visible !important;
 }
 
 .notification i {
-  font-size: 24px;
+  font-size: 20px;
   color: #333;
 }
 
@@ -1676,17 +1675,15 @@ p {
 .dropdown-menu {
   position: absolute;
   top: 40px;
-  right: 0; /* Pastikan dropdown tetap di dalam area */
-  min-width: 300px;  
+  right: 0px;
   width: 300px;
+  max-width: 300px;
   transform: translateX(-30%);
   background: white;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: none;
-  z-index: 1050;
-  white-space: normal; /* Pastikan teks tidak terpotong */
-  overflow: visible; /* Hindari pemotongan */
+  z-index: 1050; /* Pastikan berada di atas elemen lain */
 }
 
 
@@ -1729,7 +1726,7 @@ p {
 }
 
 .notification-list small {
-  color: gray;
+  color: gray;
 }
 
 
@@ -3049,7 +3046,7 @@ textarea {
 
 /* Pastikan container penuh */
 .container {
-  max-width: 100%; 
+  max-width: 1320px; 
   width: 100%;
 }
 
@@ -3590,9 +3587,9 @@ h4 {
       padding: 0px 0; } }
   .about-section .about-img-wrapper {
     position: absolute;
-    left: 0;
+    left: 10;
     top: 50%;
-    width: 46%;
+    width: 35%;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -5873,130 +5870,6 @@ ALUR-TIKETING CSS
   color: #fff;
   border-color: transparent;
 }
-
-
-
-
-
-    /*======================================
-    About Us CSS
-========================================*/
-.about-us .content-left {
-  position: relative;
-  padding-right: 60px;
-}
-
-.about-us .content-left .single-img {
-  width: 100%;
-  border-radius: 5px;
-}
-
-.about-us .content-left .single-img.minus-margin {
-  position: relative;
-  top: -20px;
-}
-
-.about-us .content-left::before {
-  position: absolute;
-  content: "";
-  right: 4px;
-  bottom: -36px;
-  height: 200px;
-  width: 200px;
-  background-image: url(../images/hero/pattern.png);
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-
-.about-us .content-left .media-body {
-  padding: 40px 30px;
-  padding-bottom: 40px;
-  border-radius: 5px;
-  background-color: #2042e3;
-  -webkit-box-shadow: 0 1rem 3rem rgba(35, 38, 45, 0.15) !important;
-  box-shadow: 0 1rem 3rem rgba(35, 38, 45, 0.15) !important;
-  display: inline-block;
-  width: 100%;
-  margin-top: 30px;
-  padding-bottom: 48px;
-}
-
-.about-us .content-left .media-body i {
-  height: 40px;
-  width: 40px;
-  line-height: 40px;
-  text-align: center;
-  display: block;
-  color: #fff;
-  background-color: #ffffff45;
-  border-radius: 5px;
-  display: block;
-  margin-bottom: 20px;
-}
-
-.about-us .content-left .media-body h6 {
-  font-size: 22px;
-  font-weight: 600;
-  display: block;
-  margin-bottom: 5px;
-  color: #fff;
-}
-
-.about-us .content-left .media-body p {
-  color: #fff;
-}
-
-.about-us .content-right {
-  padding-right: 70px;
-  padding-left: 30px;
-}
-
-.about-us .content-right h2 {
-  font-size: 32px;
-  margin-bottom: 50px;
-  line-height: 45px;
-  text-transform: capitalize;
-  position: relative;
-  font-weight: 700;
-}
-
-.about-us .content-right .single-list {
-  position: relative;
-  padding-left: 80px;
-  margin-bottom: 50px;
-}
-
-.about-us .content-right .single-list:last-child {
-  margin-bottom: 0;
-}
-
-.about-us .content-right .single-list i {
-  font-size: 20px;
-  height: 55px;
-  width: 55px;
-  line-height: 55px;
-  text-align: center;
-  display: inline-block;
-  background: #2042e31c;
-  color: #2042e3;
-  border-radius: 4px;
-  position: absolute;
-  left: 0;
-  top: 3px;
-}
-
-.about-us .content-right .single-list .list-bod h5 {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 20px;
-  color: #081828;
-}
-
-.about-us .content-right .single-list .list-bod p {
-  font-size: 14px;
-  line-height: 24px;
-}
-
 
 
 /*===========================
