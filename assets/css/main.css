@@ -2837,6 +2837,14 @@ textarea {
   text-align: center;
 }
 
+/* Styling untuk tanda bintang wajib */
+label.required:after {
+  content: " *";
+  color: red;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
 /* Button Container */
 .button-container {
   display: flex;
