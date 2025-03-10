@@ -83,6 +83,7 @@
                                     <a href="javascript:void(0)" class="theme-btn">Get Started</a>
                                 </div> -->
 
+                            </div> <!-- navbar collapse -->
                                 <!-- Notification -->
                                 <div class="notification">
                                     <div class="nav-item">
@@ -121,14 +122,13 @@
                                     <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="profile.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni lni-user"></i> My Account</a>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="dashboard/profile.html"><i class="lni lni-briefcase"></i>Profile</a>
-                                        <a class="dropdown-item" href="dashboard/akun.html"><i class="lni lni-rocket"></i> Account</a>
+                                        <a class="dropdown-item" href="profile.html"><i class="lni lni-briefcase"></i>Profile</a>
+                                        <a class="dropdown-item" href="akun.html"><i class="lni lni-rocket"></i> Account</a>
                                         <a class="dropdown-item logout-btn" id="logoutButton" href="#"><i class="lni lni-close"></i>Logout</a>
                                     </div>
                                     </li>
                                 </ul>
-
-                            </div> <!-- navbar collapse -->
+                                
                         </nav> <!-- navbar -->
                     </div>
                 </div> <!-- row -->
@@ -566,29 +566,32 @@
         </script> -->
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script>
-            document.getElementById("logout1").addEventListener("click", function() {
+            document.getElementById("logoutButton").addEventListener("click", function (event) {
+                event.preventDefault(); // Mencegah link langsung dijalankan
+        
                 Swal.fire({
-                    title: "Apakah Anda yakin?",
-                    text: "Tindakan ini tidak bisa dibatalkan!",
+                    title: "Konfirmasi Logout",
+                    text: "Apakah Anda yakin ingin keluar?",
                     icon: "warning",
                     showCancelButton: true,
                     confirmButtonColor: "#d33",
                     cancelButtonColor: "#3085d6",
-                    confirmButtonText: "Ya, Keluar!",
+                    confirmButtonText: "Ya, Logout!",
                     cancelButtonText: "Batal"
                 }).then((result) => {
                     if (result.isConfirmed) {
                         Swal.fire({
-                        position: "top-end",
-                        icon: "success",
-                        title: "Logout",
-                        showConfirmButton: false,
-                        timer: 1500
+                            title: "Berhasil Logout",
+                            text: "Anda akan diarahkan ke halaman login.",
+                            icon: "success",
+                            timer: 2000,
+                            showConfirmButton: false
                         });
+        
+                        // Simulasi logout (bisa diganti dengan AJAX atau redirect ke backend logout)
                         setTimeout(() => {
-                            window.location.href = "../index.html";
-                        }, 1500);
-                        
+                            window.location.href = "../index.html"; // Redirect ke halaman login
+                        }, 2000);
                     }
                 });
             });
