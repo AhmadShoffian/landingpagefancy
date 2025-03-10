@@ -73,7 +73,7 @@
                                         <a class="page-scroll" href="#alur-tiketing">Alur Tiketing</a>
                                     </li> -->
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#portfolio">FAQS</a>
+                                        <a class="page-scroll" href="../faqs_login.html">FAQS</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="page-scroll" href="contact_login.html">Contact</a>
@@ -659,6 +659,22 @@
                             }
                         });
                     });
+                </script>
+                <script>
+                    document.getElementById("notificationIcon").addEventListener("click", function () {
+                        var dropdown = document.getElementById("notificationDropdown");
+                        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+                    });
+        
+                    // Menutup dropdown jika klik di luar elemen
+                    document.addEventListener("click", function (event) {
+                        var dropdown = document.getElementById("notificationDropdown");
+                        var icon = document.getElementById("notificationIcon");
+                        if (!icon.contains(event.target) && !dropdown.contains(event.target)) {
+                            dropdown.style.display = "none";
+                        }
+                    });
+        
                 </script>
     </body>
 </html>
