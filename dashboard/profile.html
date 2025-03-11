@@ -246,7 +246,7 @@
                                         <small class="text-muted">Anda dapat mengubah alamat email melalui menu <a href="akun.html">Akun</a>.</small>
                                     </div>
 
-                                    <button class="btn btn-common mt-1" type="button" style="width: 140px; margin-right: auto; margin-left: 10px;">Ubah Profile</button>
+                                    <button class="btn btn-common mt-1" type="button" style="width: 140px; margin-right: auto; margin-left: 10px;" onclick="simpanData()">Ubah Profile</button>
 
                             </div>
                         </div>
@@ -596,6 +596,55 @@
                 });
             });
         </script>
+
+        <script>
+            function simpanData() {
+                // Simulasi penyimpanan data (bisa diganti dengan AJAX atau lainnya)
+                setTimeout(() => {
+                    Swal.fire({
+                        title: "Berhasil!",
+                        text: "Data berhasil disimpan.",
+                        icon: "success",
+                        confirmButtonText: "OK",
+                        timer: 7000, // Otomatis tertutup setelah 2 detik
+                        timerProgressBar: true
+                    });
+                }, 500); // Simulasi delay
+            }
+        </script>
+
+        <script>
+            document.getElementById("logout1").addEventListener("click", function (event) {
+                event.preventDefault(); // Mencegah link langsung dijalankan
+
+                Swal.fire({
+                    title: "Konfirmasi Logout",
+                    text: "Apakah Anda yakin ingin keluar?",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#d33",
+                    cancelButtonColor: "#3085d6",
+                    confirmButtonText: "Ya, Logout!",
+                    cancelButtonText: "Batal"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire({
+                            title: "Berhasil Logout",
+                            text: "Anda akan diarahkan ke halaman login.",
+                            icon: "success",
+                            timer: 2000,
+                            showConfirmButton: false
+                        });
+
+                        // Simulasi logout (bisa diganti dengan AJAX atau redirect ke backend logout)
+                        setTimeout(() => {
+                            window.location.href = "../index.html"; // Redirect ke halaman login
+                        }, 2000);
+                    }
+                });
+            });
+        </script>
+
         <script>
             document.getElementById("notificationIcon").addEventListener("click", function () {
                 var dropdown = document.getElementById("notificationDropdown");

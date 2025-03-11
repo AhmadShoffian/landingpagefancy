@@ -3627,7 +3627,7 @@ h4 {
         margin-bottom: 50px; } }
     .about-section .about-img-wrapper img {
       width: 100%;
-      margin-left: -80px;
+      margin-left: 30%;
       margin-top: 100px;
      }
      @media (max-width: 768px) {
