@@ -3626,47 +3626,61 @@ h4 {
         width: 100%;
         margin-bottom: 50px; } }
     
-        .about-section .about-img-wrapper img {
+       
+
+        .about-section .about-img-wrapper {
+          display: flex;
+          justify-content: center; /* Gambar tetap di tengah */
+          align-items: center;
           width: 100%;
-          height: auto; /* Menjaga proporsi gambar */
-          display: block;
-          margin-left: -50px; /* Default untuk layar besar */
-          margin-top: 130px;
+          position: relative; /* Pastikan tidak keluar dari layout */
       }
       
-      /* Untuk layar kecil (Mobile, max 768px) */
+      /* Gambar default untuk semua perangkat */
+      .about-section .about-img-wrapper img {
+          width: 100%; /* Responsif sesuai kontainer */
+          height: auto; /* Jaga proporsi gambar */
+          display: block;
+          max-width: 600px; /* Batasi ukuran gambar */
+          margin: 130px auto 0 auto; /* Tengah dan ada jarak atas */
+      }
+      
+      /* ✅ Mobile (HP) - Maksimum lebar 768px */
       @media (max-width: 768px) {
           .about-section .about-img-wrapper img {
-              width: 100%;
-              margin-left: 0; /* Jangan geser ke kiri */
-              margin-right: 0;
+              width: 90%; /* Agar tidak terlalu besar di HP */
+              max-width: 100%; /* Pastikan gambar tetap responsif */
               margin-top: 50px; /* Kurangi jarak atas */
           }
       }
       
-      /* Untuk layar sedang (Tablet, min 1024px) */
-      @media (min-width: 1024px) {
-        .about-section .about-img-wrapper img {
-            width: 100%; /* Pastikan gambar memenuhi kontainer */
-            max-width: 600px; /* Sesuaikan ukuran maksimum agar tidak terlalu besar */
-            margin-left: -20%;
-            margin-right: auto;
-            display: block;
-        }
-    }
-    
+      /* ✅ Tablet - Lebar minimal 768px hingga 1024px */
+      @media (min-width: 768px) and (max-width: 1024px) {
+          .about-section .about-img-wrapper img {
+              width: 85%;
+              max-width: 650px;
+              margin-top: 80px; /* Sesuaikan jarak atas */
+          }
+      }
       
-      /* Untuk layar lebih besar (Desktop, min 1200px) */
+      /* ✅ Laptop - Lebar minimal 1024px hingga 1200px */
+      @media (min-width: 1024px) and (max-width: 1200px) {
+          .about-section .about-img-wrapper img {
+              width: 80%;
+              max-width: 700px;
+              margin-top: 100px;
+          }
+      }
+      
+      /* ✅ Komputer & Layar Besar - Lebar lebih dari 1200px */
       @media (min-width: 1200px) {
-        .about-section .about-img-wrapper img {
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            transform: translateX(50px);
-
-        }
-    }
-    
+          .about-section .about-img-wrapper img {
+              width: 75%;
+              max-width: 800px;
+              margin-top: 120px;
+              transform: translateX(0); /* Pastikan tidak geser ke kanan */
+          }
+      }
       
     
 
