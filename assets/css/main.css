@@ -3625,19 +3625,48 @@ h4 {
         transform: translateY(0);
         width: 100%;
         margin-bottom: 50px; } }
-    .about-section .about-img-wrapper img {
-      width: 100%;
-      margin-left: 30%;
-      margin-top: 100px;
-     }
-     @media (max-width: 768px) {
-      .about-section .about-img-wrapper img {
-        width: 100%;
-        margin-left: 0; 
-        margin-right: 0;
-        margin-top: 50px;
+    
+        .about-section .about-img-wrapper img {
+          width: 100%;
+          height: auto; /* Menjaga proporsi gambar */
+          display: block;
+          margin-left: 0px; /* Default untuk layar besar */
+          margin-top: 130px;
       }
+      
+      /* Untuk layar kecil (Mobile, max 768px) */
+      @media (max-width: 768px) {
+          .about-section .about-img-wrapper img {
+              width: 100%;
+              margin-left: 0; /* Jangan geser ke kiri */
+              margin-right: 0;
+              margin-top: 50px; /* Kurangi jarak atas */
+          }
       }
+      
+      /* Untuk layar sedang (Tablet, min 1024px) */
+      @media (min-width: 1024px) {
+        .about-section .about-img-wrapper img {
+            width: 100%; /* Pastikan gambar memenuhi kontainer */
+            max-width: 600px; /* Sesuaikan ukuran maksimum agar tidak terlalu besar */
+            margin-left: -20%;
+            margin-right: auto;
+            display: block;
+        }
+    }
+    
+      
+      /* Untuk layar lebih besar (Desktop, min 1200px) */
+      @media (min-width: 1200px) {
+        .about-section .about-img-wrapper img {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    }
+    
+      
+    
 
     .about-section .about-img-wrapper .about-experience {
       width: 300px;
