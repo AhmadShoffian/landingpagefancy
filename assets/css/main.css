@@ -2863,6 +2863,14 @@ label.required:after {
   .input-box {
       width: 100%;
   }
+  @media (max-width: 768px) {
+    .form-group {
+        flex-direction: column;
+    }
+    .input-box {
+        width: 100%;
+    }
+}
 }
 
 
