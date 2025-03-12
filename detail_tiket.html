@@ -12,6 +12,7 @@
 
 		<!-- ========================= CSS here ========================= -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 		<link rel="stylesheet" href="assets/css/bootstrap-5.0.0-alpha.min.css">
         <link rel="stylesheet" href="assets/css/LineIcons.2.0.css">
 		<link rel="stylesheet" href="assets/css/animate.css">
@@ -119,6 +120,7 @@
         <div class="container pt-20">
             <div class="card shadow-sm p-4">
                 <h4 class="mb-4">Detail Ticket
+                    <button class="btn-data-tiket-chat" data-bs-toggle="modal" data-bs-target="#chatTiketModal">Chat</button>
                     <button class="btn-edit-ticket-hidup" data-bs-toggle="modal" data-bs-target="#editTiketModal">Edit</button>
                 </h4>
                 <div class="row content-section">
@@ -174,15 +176,29 @@
                     <div class="row">
                         <div class="col-md-6">
                             <p>[12-02-2025 / 09:30:45] <strong>Ticket Status:</strong> <span class="text-success">Open</span></p>
+                            <ul class="ul-with-bullet">
+                                <li>Pengguna mengajukan permohonan</li>
+                            </ul>
                             <p>[12-02-2025 / 09:35:09] <strong>Ticket Edited by User</strong></p>
+                            <ul class="ul-with-bullet">
+                                <li>Pengguna mengubah permohonan</li>
+                            </ul>
                             <p>[12-02-2025 / 13:30:30] <strong>Ticket Status:</strong> <span class="text-warning">Processed</span></p>
+                            <ul class="ul-with-bullet">
+                                <li>Permohonan sedang diproses</li>
+                            </ul>
                             <p>[12-02-2025 / 15:02:23] <strong>Ticket Confirmation</strong></p>
+                            <ul class="ul-with-bullet">
+                                <li>Permohonan selesai diproses.</li>
+                            </ul>
                         </div>
-                        <div class="col-md-6">
-                            <p>Pengguna mengajukan permohonan</p>
-                            <p>Pengguna mengubah permohonan</p>
-                            <p>Permohonan sedang diproses</p>
-                            <p>Permohonan selesai diproses. Silakan lihat penyelesaian pada kolom chat dan lakukan konfirmasi apabila hasil belum sesuai atau masih memiliki pertanyaan. Lakukan <span class="text-danger">CLOSE TICKET</span> apabila hasil sudah sesuai.</p>
+                        <div class="col-md-12 mt-30">
+                            <p class="close-messages text-danger">
+                                * Silakan klik tombol CHAT apabila masih ada pertanyaan <br>
+                            </p>
+                            <p class="close-messages text-danger">
+                                * Silakan Klik tombol CLOSE TICKET apabila sudah selesai
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -191,8 +207,8 @@
             </div>
         </div>
 
-         <!-- ========================= footer start ========================= -->
-         <footer class="footer pt-100">
+        <!-- ========================= footer start ========================= -->
+        <footer class="footer pt-100">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-3 col-lg-4 col-md-6">
@@ -220,25 +236,6 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- <div class="col-xl-3 col-lg-3 col-md-6">
-                        <div class="footer-widget mb-60 wow fadeInUp" data-wow-delay=".6s">
-                            <h4>Service</h4>
-                            <ul class="footer-links">
-                                <li>
-                                    <a href="javascript:void(0)">Marketing</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">Branding</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">Web Design</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">Graphics Design</a>
-                                </li> 
-                            </ul>
-                        </div>
-                    </div> -->
                     <div class="col-xl-5 col-lg-6 col-md-6">
                         <div class="footer-widget mb-60 wow fadeInRight" data-wow-delay=".8s">
                             <h4>Contact</h4>
@@ -265,7 +262,7 @@
                 <div class="copyright-area">
                     <div class="row align-items-center">
                         <div class="col-md-6">
-                             <div class="footer-social-links">
+                            <div class="footer-social-links">
                                 <ul class="d-flex">
                                     <li><a href="javascript:void(0)"><i class="lni lni-facebook-original"></i></a></li>
                                     <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
@@ -282,8 +279,45 @@
                 </div>
             </div>
         </footer>
-    <!-- ========================= footer end ========================= -->
+        <!-- ========================= footer end ========================= -->
 
+        <!-- ========================= Chat Start ========================= -->
+        <div class="modal fade" id="chatTiketModal" tabindex="-1" aria-labelledby="chatTiketModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Live Chat</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="chat-container">
+                            <div class="chat-message received">
+                                <div class="message-text">Halo, bisa bantu edit gambar ini?</div>
+                                <div class="chat-timestamp">10:00 AM</div>
+                            </div>
+                            <div class="chat-message sent">
+                                <div class="message-text">Tentu! Saya siap membantu.</div>
+                                <div class="chat-timestamp">10:01 AM</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="chat-input-container">
+                            <input type="text" class="form-control" id="chatInput" placeholder="Ketik pesan...">
+                            <small class="text-muted"><span style="color:red;">*</span> Dokumen harus berukuran kurang dari 2MB</small>
+                        </div>
+                        <label for="fileUpload" class="upload-icon">
+                            <i class="lni lni-upload"></i>
+                        </label>
+                        <input type="file" id="fileUpload" style="display: none;">
+                        <button class="btn" id="sendChat">
+                            <i class="fa fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ========================= Chat End ========================= -->
 
         <!-- ========================= Edit Tiket Start ===================== -->
         <div class="modal fade" id="editTiketModal" tabindex="-1" aria-labelledby="editTicketModalLabel" aria-hidden="true">
@@ -393,7 +427,7 @@
         <script src="assets/js/wow.min.js"></script>
         <script src="assets/js/imagesloaded.min.js"></script>
 		<script src="assets/js/main.js"></script>
-        <script src="script.js"></script>
+        <script src="assets/js/chat.js"></script>
         <script src="input_form.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
