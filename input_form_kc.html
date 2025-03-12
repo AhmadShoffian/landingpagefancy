@@ -79,27 +79,27 @@
                 # Semua informasi adalah benar dan bebas dari kesalahan.
             </div>
             <div class="form-container-inputform">
-                <form>
+                <form id="submissionForm">
                     <div class="form-group">
                         <div class="input-box">
-                            <label for="name">Name *</label>
-                            <input type="text" id="name" placeholder="Masukkan Nama">
+                            <label for="name">Nama</label><span class="required"></span>
+                            <input type="text" id="name" class="required" placeholder="Masukkan Nama">
                         </div>
                         <div class="input-box">
-                            <label for="phone">No. telepon *</label>
-                            <input type="text" id="phone" placeholder="Masukkan No. Telepon">
+                            <label for="phone">No. telepon</label><span class="required"></span>
+                            <input type="text" id="phone" class="required" placeholder="Masukkan No. Telepon">
                         </div>
                     </div>
         
                     <div class="form-group">
                         <div class="input-box">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" placeholder="Masukkan Email">
+                            <label for="email">Email</label><span class="required"></span>
+                            <input type="email" id="email" class="required" placeholder="Masukkan Email">
                         </div>
                         <div class="input-box">
-                            <label for="category">Kategori *</label>
-                            <select id="category">
-                                <option selected>Kategori</option>
+                            <label for="category">Kategori</label><span class="required"></span>
+                            <select id="category" class="required" onchange="checkCategory()">
+                                <option value="">Pilih Kategori</option>
                                 <option value="1">Perbaikan</option>
                                 <option value="2">Penambahan</option>
                                 <option value="3">Permohonan</option>
@@ -110,9 +110,9 @@
         
                     <div class="form-group">
                         <div class="input-box">
-                            <label for="role">Peran *</label>
-                            <select id="role">
-                                <option selected>Pilih Peran</option>
+                            <label for="role">Peran</label><span class="required"></span>
+                            <select id="role" class="required">
+                                <option value="">Pilih Peran</option>
                                 <option value="1">Dosen</option>
                                 <option value="2">Mahasiswa</option>
                                 <option value="3">Tendik</option>
@@ -120,11 +120,11 @@
                             </select>
                         </div>
                         <div class="input-box">
-                            <label for="subcategory">Sub Kategori *</label>
-                            <select id="subcategory">
-                                <option selected>Sub Kategori</option>
+                            <label for="subcategory">Sub Kategori</label><span class="required"></span>
+                            <select id="subcategory" class="required">
+                                <option value="">Pilih Sub Kategori</option>
                                 <option value="1">Perbaikan Jaringan</option>
-                                <option value="2">Penambahan Bandwitch</option>
+                                <option value="2">Penambahan Bandwidth</option>
                                 <option value="3">Pemasangan Jaringan</option>
                                 <option value="4">Perbaikan Komputer</option>
                             </select>
@@ -132,16 +132,17 @@
                     </div>
         
                     <div class="input-box">
-                        <label for="title">Judul *</label>
-                        <input type="text" id="title" placeholder="Masukkan Judul">
+                        <label for="title">Judul</label><span class="required"></span>
+                        <input type="text" id="title" class="required" placeholder="Masukkan Judul">
                     </div>
         
                     <div class="input-box">
-                        <label for="description">Deskripsi *</label>
-                        <textarea id="description" rows="6" placeholder="Masukkan Deskripsi"></textarea>
+                        <label for="description">Deskripsi</label><span class="required"></span>
+                        <textarea id="description" class="required" rows="6" placeholder="Masukkan Deskripsi"></textarea>
                     </div>
         
-                    <label class="form-label">Lampiran</label>
+                    <label class="form-label" id="lampiranLabel">Lampiran</label>
+                    <span id="lampiranBintang" style="color:red; display: none;"> *</span>
                     <div class="file-upload">
                         <div class="preview-box" id="previewBox">
                             <span id="previewText">Preview File</span>
@@ -151,13 +152,21 @@
                         </div>
                         <div class="upload-box">
                             <span>Upload file</span>
-                            <input type="file" id="fileInput" accept=".png,.jpg,.jpeg,.pdf" onchange="previewFile()">
+                            <input type="file" id="fileInput" accept=".png,.jpg,.jpeg,.pdf">
                         </div>
                     </div>
                 </form>
                 <div class="button-container">
-                    <button type="submit" class="btn-submit" id="swal-6">Kirim</button>
+                    <button type="submit" class="btn btn-primary" id="swal-2">Kirim</button>
                 </div>
+                <!-- <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card">
+                      <div class="card-body text-center">
+                        <div class="mb-2">Success Message</div>
+                        <button class="btn btn-primary" id="toastr-2">Launch</button>
+                      </div>
+                    </div>
+                </div> -->
             </div>
         </div>
            
@@ -230,11 +239,7 @@
                                 </div>
                             </div>
                         </div>
-        
-                        <div class="copyright-area">
-                            <p class="mb-0 text-black text-center">Copyright © 2025. UPA. Teknologi Informasi dan Komunikasi</p>
-                        </div>
-        
+
                         <div class="copyright-area">
                             <div class="row align-items-center">
                                 <div class="col-md-6">
@@ -253,6 +258,11 @@
                                 </div> -->
                             </div>
                         </div>
+        
+                        <div class="copyright-area">
+                            <p class="mb-0 text-black text-center">Copyright © 2025. UPA. Teknologi Informasi dan Komunikasi</p>
+                        </div>
+        
                     </div>
                 </footer>
                 <!-- ========================= footer end ========================= -->
@@ -432,5 +442,36 @@
         </div>
     </div>
     <!-- End Signup Modal -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let labels = document.querySelectorAll("label");
+            let categorySelect = document.getElementById("category");
+            let lampiranBintang = document.getElementById("lampiranBintang");
+            let fileInput = document.getElementById("fileInput");
+
+            // Fungsi untuk menambahkan tanda * ke semua input yang wajib diisi, kecuali "Lampiran"
+            labels.forEach(label => {
+                if (label.textContent.trim().endsWith("*") || label.id === "lampiranLabel") return; // Cegah duplikasi bintang pada "Lampiran"
+                let star = document.createElement("span");
+                star.innerHTML = " *";
+                star.style.color = "red";
+                label.appendChild(star);
+            });
+
+            // Fungsi untuk cek apakah kategori "Permohonan" dipilih
+            function checkCategory() {
+                if (categorySelect.value === "3") { // "3" adalah kode untuk Permohonan
+                    lampiranBintang.style.display = "inline"; // Tampilkan tanda bintang
+                } else {
+                    lampiranBintang.style.display = "none"; // Sembunyikan tanda bintang
+                }
+            }
+
+            // Jalankan saat dropdown kategori berubah
+            categorySelect.addEventListener("change", checkCategory);
+            checkCategory(); // Panggil sekali saat halaman pertama kali dimuat
+        });
+
+    </script>
     </body>
 </html>
