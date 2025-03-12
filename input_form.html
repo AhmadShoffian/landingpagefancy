@@ -129,59 +129,85 @@
                             <input type="text" id="name" class="required" placeholder="Masukkan Nama">
                         </div>
                         <div class="input-box">
+                            <label for="title">Judul</label><span class="required"></span>
+                            <input type="text" id="title" class="required" placeholder="Masukkan Judul">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-box half-width">
+                          <label for="email">Email</label><span class="required"></span>
+                          <input type="email" id="email" class="required" placeholder="Masukkan Email">
+                        </div>
+                        <div class="input-box half-width">
+                          <label for="description">Deskripsi</label><span class="required"></span>
+                          <textarea id="description" class="required" rows="3" placeholder="Masukkan Deskripsi"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="input-box">
                             <label for="phone">No. telepon</label><span class="required"></span>
                             <input type="text" id="phone" class="required" placeholder="Masukkan No. Telepon">
                         </div>
                     </div>
-        
-                    <div class="form-group">
-                        <div class="input-box">
-                            <label for="email">Email</label><span class="required"></span>
-                            <input type="email" id="email" class="required" placeholder="Masukkan Email">
-                        </div>
-                        <div class="input-box">
-                            <label for="category">Kategori</label><span class="required"></span>
-                            <select id="category" class="required" onchange="checkCategory()">
-                                <option value="">Pilih Kategori</option>
-                                <option value="1">Perbaikan</option>
-                                <option value="2">Penambahan</option>
-                                <option value="3">Permohonan</option>
-                                <option value="4">Pemeliharaan</option>
-                            </select>
-                        </div>
-                    </div>
-        
+                    
                     <div class="form-group">
                         <div class="input-box">
                             <label for="role">Peran</label><span class="required"></span>
                             <select id="role" class="required">
                                 <option value="">Pilih Peran</option>
-                                <option value="1">Dosen</option>
-                                <option value="2">Mahasiswa</option>
-                                <option value="3">Tendik</option>
-                                <option value="4">Umum</option>
-                            </select>
-                        </div>
-                        <div class="input-box">
-                            <label for="subcategory">Sub Kategori</label><span class="required"></span>
-                            <select id="subcategory" class="required">
-                                <option value="">Pilih Sub Kategori</option>
-                                <option value="1">Perbaikan Jaringan</option>
-                                <option value="2">Penambahan Bandwidth</option>
-                                <option value="3">Pemasangan Jaringan</option>
-                                <option value="4">Perbaikan Komputer</option>
+                                <option value="1">Rektorat</option>
+                                <option value="2">Dekanat</option>
+                                <option value="3">Dosen</option>
+                                <option value="4">Biro</option>
+                                <option value="5">Mahasiswa</option>
+                                <option value="6">Tendik</option>
+                                <option value="7">Umum</option>
                             </select>
                         </div>
                     </div>
-        
                     <div class="input-box">
-                        <label for="title">Judul</label><span class="required"></span>
-                        <input type="text" id="title" class="required" placeholder="Masukkan Judul">
+                        <label for="role">Unit Kerja</label><span class="required"></span>
+                        <select id="role" class="required">
+                            <option value="">Pilih Unit Kerja</option>
+                            <option value="1">Biro Perencanaan, Keuangan, dan Umum</option>
+                            <option value="2">Biro Akademik, Kemahasiswaan, dan Kerja Sama</option>
+                            <option value="3">Fakultas Seni Pertunjukan</option>
+                            <option value="4">Fakultas Seni Rupa dan Desain</option>
+                            <option value="5">Fakultas Seni Media Rekam</option>
+                            <option value="6">Program Pascasarjana</option>
+                            <option value="7">Lembaga Penelitian dan Pengabdian Masyarakat</option>
+                            <option value="8">Lembaga Penjaminan Mutu dan Pengembangan Pembelajaran</option>
+                            <option value="9">UPA Teknologi Informasi dan Komunikasi</option>
+                            <option value="10">UPA Galeri dan Koleksi Seni</option>
+                            <option value="12">UPA Bahasa</option>
+                            <option value="12">UPA Pertunjukan Seni</option>
+                            <option value="13">UPA Pengembangan Karir dan Kewirausahaan</option>
+                            <option value="14">UPA  Layanan Uji Kompetensi</option>
+                            <option value="15">Satuan Pengawas Internal</option>
+
+                        </select>
                     </div>
-        
                     <div class="input-box">
-                        <label for="description">Deskripsi</label><span class="required"></span>
-                        <textarea id="description" class="required" rows="6" placeholder="Masukkan Deskripsi"></textarea>
+                        <label for="category">Kategori</label><span class="required"></span>
+                        <select id="category" class="required" onchange="checkCategory()">
+                            <option value="">Pilih Kategori</option>
+                            <option value="1">Perbaikan</option>
+                            <option value="2">Penambahan</option>
+                            <option value="3">Permohonan</option>
+                            <option value="4">Pemeliharaan</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <label for="subcategory">Sub Kategori</label><span class="required"></span>
+                        <select id="subcategory" class="required">
+                            <option value="">Pilih Sub Kategori</option>
+                            <option value="1">Perbaikan Jaringan</option>
+                            <option value="2">Penambahan Bandwidth</option>
+                            <option value="3">Pemasangan Jaringan</option>
+                            <option value="4">Perbaikan Komputer</option>
+                        </select>
                     </div>
         
                     <label class="form-label" id="lampiranLabel">Lampiran</label>
@@ -282,11 +308,7 @@
                                 </div>
                             </div>
                         </div>
-        
-                        <div class="copyright-area">
-                            <p class="mb-0 text-black text-center">Copyright © 2025. UPA. Teknologi Informasi dan Komunikasi</p>
-                        </div>
-        
+
                         <div class="copyright-area">
                             <div class="row align-items-center">
                                 <div class="col-md-6">
@@ -300,6 +322,10 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+        
+                        <div class="copyright-area">
+                            <p class="mb-0 text-black text-center">Copyright © 2025. UPA. Teknologi Informasi dan Komunikasi</p>
                         </div>
                     </div>
                 </footer>
