@@ -2729,6 +2729,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
+  gap: 10px; /* Mengurangi jarak antar elemen */
 }
 
 .input-box {
@@ -2868,6 +2869,16 @@ label.required:after {
   }
   .input-box {
       width: 100%;
+  }
+    /* Pastikan Judul dan Deskripsi berada di bawah Sub Kategori */
+    #subcategory {
+      order: 1;
+  }
+    #title {
+      order: 2;
+  }
+    #description {
+      order: 3;
   }
   @media (max-width: 768px) {
     .form-group {
