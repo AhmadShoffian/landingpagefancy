@@ -582,10 +582,11 @@
                     text: "Apakah Anda yakin ingin keluar?",
                     icon: "warning",
                     showCancelButton: true,
-                    confirmButtonColor: "#d33",
-                    cancelButtonColor: "#3085d6",
+                    confirmButtonColor: "#0d6efd",
+                    confirmButtonText: "#3085d6",
                     confirmButtonText: "Ya, Logout!",
-                    cancelButtonText: "Batal"
+                    cancelButtonText: "Batal",
+                    cancelButtonColor: "#d33"
                 }).then((result) => {
                     if (result.isConfirmed) {
                         Swal.fire({
@@ -613,8 +614,8 @@
                         title: "Berhasil!",
                         text: "Data berhasil disimpan.",
                         icon: "success",
-                        confirmButtonText: "OK",
-                        timer: 7000, // Otomatis tertutup setelah 2 detik
+                        showConfirmButton: false,
+                        timer: 2000, // Otomatis tertutup setelah 2 detik
                         timerProgressBar: true
                     });
                 }, 500); // Simulasi delay
@@ -630,10 +631,11 @@
                     text: "Apakah Anda yakin ingin keluar?",
                     icon: "warning",
                     showCancelButton: true,
-                    confirmButtonColor: "#d33",
-                    cancelButtonColor: "#3085d6",
+                    confirmButtonColor: "#0d6efd",
+                    confirmButtonText: "#3085d6",
                     confirmButtonText: "Ya, Logout!",
-                    cancelButtonText: "Batal"
+                    cancelButtonText: "Batal",
+                    cancelButtonColor: "#d33"
                 }).then((result) => {
                     if (result.isConfirmed) {
                         Swal.fire({
