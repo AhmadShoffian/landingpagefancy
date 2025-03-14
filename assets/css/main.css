@@ -4827,7 +4827,7 @@ ALUR-TIKETING CSS
 }
 
 .pagination.left {
-  text-align: left;
+  text-align: right;
 }
 
 .pagination .pagination-list {
