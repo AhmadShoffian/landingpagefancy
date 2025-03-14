@@ -25,10 +25,14 @@ html {
 body {
   font-size: 14px;
   font-weight: 400;
+  height: auto;
+  min-height: 100vh;
   font-family: "Poppins", sans-serif;
   font-style: normal;
   color: #333;
-  overflow-x: hidden; }
+  overflow-x: scroll !important;
+  overflow-y: scroll !important;
+}
 
 * {
   margin: 0;
