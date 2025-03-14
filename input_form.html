@@ -205,8 +205,9 @@
 
                         </div>
                         <div class="input-box">
-                            <label class="form-label" id="lampiranLabel">Lampiran</label>
-                            <span id="lampiranBintang" style="color:red; display: none;"> *</span>
+                            <label class="form-label" id="lampiranLabel">
+                                Lampiran <span id="lampiranBintang" style="color:red;">*</span>
+                            </label>
                             <div class="file-upload">
                                 <div class="preview-box" id="previewBox">
                                     <span id="previewText">Preview File</span>
@@ -221,19 +222,6 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <div class="input-box">
-                            
-                        </div>
-                    </div>
-                    <div class="input-box">
-                        
-                    </div>
-                    <div class="input-box">
-                        
-                    </div>
-                    
                 </form>
                 <div class="button-container">
                     <button type="submit" class="btn btn-primary" id="swal-2">Kirim</button>
@@ -260,6 +248,14 @@
                                 <div class="footer-widget mb-60 wow fadeInLeft" data-wow-delay=".2s">
                                     <a href="index.html" class="logo mb-30"><img src="assets/img/logo-isi-black.svg" alt="logo"></a>
                                     <p class="mb-30 footer-desc">We Crafted an awesome desig library that is robust and intuitive to use. No matter you're building a business presentation websit.</p>
+                                    <div class="footer-social-links">
+                                        <ul class="d-flex">
+                                            <li><a href="javascript:void(0)"><i class="lni lni-facebook-original"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="lni lni-instagram-original"></i></a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 offset-xl-1 col-lg-3 col-md-6">
@@ -315,21 +311,6 @@
                                             Indonesia</p>
                                         </li>
                                     </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="copyright-area">
-                            <div class="row align-items-center">
-                                <div class="col-md-6">
-                                     <div class="footer-social-links">
-                                        <ul class="d-flex">
-                                            <li><a href="javascript:void(0)"><i class="lni lni-facebook-original"></i></a></li>
-                                            <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
-                                            <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
-                                            <li><a href="javascript:void(0)"><i class="lni lni-instagram-original"></i></a></li>
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -405,6 +386,30 @@
                         });
                     });
                 </script> -->
+
+                <script>
+                    document.getElementById("permohonanBtn").addEventListener("click", function(event) {
+                        var fileInput = document.getElementById("fileInput"); // Ambil input file
+                        var lampiranBintang = document.getElementById("lampiranBintang"); // Tanda bintang
+                        var lampiranLabel = document.getElementById("lampiranLabel"); // Label lampiran
+                        
+                        if (fileInput.files.length === 0) { 
+                            alert("Lampiran harus diisi!");
+                            
+                            // Tambah efek agar pengguna tahu lampiran wajib diisi
+                            lampiranLabel.style.color = "red";
+                            lampiranBintang.style.fontWeight = "bold";
+                    
+                            // Mencegah form terkirim
+                            event.preventDefault();
+                        } else {
+                            // Kembalikan ke normal jika sudah diisi
+                            lampiranLabel.style.color = "black";
+                            lampiranBintang.style.fontWeight = "normal";
+                        }
+                    });
+                </script>
+                    
                
 
                 <script>

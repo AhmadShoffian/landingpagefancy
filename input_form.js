@@ -47,7 +47,7 @@ function removeFile() {
 }
 
 // Form Submission Handling
-// document.getElementById("uploadForm").addEventListener("submit", function(event) {
-//     event.preventDefault();
-//     alert("Form berhasil dikirim!");
-// });
+document.getElementById("uploadForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    alert("Form berhasil dikirim!");
+});

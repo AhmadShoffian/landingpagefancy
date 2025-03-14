@@ -4081,20 +4081,20 @@ ALUR-TIKETING CSS
   gap: 50px; /* Jarak antara Login dan Kirim Cepat */
 }
 .login-alur {
-  border: 2px solid #ccc; /* Border luar */
+  border: 1px solid #ccc; /* Border luar */
   border-radius: 10px;
   padding: 20px;
-  background: white;
+  background: #EFF2F9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
 }
 
 /* Kirim Cepat */
 .kirim-cepat {
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   border-radius: 10px;
   padding: 20px;
-  background: white;
+  background: #EFF2F9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .kirim-cepat h3{
