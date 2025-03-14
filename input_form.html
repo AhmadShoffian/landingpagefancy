@@ -468,13 +468,13 @@
                             let fileInput = document.getElementById("fileInput");
 
                             // Fungsi untuk menambahkan tanda * ke semua input yang wajib diisi, kecuali "Lampiran"
-                            // labels.forEach(label => {
-                            //     if (label.textContent.trim().endsWith("*") || label.id === "lampiranLabel") return; // Cegah duplikasi bintang pada "Lampiran"
-                            //     let star = document.createElement("span");
-                            //     star.innerHTML = " *";
-                            //     star.style.color = "red";
-                            //     label.appendChild(star);
-                            // });
+                            labels.forEach(label => {
+                                if (label.textContent.trim().endsWith(" *") || label.id === "lampiranLabel") return; // Cegah duplikasi bintang pada "Lampiran"
+                                let star = document.createElement("span");
+                                star.innerHTML = " *";
+                                star.style.color = "red";
+                                label.appendChild(star);
+                            });
 
                             // Fungsi untuk cek apakah kategori "Permohonan" dipilih
                             function checkCategory() {

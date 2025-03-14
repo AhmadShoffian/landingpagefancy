@@ -3038,12 +3038,12 @@ textarea {
 }
 
 /* Styling untuk tanda bintang wajib */
-span.required::before {
+/* span.required::before {
   content: " *";
   color: red;
   font-weight: bold;
   margin-left: 5px;
-}
+} */
 
 
 /* Button Container */
