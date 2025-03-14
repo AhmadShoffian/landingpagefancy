@@ -117,71 +117,94 @@
 
         <div class="container pt-20">
             <div class="card shadow-sm p-4">
-                <h4 class="mb-4">Detail Ticket
-                    <button class="btn-edit-ticket">Edit</button>
-                </h4>
+                <h4 class="mb-4">Detail Tiket</h4>
                 <div class="row content-section">
-                    <div class="col-md-6">
-                        <div class="d-flex mb-3">
-                            <p class="fw-bold w-50">No. Ticket</p>
-                            <p class="w-50">009992812</p>
+                    <div class="col-md-6 left-desc">
+                        <div class="d-flex align-items-center mb-2 tiket-desc">
+                            <p class="fw-bold text-start text-label">No. Tiket</p>
+                            <p class="fw-bold colon">:</p>
+                            <p class="text-value">009992812</p>
                         </div>
-                        <div class="d-flex mb-3">
-                            <p class="fw-bold w-50">Name</p>
-                            <p class="w-50 mb-0">
+                        <div class="d-flex align-items-center mb-2 tiket-desc">
+                            <p class="fw-bold text-start text-label">Nama</p>
+                            <p class=" fw-bold colon">:</p>
+                            <p class="text-value mb-0">
                                 Irenne Dwi Natalia <br>
                                 <span class="text-muted">Tendik</span>
                             </p>
                         </div>
-                        <div class="d-flex mb-3">
-                            <p class="fw-bold w-50">Kategori</p>
-                            <p class="w-50">Perbaikan</p>
+                        <div class="d-flex align-items-center mb-2 tiket-desc">
+                            <p class="fw-bold text-start text-label">Kategori</p>
+                            <p class="fw-bold colon">:</p>
+                            <p class="text-value">Perbaikan</p>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="d-flex mb-3">
-                            <p class="fw-bold w-50">Status</p>
-                            <p class="w-50"><span class="status-badge status-closed">Closed</span></p>
+                    <div class="col-md-6 right-desc">
+                        <div class="d-flex align-items-center mb-2 tiket-desc">
+                            <p class="fw-bold text-start text-label">Status</p>
+                            <p class="fw-bold colon">:</p>
+                            <p class="text-value"><span class="status-badge status-closed">Closed</span></p>
                         </div>
-                        <div class="d-flex mb-3">
-                            <p class="fw-bold w-50">Created</p>
-                            <p class="w-50">30/12/2024 13:30</p>
+                        <div class="d-flex align-items-center mb-2 tiket-desc">
+                            <p class="fw-bold text-start text-label">Created</p>
+                            <p class="fw-bold colon">:</p>
+                            <p class="text-value">30/12/2024 13:30</p>
                         </div>
-                        <div class="d-flex mb-3">
-                            <p class="fw-bold w-50">Attachment</p>
-                            <p class="w-50"><a href="#">screen-soot-1.jpg</a></p>
+                        <div class="d-flex align-items-center mb-2 tiket-desc">
+                            <p class="fw-bold text-start text-label">Attachment</p>
+                            <p class="fw-bold colon">:</p>
+                            <p class="text-value"><a href="#">screen-soot-1.jpg</a></p>
                         </div>
-                    </div>
+                    </div> 
                 </div>
+
                 <hr class="divider">
                 <div class="row content-section">
                     <div class="col-md-6">
                         <div class="d-flex mb-3">
-                            <p class="fw-bold w-50">Title</p>
-                            <p class="w-50">Perbaikan Printer</p>
+                            <p class="fw-bold text-start text-label">Title</p>
+                            <p class="fw-bold colon">:</p>
+                            <p class="text-value">Perbaikan Printer</p>
                         </div>
                     </div>
                     <div class="col-md-12 mb-4">
-                        <p class="fw-bold">Description</p>
+                        <div class="d-flex mb-3">
+                            <p class="fw-bold text-start text-label">Description</p>
+                            <p class="fw-bold colon">:</p>
+                        </div>
                         <p>When I'm printing a document with an Epson printer, LED printer always red and show warning dialog.</p>
                     </div>
                 </div>
-                
+            
                 <hr class="divider">
                 <h5 class="mb-4">Riwayat Pekerjaan</h5>
                 <div class="history-box p-3">
                     <div class="row">
                         <div class="col-md-6">
                             <p>[12-02-2025 / 09:30:45] <strong>Ticket Status:</strong> <span class="text-success">Open</span></p>
+                            <ul class="ul-with-bullet">
+                                <li>Pengguna mengajukan permohonan</li>
+                            </ul>
                             <p>[12-02-2025 / 09:35:09] <strong>Ticket Edited by User</strong></p>
+                            <ul class="ul-with-bullet">
+                                <li>Pengguna mengubah permohonan</li>
+                            </ul>
                             <p>[12-02-2025 / 13:30:30] <strong>Ticket Status:</strong> <span class="text-warning">Processed</span></p>
+                            <ul class="ul-with-bullet">
+                                <li>Permohonan sedang diproses</li>
+                            </ul>
                             <p>[12-02-2025 / 15:02:23] <strong>Ticket Confirmation</strong></p>
+                            <ul class="ul-with-bullet">
+                                <li>Permohonan selesai diproses.</li>
+                            </ul>
                         </div>
-                        <div class="col-md-6">
-                            <p>Pengguna mengajukan permohonan</p>
-                            <p>Pengguna mengubah permohonan</p>
-                            <p>Permohonan sedang diproses</p>
-                            <p>Permohonan selesai diproses. Silakan lihat penyelesaian pada kolom chat dan lakukan konfirmasi apabila hasil belum sesuai atau masih memiliki pertanyaan. Lakukan <span class="text-danger">CLOSE TICKET</span> apabila hasil sudah sesuai.</p>
+                        <div class="col-md-12 mt-30">
+                            <p class="close-messages text-danger">
+                                * Silakan klik tombol CHAT apabila masih ada pertanyaan <br>
+                            </p>
+                            <p class="close-messages text-danger">
+                                * Silakan Klik tombol CLOSE TICKET apabila sudah selesai
+                            </p>
                         </div>
                     </div>
                 </div>

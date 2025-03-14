@@ -3425,6 +3425,40 @@ h4, h5 {
   color: #000;
 }
 
+.tiket-desc {
+  display: flex;
+  align-items: center;
+  gap: 4px; /* Mengurangi jarak antar elemen */
+}
+
+.text-label {
+  min-width: 120px; /* Lebar minimum agar tetap sejajar */
+  text-align: left; /* Rata kanan agar lebih rapi */
+}
+
+.colon {
+  margin-left: -2px; /* Menggeser titik dua lebih dekat */
+}
+
+.text-value {
+  margin-left: 4px; /* Menggeser deskripsi lebih dekat */
+}
+
+.right-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Menggeser semua elemen ke kanan */
+  padding-left: 300px;
+  text-align: right; /* Pastikan teks sejajar kanan */
+}
+
+.right-desc .d-flex {
+  justify-content: end; /* Menggeser titik dua dan teks ke kanan */
+  gap: 6px; /* Mengatur jarak agar lebih rapi */
+}
+
+
+
 /*================
   EDIT TIKET MODAL 
   ================*/
