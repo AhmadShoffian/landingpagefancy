@@ -126,33 +126,33 @@
                 <div class="row content-section">
                     <div class="col-md-6">
                         <div class="d-flex mb-3">
-                            <p class="fw-bold w-50">No. Ticket</p>
-                            <p class="w-50">009992812</p>
+                            <p class="fw-bold w-25 label-text">No. Ticket</p>
+                            <p class="w-25">009992812</p>
                         </div>
                         <div class="d-flex mb-3">
-                            <p class="fw-bold w-50">Name</p>
-                            <p class="w-50 mb-0">
+                            <p class="fw-bold w-25">Name</p>
+                            <p class="w-25 mb-0">
                                 Irenne Dwi Natalia <br>
                                 <span class="text-muted">Tendik</span>
                             </p>
                         </div>
                         <div class="d-flex mb-3">
-                            <p class="fw-bold w-50">Kategori</p>
-                            <p class="w-50">Perbaikan</p>
+                            <p class="fw-bold w-25">Kategori</p>
+                            <p class="w-25">Perbaikan</p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="d-flex mb-3">
-                            <p class="fw-bold w-50">Status</p>
-                            <p class="w-50"><span class="status-badge">Processed</span></p>
+                            <p class="fw-bold w-25">Status</p>
+                            <p class="w-25"><span class="status-badge">Processed</span></p>
                         </div>
                         <div class="d-flex mb-3">
-                            <p class="fw-bold w-50">Created</p>
-                            <p class="w-50">30/12/2024 13:30</p>
+                            <p class="fw-bold w-25">Created</p>
+                            <p class="w-25">30/12/2024 13:30</p>
                         </div>
                         <div class="d-flex mb-3">
-                            <p class="fw-bold w-50">Attachment</p>
-                            <p class="w-50"><a href="#">screen-soot-1.jpg</a></p>
+                            <p class="fw-bold w-25">Attachment</p>
+                            <p class="w-25"><a href="#">screen-soot-1.jpg</a></p>
                         </div>
                     </div>
                 </div>
@@ -160,8 +160,8 @@
                 <div class="row content-section">
                     <div class="col-md-6">
                         <div class="d-flex mb-3">
-                            <p class="fw-bold w-50">Title</p>
-                            <p class="w-50">Perbaikan Printer</p>
+                            <p class="fw-bold w-25">Title</p>
+                            <p class="w-25">Perbaikan Printer</p>
                         </div>
                     </div>
                     <div class="col-md-12 mb-4">
@@ -215,6 +215,14 @@
                         <div class="footer-widget mb-60 wow fadeInLeft" data-wow-delay=".2s">
                             <a href="index.html" class="logo mb-30"><img src="assets/img/logo-isi-black.svg" alt="logo"></a>
                             <p class="mb-30 footer-desc">We Crafted an awesome desig library that is robust and intuitive to use. No matter you're building a business presentation websit.</p>
+                            <div class="footer-social-links">
+                                <ul class="d-flex">
+                                    <li><a href="javascript:void(0)"><i class="lni lni-facebook-original"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="lni lni-instagram-original"></i></a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="col-xl-3 offset-xl-1 col-lg-3 col-md-6">
@@ -252,25 +260,6 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                </div>
-
-                <div class="copyright-area">
-                    <div class="row align-items-center">
-                        <div class="col-md-6">
-                            <div class="footer-social-links">
-                                <ul class="d-flex">
-                                    <li><a href="javascript:void(0)"><i class="lni lni-facebook-original"></i></a></li>
-                                    <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
-                                    <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
-                                    <li><a href="javascript:void(0)"><i class="lni lni-instagram-original"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- <div class="col-md-6">
-                            <p class="wow fadeInUp" data-wow-delay=".3s">Template by <a
-                                    href="https://uideck.com" rel="nofollow">UIdeck</a></p>
-                        </div> -->
                     </div>
                 </div>
 
@@ -333,72 +322,102 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form id="editTicketForm">
-                            <div class="row">
-                                <div class="row mb-3">
-                                    <div class="col-md-6">
-                                        <label for="name" class="form-label">Nama</label>
-                                        <input type="text" class="form-control" required id="name" placeholder="Masukkan Nama">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="phone" class="form-label">No. Telepon</label>
-                                        <input type="text" class="form-control" required id="phone" placeholder="Masukkan No. Telepon">
+                        <form id="submissionForm">
+                            <div class="form-group">
+                                <div class="input-box">
+                                    <label for="name">Nama</label><span class="required"></span>
+                                    <input type="text" id="name" class="required" placeholder="Masukkan Nama">
+                                </div>
+                                <div class="input-box">
+                                    <label for="title">Judul</label><span class="required"></span>
+                                    <input type="text" id="title" class="required" placeholder="Masukkan Judul">
+                                </div>
+                            </div>
+                
+                            <div class="form-group">
+                                <div class="input-box">
+                                    <label for="email">Email</label><span class="required"></span>
+                                    <input type="email" id="email" class="required" placeholder="Masukkan Email">
+                                    <label for="phone" class="mt-4">No. telepon</label><span class="required"></span>
+                                    <input type="text" id="phone" class="required" placeholder="Masukkan No. Telepon">
+                                </div>
+                                <div class="input-box">
+                                    <label for="description">Deskripsi</label><span class="required"></span>
+                                    <textarea id="description" class="required" rows="6" placeholder="Masukkan Deskripsi"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-box">
+                                    <label for="phone">No. telepon</label><span class="required"></span>
+                                    <input type="text" id="phone" class="required" placeholder="Masukkan No. Telepon">
+
+                                    <label for="role" class="form-label mt-4">Peran</label><span class="required"></span>
+                                    <select id="role" class=" form-select required">
+                                        <option value="">Pilih Peran</option>
+                                        <option value="1">Rektorat</option>
+                                        <option value="2">Dekanat</option>
+                                        <option value="3">Dosen</option>
+                                        <option value="4">Biro</option>
+                                        <option value="5">Mahasiswa</option>
+                                        <option value="6">Tendik</option>
+                                        <option value="7">Umum</option>
+                                    </select>
+
+                                    <label for="role" class="mt-4">Unit Kerja</label><span class="required"></span>
+                                    <select id="role" class="form-select required">
+                                        <option value="">Pilih Unit Kerja</option>
+                                        <option value="1">Biro Perencanaan, Keuangan, dan Umum</option>
+                                        <option value="2">Biro Akademik, Kemahasiswaan, dan Kerja Sama</option>
+                                        <option value="3">Fakultas Seni Pertunjukan</option>
+                                        <option value="4">Fakultas Seni Rupa dan Desain</option>
+                                        <option value="5">Fakultas Seni Media Rekam</option>
+                                        <option value="6">Program Pascasarjana</option>
+                                        <option value="7">Lembaga Penelitian dan Pengabdian Masyarakat</option>
+                                        <option value="8">Lembaga Penjaminan Mutu dan Pengembangan Pembelajaran</option>
+                                        <option value="9">UPA Teknologi Informasi dan Komunikasi</option>
+                                        <option value="10">UPA Galeri dan Koleksi Seni</option>
+                                        <option value="12">UPA Bahasa</option>
+                                        <option value="12">UPA Pertunjukan Seni</option>
+                                        <option value="13">UPA Pengembangan Karir dan Kewirausahaan</option>
+                                        <option value="14">UPA  Layanan Uji Kompetensi</option>
+                                        <option value="15">Satuan Pengawas Internal</option>
+                                    </select>
+
+                                    <label for="category" class="mt-4">Kategori</label><span class="required"></span>
+                                    <select id="category" class="form-select required" onchange="checkCategory()">
+                                        <option value="">Pilih Kategori</option>
+                                        <option value="1">Perbaikan</option>
+                                        <option value="2">Penambahan</option>
+                                        <option value="3">Permohonan</option>
+                                        <option value="4">Pemeliharaan</option>
+                                    </select>
+
+                                    <label for="subcategory" class="mt-3">Sub Kategori</label><span class="required"></span>
+                                    <select id="subcategory" class="form-select required">
+                                        <option value="">Pilih Sub Kategori</option>
+                                        <option value="1">Perbaikan Jaringan</option>
+                                        <option value="2">Penambahan Bandwidth</option>
+                                        <option value="3">Pemasangan Jaringan</option>
+                                        <option value="4">Perbaikan Komputer</option>
+                                    </select>
+                                </div>
+                                <div class="input-box">
+                                    <label class="form-label" id="lampiranLabel">Lampiran</label>
+                                    <span id="lampiranBintang" style="color:red; display: none;"> *</span>
+                                    <div class="file-upload">
+                                        <div class="preview-box" id="previewBox">
+                                            <span id="previewText">Preview File</span>
+                                            <img id="previewImage" src="" alt="" style="display: none;">
+                                            <a id="previewLink" href="#" target="_blank" style="display: none;">Lihat File</a>
+                                            <div class="overlay" id="removeBtn" onclick="removeFile()" style="display: none;">Hapus</div>
+                                        </div>
+                                        <div class="upload-box">
+                                            <span>Upload file</span>
+                                            <input type="file" id="fileInput" accept=".png,.jpg,.jpeg,.pdf">
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="row mb-3">
-                                    <div class="col-md-6">
-                                        <label for="email" class="form-label">Email</label>
-                                        <input type="email" class="form-control" required id="email" placeholder="Masukkan Email">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="category" class="form-label">Kategori</label>
-                                        <select class="form-control" required id="category">
-                                            <option selected>Kategori</option>
-                                            <option value="1">Kategori A</option>
-                                            <option value="2">Kategori B</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-md-6">
-                                        <label for="role" class="form-label">Peran</label>
-                                        <select class="form-control" required id="role">
-                                            <option selected>Pilih Peran</option>
-                                            <option value="1">Admin</option>
-                                            <option value="2">User</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="subcategory" class="form-label">Sub Kategori</label>
-                                        <select class="form-control" required id="subcategory">
-                                            <option selected>Sub Kategori</option>
-                                            <option value="1">Sub Kategori A</option>
-                                            <option value="2">Sub Kategori B</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="title" class="form-label">Judul</label>
-                                    <input type="text" class="form-control" required id="title" placeholder="Masukkan Judul">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="description" class="form-label">Deskripsi</label>
-                                    <textarea class="form-control" required id="description" rows="3" placeholder="Masukkan Deskripsi"></textarea>
-                                </div>
-                                <label class="form-label">Lampiran</label>
-                                <div class="file-upload">
-                                    <div class="preview-box" id="previewBox">
-                                        <span id="previewText">Preview File</span>
-                                        <img id="previewImage" src="" alt="" style="display: none;">
-                                        <a id="previewLink" href="#" target="_blank" style="display: none;">Lihat File</a>
-                                        <div class="overlay" id="removeBtn" onclick="removeFile()" style="display: none;">Hapus</div>
-                                    </div>
-                                    <div class="upload-box">
-                                        <span>Upload file</span>
-                                        <input type="file" id="fileInput" accept=".png,.jpg,.jpeg,.pdf" onchange="previewFile()">
-                                    </div>
-                                </div>
-                                
+                            </div>
                             <!-- Tombol Simpan & Batal -->
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-primary px-4">Simpan</button>
@@ -435,14 +454,15 @@
         <script>
             document.getElementById("closeTicket").addEventListener("click", function () {
                 Swal.fire({
-                    title: "Tutup Tiket?",
-                    text: "Apakah Anda yakin ingin menutup tiket ini? Tindakan ini tidak dapat dibatalkan.",
+                    title: "Tutup Tiket!",
+                    text: "Apakah yakin ingin menutup ticket Anda!",
                     icon: "warning",
                     showCancelButton: true,
-                    confirmButtonColor: "#d33",
+                    confirmButtonColor: "#0d6efd",
                     cancelButtonColor: "#3085d6",
-                    confirmButtonText: "Ya, Tutup!",
-                    cancelButtonText: "Batal"
+                    confirmButtonText: "Ya",
+                    cancelButtonText: "Batal",
+                    cancelButtonColor: "#d33"
                 }).then((result) => {
                     if (result.isConfirmed) {
                         Swal.fire({
