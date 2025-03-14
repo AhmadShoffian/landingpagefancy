@@ -4120,7 +4120,7 @@ ALUR-TIKETING CSS
   gap: 50px; /* Jarak antara Login dan Kirim Cepat */
 }
 .login-alur {
-  border: 1px solid #ccc; /* Border luar */
+  border: opx solid #ccc; /* Border luar */
   border-radius: 10px;
   padding: 20px;
   background: #fff;
@@ -4130,7 +4130,7 @@ ALUR-TIKETING CSS
 
 /* Kirim Cepat */
 .kirim-cepat {
-  border: 1px solid #ccc;
+  border: 0px solid #ccc;
   border-radius: 10px;
   padding: 20px;
   background: #fff;
