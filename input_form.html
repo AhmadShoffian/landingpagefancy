@@ -118,8 +118,8 @@
         <div class="container">
             <div class="alert" role="alert" style="background-color: #D1F8EF; color: black;">
                 <strong>Sebelum mengirimkan, mohon pastikan:</strong><br>
-                # Semua yang bertanda bintang wajib diisi.<br>
-                # Semua informasi adalah benar dan bebas dari kesalahan.
+                <span style="color: red;">*</span> Semua yang bertanda bintang wajib diisi.<br>
+                <span style="color: red;">*</span> Semua informasi adalah benar dan bebas dari kesalahan.
             </div>
             <div class="form-container-inputform">
                 <form id="submissionForm">
@@ -138,6 +138,27 @@
                         <div class="input-box half-width">
                           <label for="email">Email</label><span class="required"></span>
                           <input type="email" id="email" class="required" placeholder="Masukkan Email">
+
+                          <label for="role" class="mt-4">Unit Kerja</label><span class="required"></span>
+                          <select id="role" class="form-select required">
+                              <option value="">Pilih Unit Kerja</option>
+                              <option value="1">Biro Perencanaan, Keuangan, dan Umum</option>
+                              <option value="2">Biro Akademik, Kemahasiswaan, dan Kerja Sama</option>
+                              <option value="3">Fakultas Seni Pertunjukan</option>
+                              <option value="4">Fakultas Seni Rupa dan Desain</option>
+                              <option value="5">Fakultas Seni Media Rekam</option>
+                              <option value="6">Program Pascasarjana</option>
+                              <option value="7">Lembaga Penelitian dan Pengabdian Masyarakat</option>
+                              <option value="8">Lembaga Penjaminan Mutu dan Pengembangan Pembelajaran</option>
+                              <option value="9">UPA Teknologi Informasi dan Komunikasi</option>
+                              <option value="10">UPA Galeri dan Koleksi Seni</option>
+                              <option value="12">UPA Bahasa</option>
+                              <option value="12">UPA Pertunjukan Seni</option>
+                              <option value="13">UPA Pengembangan Karir dan Kewirausahaan</option>
+                              <option value="14">UPA  Layanan Uji Kompetensi</option>
+                              <option value="15">Satuan Pengawas Internal</option>
+                          </select>
+
                         </div>
                         <div class="input-box half-width">
                           <label for="description">Deskripsi</label><span class="required"></span>
@@ -149,13 +170,9 @@
                         <div class="input-box">
                             <label for="phone">No. telepon</label><span class="required"></span>
                             <input type="text" id="phone" class="required" placeholder="Masukkan No. Telepon">
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <div class="input-box">
-                            <label for="role">Peran</label><span class="required"></span>
-                            <select id="role" class="required">
+
+                            <label for="role" class="mt-4">Peran</label><span class="required"></span>
+                            <select id="role" class="form-select required">
                                 <option value="">Pilih Peran</option>
                                 <option value="1">Rektorat</option>
                                 <option value="2">Dekanat</option>
@@ -165,63 +182,44 @@
                                 <option value="6">Tendik</option>
                                 <option value="7">Umum</option>
                             </select>
-                        </div>
-                    </div>
-                    <div class="input-box">
-                        <label for="role">Unit Kerja</label><span class="required"></span>
-                        <select id="role" class="required">
-                            <option value="">Pilih Unit Kerja</option>
-                            <option value="1">Biro Perencanaan, Keuangan, dan Umum</option>
-                            <option value="2">Biro Akademik, Kemahasiswaan, dan Kerja Sama</option>
-                            <option value="3">Fakultas Seni Pertunjukan</option>
-                            <option value="4">Fakultas Seni Rupa dan Desain</option>
-                            <option value="5">Fakultas Seni Media Rekam</option>
-                            <option value="6">Program Pascasarjana</option>
-                            <option value="7">Lembaga Penelitian dan Pengabdian Masyarakat</option>
-                            <option value="8">Lembaga Penjaminan Mutu dan Pengembangan Pembelajaran</option>
-                            <option value="9">UPA Teknologi Informasi dan Komunikasi</option>
-                            <option value="10">UPA Galeri dan Koleksi Seni</option>
-                            <option value="12">UPA Bahasa</option>
-                            <option value="12">UPA Pertunjukan Seni</option>
-                            <option value="13">UPA Pengembangan Karir dan Kewirausahaan</option>
-                            <option value="14">UPA  Layanan Uji Kompetensi</option>
-                            <option value="15">Satuan Pengawas Internal</option>
 
-                        </select>
-                    </div>
-                    <div class="input-box">
-                        <label for="category">Kategori</label><span class="required"></span>
-                        <select id="category" class="required" onchange="checkCategory()">
-                            <option value="">Pilih Kategori</option>
-                            <option value="1">Perbaikan</option>
-                            <option value="2">Penambahan</option>
-                            <option value="3">Permohonan</option>
-                            <option value="4">Pemeliharaan</option>
-                        </select>
-                    </div>
-                    <div class="input-box">
-                        <label for="subcategory">Sub Kategori</label><span class="required"></span>
-                        <select id="subcategory" class="required">
-                            <option value="">Pilih Sub Kategori</option>
-                            <option value="1">Perbaikan Jaringan</option>
-                            <option value="2">Penambahan Bandwidth</option>
-                            <option value="3">Pemasangan Jaringan</option>
-                            <option value="4">Perbaikan Komputer</option>
-                        </select>
-                    </div>
-        
-                    <label class="form-label" id="lampiranLabel">Lampiran</label>
-                    <span id="lampiranBintang" style="color:red; display: none;"> *</span>
-                    <div class="file-upload">
-                        <div class="preview-box" id="previewBox">
-                            <span id="previewText">Preview File</span>
-                            <img id="previewImage" src="" alt="" style="display: none;">
-                            <a id="previewLink" href="#" target="_blank" style="display: none;">Lihat File</a>
-                            <div class="overlay" id="removeBtn" onclick="removeFile()" style="display: none;">Hapus</div>
+                            
+
+                            <label for="category" class="mt-4">Kategori</label><span class="required"></span>
+                            <select id="category" class="form-select required" onchange="checkCategory()">
+                                <option value="">Pilih Kategori</option>
+                                <option value="1">Perbaikan</option>
+                                <option value="2">Penambahan</option>
+                                <option value="3">Permohonan</option>
+                                <option value="4">Pemeliharaan</option>
+                            </select>
+
+                            <label for="subcategory" class="mt-4">Sub Kategori</label><span class="required"></span>
+                            <select id="subcategory" class="form-select required">
+                                <option value="">Pilih Sub Kategori</option>
+                                <option value="1">Perbaikan Jaringan</option>
+                                <option value="2">Penambahan Bandwidth</option>
+                                <option value="3">Pemasangan Jaringan</option>
+                                <option value="4">Perbaikan Komputer</option>
+                            </select>
+
                         </div>
-                        <div class="upload-box">
-                            <span>Upload file</span>
-                            <input type="file" id="fileInput" accept=".png,.jpg,.jpeg,.pdf">
+                        <div class="input-box">
+                            <label class="form-label" id="lampiranLabel">
+                                Lampiran <span id="lampiranBintang" style="color:red;">*</span>
+                            </label>
+                            <div class="file-upload">
+                                <div class="preview-box" id="previewBox">
+                                    <span id="previewText">Preview File</span>
+                                    <img id="previewImage" src="" alt="" style="display: none;">
+                                    <a id="previewLink" href="#" target="_blank" style="display: none;">Lihat File</a>
+                                    <div class="overlay" id="removeBtn" onclick="removeFile()" style="display: none;">Hapus</div>
+                                </div>
+                                <div class="upload-box">
+                                    <span>Upload file</span>
+                                    <input type="file" id="fileInput" accept=".png,.jpg,.jpeg,.pdf">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </form>
@@ -250,6 +248,14 @@
                                 <div class="footer-widget mb-60 wow fadeInLeft" data-wow-delay=".2s">
                                     <a href="index.html" class="logo mb-30"><img src="assets/img/logo-isi-black.svg" alt="logo"></a>
                                     <p class="mb-30 footer-desc">We Crafted an awesome desig library that is robust and intuitive to use. No matter you're building a business presentation websit.</p>
+                                    <div class="footer-social-links">
+                                        <ul class="d-flex">
+                                            <li><a href="javascript:void(0)"><i class="lni lni-facebook-original"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="lni lni-instagram-original"></i></a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 offset-xl-1 col-lg-3 col-md-6">
@@ -308,21 +314,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="copyright-area">
-                            <div class="row align-items-center">
-                                <div class="col-md-6">
-                                     <div class="footer-social-links">
-                                        <ul class="d-flex">
-                                            <li><a href="javascript:void(0)"><i class="lni lni-facebook-original"></i></a></li>
-                                            <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
-                                            <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
-                                            <li><a href="javascript:void(0)"><i class="lni lni-instagram-original"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
         
                         <div class="copyright-area">
                             <p class="mb-0 text-black text-center">Copyright © 2025. UPA. Teknologi Informasi dan Komunikasi</p>
@@ -360,10 +351,11 @@
                             text: "Apakah Anda yakin ingin keluar?",
                             icon: "warning",
                             showCancelButton: true,
-                            confirmButtonColor: "#d33",
-                            cancelButtonColor: "#3085d6",
+                            confirmButtonColor: "#0d6efd",
+                            confirmButtonText: "#3085d6",
                             confirmButtonText: "Ya, Logout!",
-                            cancelButtonText: "Batal"
+                            cancelButtonText: "Batal",
+                            cancelButtonColor: "#d33"
                         }).then((result) => {
                             if (result.isConfirmed) {
                                 Swal.fire({
@@ -394,20 +386,44 @@
                         });
                     });
                 </script> -->
+
+                <script>
+                    document.getElementById("permohonanBtn").addEventListener("click", function(event) {
+                        var fileInput = document.getElementById("fileInput"); // Ambil input file
+                        var lampiranBintang = document.getElementById("lampiranBintang"); // Tanda bintang
+                        var lampiranLabel = document.getElementById("lampiranLabel"); // Label lampiran
+                        
+                        if (fileInput.files.length === 0) { 
+                            alert("Lampiran harus diisi!");
+                            
+                            // Tambah efek agar pengguna tahu lampiran wajib diisi
+                            lampiranLabel.style.color = "red";
+                            lampiranBintang.style.fontWeight = "bold";
+                    
+                            // Mencegah form terkirim
+                            event.preventDefault();
+                        } else {
+                            // Kembalikan ke normal jika sudah diisi
+                            lampiranLabel.style.color = "black";
+                            lampiranBintang.style.fontWeight = "normal";
+                        }
+                    });
+                </script>
+                    
                
 
                 <script>
                    document.getElementById("swal-2").addEventListener("click", function() {
                         Swal.fire({
                             title: 'Data Berhasil Dikirim!',
-                            text: 'Mohon tunggu konfirmasi dari kami.',
+                            text: 'Silahkan klik tombol "OK"',
                             icon: 'success',
                             confirmButtonText: 'OK',
                             confirmButtonColor: '#4CAF50',
                             allowOutsideClick: false,
                             allowEscapeKey: false,
                             allowEnterKey: false,
-                            showCloseButton: true,
+                            showCloseButton: false,
                             showCancelButton: false,
                             showDenyButton: false,
                             showConfirmButton: true,
