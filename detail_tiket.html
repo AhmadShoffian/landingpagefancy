@@ -336,21 +336,21 @@
                         <form id="submissionForm">
                             <div class="form-group">
                                 <div class="input-box">
-                                    <label for="name">Nama</label><span class="required"></span>
+                                    <label for="name">Nama <span class="required"></span></label>
                                     <input type="text" id="name" class="required" placeholder="Masukkan Nama">
                                 </div>
                                 <div class="input-box">
-                                    <label for="title">Judul</label><span class="required"></span>
+                                    <label for="title">Judul <span class="required"></span></label>
                                     <input type="text" id="title" class="required" placeholder="Masukkan Judul">
                                 </div>
                             </div>
         
                             <div class="form-group">
                                 <div class="input-box half-width">
-                                  <label for="email">Email</label><span class="required"></span>
+                                  <label for="email">Email <span class="required"></span></label>
                                   <input type="email" id="email" class="required" placeholder="Masukkan Email">
         
-                                  <label for="role" class="mt-4">Unit Kerja</label><span class="required"></span>
+                                  <label for="role" class="mt-4">Unit Kerja <span class="required"></span></label>
                                   <select id="role" class="form-select required">
                                       <option value="">Pilih Unit Kerja</option>
                                       <option value="1">Biro Perencanaan, Keuangan, dan Umum</option>
@@ -372,17 +372,17 @@
         
                                 </div>
                                 <div class="input-box half-width">
-                                  <label for="description">Deskripsi</label><span class="required"></span>
+                                  <label for="description">Deskripsi <span class="required"></span></label>
                                   <textarea id="description" class="required" rows="3" placeholder="Masukkan Deskripsi"></textarea>
                                 </div>
                             </div>
                             
                             <div class="form-group">
                                 <div class="input-box">
-                                    <label for="phone">No. telepon</label><span class="required"></span>
+                                    <label for="phone">No. telepon <span class="required"></span></label>
                                     <input type="text" id="phone" class="required" placeholder="Masukkan No. Telepon">
         
-                                    <label for="role" class="mt-4">Peran</label><span class="required"></span>
+                                    <label for="role" class="mt-4">Peran <span class="required"></span></label>
                                     <select id="role" class="form-select required">
                                         <option value="">Pilih Peran</option>
                                         <option value="1">Rektorat</option>
@@ -396,7 +396,7 @@
         
                                     
         
-                                    <label for="category" class="mt-4">Kategori</label><span class="required"></span>
+                                    <label for="category" class="mt-4">Kategori <span class="required"></span></label>
                                     <select id="category" class="form-select required" onchange="checkCategory()">
                                         <option value="">Pilih Kategori</option>
                                         <option value="1">Perbaikan</option>
@@ -405,7 +405,7 @@
                                         <option value="4">Pemeliharaan</option>
                                     </select>
         
-                                    <label for="subcategory" class="mt-4">Sub Kategori</label><span class="required"></span>
+                                    <label for="subcategory" class="mt-4">Sub Kategori <span class="required"></span></label>
                                     <select id="subcategory" class="form-select required">
                                         <option value="">Pilih Sub Kategori</option>
                                         <option value="1">Perbaikan Jaringan</option>
@@ -416,7 +416,7 @@
         
                                 </div>
                                 <div class="input-box">
-                                    <label class="form-label">Lampiran</label>
+                                    <label class="form-label">Lampiran <span id="lampiranBintang" style="color:red;">*</span></label>
                                     <div class="file-upload">
                                         <div class="preview-box" id="previewBox">
                                             <span id="previewText">Preview File</span>
@@ -539,5 +539,39 @@
             });
 
            </script>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    let labels = document.querySelectorAll("label");
+                    let categorySelect = document.getElementById("category");
+                    let lampiranBintang = document.getElementById("lampiranBintang");
+                    let fileInput = document.getElementById("fileInput");
+
+                    // Fungsi untuk menambahkan tanda * ke semua input yang wajib diisi, kecuali "Lampiran"
+                    // labels.forEach(label => {
+                    //     if (label.textContent.trim().endsWith("*") || label.id === "lampiranLabel") return; // Cegah duplikasi bintang pada "Lampiran"
+                    //     let star = document.createElement("span");
+                    //     star.innerHTML = " *";
+                    //     star.style.color = "red";
+                    //     label.appendChild(star);
+                    // });
+
+                    // Fungsi untuk cek apakah kategori "Permohonan" dipilih
+                    function checkCategory() {
+                        if (categorySelect.value === "3") { // "3" adalah kode untuk Permohonan
+                            lampiranBintang.style.display = "inline"; // Tampilkan tanda bintang
+                        } else {
+                            lampiranBintang.style.display = "none"; // Sembunyikan tanda bintang
+                        }
+                    }
+
+                    // Jalankan saat dropdown kategori berubah
+                    categorySelect.addEventListener("change", checkCategory);
+                    checkCategory(); // Panggil sekali saat halaman pertama kali dimuat
+                });
+
+            </script>
+
+
     </body>
 </html>
