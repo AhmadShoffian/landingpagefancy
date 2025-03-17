@@ -306,6 +306,14 @@ p {
 .section-title p {
   font-size: 18px; }
 
+input[readonly] {
+  background-color: #e9ecef; /* Warna abu-abu terang */
+  color: #6c757d; /* Warna teks lebih redup */
+  cursor: not-allowed; /* Kursor menjadi tanda tidak bisa diakses */
+  border: 1px solid #ced4da; /* Warna border tetap */
+}
+
+
 /*===== All Preloader Style =====*/
 .preloader {
   /* Body Overlay */

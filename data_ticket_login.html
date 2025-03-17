@@ -299,7 +299,7 @@
                             <div class="form-group">
                                 <div class="input-box">
                                     <label for="name">Nama <span class="required"></span></label>
-                                    <input type="text" id="name" class="required" placeholder="Masukkan Nama">
+                                    <input type="text" id="name" class="required" placeholder="Masukkan Nama" readonly>
                                 </div>
                                 <div class="input-box">
                                     <label for="title">Judul <span class="required"></span></label>
@@ -310,10 +310,10 @@
                             <div class="form-group">
                                 <div class="input-box half-width">
                                   <label for="email">Email <span class="required"></span></label>
-                                  <input type="email" id="email" class="required" placeholder="Masukkan Email">
+                                  <input type="email" id="email" class="required" placeholder="Masukkan Email" readonly>
         
                                   <label for="role" class="mt-4">Unit Kerja <span class="required"></span></label>
-                                  <select id="role" class="form-select required">
+                                  <select id="role" class="form-select required" disabled>
                                       <option value="">Pilih Unit Kerja</option>
                                       <option value="1">Biro Perencanaan, Keuangan, dan Umum</option>
                                       <option value="2">Biro Akademik, Kemahasiswaan, dan Kerja Sama</option>
@@ -342,10 +342,10 @@
                             <div class="form-group">
                                 <div class="input-box">
                                     <label for="phone">No. telepon <span class="required"></span></label>
-                                    <input type="text" id="phone" class="required" placeholder="Masukkan No. Telepon">
+                                    <input type="text" id="phone" class="required" placeholder="Masukkan No. Telepon" readonly>
         
                                     <label for="role" class="mt-4">Peran <span class="required"></span></label>
-                                    <select id="role" class="form-select required">
+                                    <select id="role" class="form-select required" disabled>
                                         <option value="">Pilih Peran</option>
                                         <option value="1">Rektorat</option>
                                         <option value="2">Dekanat</option>
@@ -459,36 +459,25 @@
                     });
                 </script>
 
+                <!-- Alert Tombol Kirim -->
                 <script>
                     document.getElementById("swal-2").addEventListener("click", function() {
                         Swal.fire({
                             title: 'Data Berhasil Dikirim!',
-                            text: 'Silahkan klik tombol "OK"',
+                            text: 'Anda akan dialihkan dalam beberapa detik...',
                             icon: 'success',
-                            confirmButtonText: 'OK',
-                            confirmButtonColor: '#4CAF50',
+                            timer: 3000, // Alert akan hilang setelah 3 detik
+                            showConfirmButton: false, // Menghilangkan tombol "OK"
                             allowOutsideClick: false,
                             allowEscapeKey: false,
                             allowEnterKey: false,
-                            showCloseButton: false,
-                            showCancelButton: false,
-                            showDenyButton: false,
-                            showConfirmButton: true,
-                            showLoaderOnConfirm: true,
-                            preConfirm: () => {
-                                return new Promise((resolve) => {
-                                    setTimeout(() => {
-                                        resolve();
-                                    }, 2000);
-                                });
-                            }
-                        }).then((result) => {
-                            if (result.isConfirmed) {
-                                location.reload();
-                            }
-                            
+                            timerProgressBar: true // Menampilkan progress bar waktu
                         });
-
+                
+                        // Redirect setelah alert menghilang
+                        setTimeout(() => {
+                            location.reload();
+                        }, 3000); // Waktu harus sama dengan `timer` di atas
                     });
                 </script>
 
