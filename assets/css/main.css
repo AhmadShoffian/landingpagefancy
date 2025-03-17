@@ -3463,6 +3463,39 @@ h4, h5 {
   gap: 6px; /* Mengatur jarak agar lebih rapi */
 }
 
+/*================
+  AKUN CSS 
+  ================*/
+/* Pastikan inputan menyesuaikan lebar layar */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%; /* Menggunakan lebar penuh */
+    max-width: 100%; /* Menghindari melebihi container */
+    padding: 10px; /* Memberikan ruang di dalam input */
+    box-sizing: border-box; /* Menghindari overflow */
+    border: 1px solid #ccc; /* Menyesuaikan border agar rapi */
+    border-radius: 5px; /* Membuat sudut lebih halus */
+    background-color: white; /* Menghindari warna latar putih mencolok */
+}
+
+/* Pastikan container tidak overflow */
+.dashboard-wrapper {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Atur margin agar input tidak terlalu besar */
+@media screen and (max-width: 768px) {
+    .form-group {
+        margin-bottom: 10px;
+    }
+    
+    .dashboard-wrapper {
+        padding: 5px;
+    }
+}
 
 
 /*================
