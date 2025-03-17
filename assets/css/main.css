@@ -3438,7 +3438,7 @@ textarea {
 .accordion-body p:last-child {
   margin: 0;
 }
-
+/* Styling FAQ agar tampilan lebih rapi */
 .accordion-item {
   margin-bottom: 20px;
 }

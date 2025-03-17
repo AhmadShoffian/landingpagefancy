@@ -459,7 +459,7 @@
                             </div>
                             <!-- Tombol Simpan & Batal -->
                             <div class="modal-footer">
-                                <button type="submit" class="btn btn-primary px-4">Simpan</button>
+                                <button type="button" class="btn btn-primary px-4" id="swal-2">Simpan</button>
                                 <button type="button" class="btn btn-danger px-4" data-bs-dismiss="modal">Batal</button>
                             </div>
                         </form>
@@ -549,6 +549,39 @@
             });
         });
     </script>
+            
+<script>
+    document.getElementById("swal-2").addEventListener("click", function() {
+        Swal.fire({
+            title: 'Data Berhasil Dikirim!',
+            text: 'Silahkan klik tombol "OK"',
+            icon: 'success',
+            confirmButtonText: 'OK',
+            confirmButtonColor: '#4CAF50',
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            allowEnterKey: false,
+            showCloseButton: false,
+            showCancelButton: false,
+            showDenyButton: false,
+            showConfirmButton: true,
+            showLoaderOnConfirm: true,
+            preConfirm: () => {
+                return new Promise((resolve) => {
+                    setTimeout(() => {
+                        resolve();
+                    }, 2000);
+                });
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                location.reload();
+            }
+            
+        });
+
+    });
+</script>
         <script>
             document.getElementById("notificationIcon").addEventListener("click", function () {
                 var dropdown = document.getElementById("notificationDropdown");
