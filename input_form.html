@@ -100,8 +100,8 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="dashboard/profile.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni lni-user"></i> My Account</a>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="dashboard/profile.html"><i class="lni lni-briefcase"></i>Profile</a>
-                                        <a class="dropdown-item" href="dashboard/akun.html"><i class="lni lni-rocket"></i> Account</a>
+                                        <a class="dropdown-item" href="dashboard/profile.html"><i class="lni lni-briefcase"></i>Profil</a>
+                                        <a class="dropdown-item" href="dashboard/akun.html"><i class="lni lni-rocket"></i> Akun</a>
                                         <!-- <a class="dropdown-item" href="#"><i class="lni lni-close"></i>Logout</a> -->
                                         <a class="dropdown-item logout-btn" id="logoutButton" href="#"><i class="lni lni-close"></i>Logout</a>
                                     </div>
@@ -224,28 +224,20 @@
                 <div class="button-container">
                     <button type="submit" class="btn btn-primary" id="swal-2">Kirim</button>
                 </div>
-                <!-- <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="card">
-                      <div class="card-body text-center">
-                        <div class="mb-2">Success Message</div>
-                        <button class="btn btn-primary" id="toastr-2">Launch</button>
-                      </div>
-                    </div>
-                </div> -->
             </div>
         </div>
            
         
                 <!--===========================form isian end =========================-->
 
-                 <!-- ========================= footer start ========================= -->
-                 <footer class="footer pt-100">
+                <!-- ========================= footer start ========================= -->
+                <footer class="footer pt-100">
                     <div class="container">
                         <div class="row">
                             <div class="col-xl-3 col-lg-4 col-md-6">
                                 <div class="footer-widget mb-60 wow fadeInLeft" data-wow-delay=".2s">
                                     <a href="index.html" class="logo mb-30"><img src="assets/img/logo-isi-black.svg" alt="logo"></a>
-                                    <p class="mb-30 footer-desc">We Crafted an awesome desig library that is robust and intuitive to use. No matter you're building a business presentation websit.</p>
+                                    <p class="mb-30 footer-desc">Institut Seni Indonesia Yogyakarta atau ISI Yogyakarta, berdiri sejak 23 Juli 1984, adalah Perguruan Tinggi Negeri Seni Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi Republik Indonesia dengan berbagai bidang seni terlengkap dan terbaik di Indonesia.</p>
                                     <div class="footer-social-links">
                                         <ul class="d-flex">
                                             <li><a href="javascript:void(0)"><i class="lni lni-facebook-original"></i></a></li>
@@ -275,25 +267,6 @@
                                     </ul>
                                 </div>
                             </div>
-                            <!-- <div class="col-xl-3 col-lg-3 col-md-6">
-                                <div class="footer-widget mb-60 wow fadeInUp" data-wow-delay=".6s">
-                                    <h4>Service</h4>
-                                    <ul class="footer-links">
-                                        <li>
-                                            <a href="javascript:void(0)">Marketing</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">Branding</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">Web Design</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">Graphics Design</a>
-                                        </li> 
-                                    </ul>
-                                </div>
-                            </div> -->
                             <div class="col-xl-5 col-lg-6 col-md-6">
                                 <div class="footer-widget mb-60 wow fadeInRight" data-wow-delay=".8s">
                                     <h4>Contact</h4>
@@ -372,19 +345,6 @@
                         });
                     });
                 </script>
-                <!-- <script>
-                    $(document).ready(function() {
-                        $("#toastr-2").click(function() {
-                            console.log("Button clicked!"); // Debugging untuk memastikan event berjalan
-                            iziToast.success({
-                                title: 'Hello, world!',
-                                message: 'This awesome plugin is made by iziToast',
-                                position: 'topRight'
-                            });
-                        });
-                    });
-                </script> -->
-
                 <script>
                     document.getElementById("permohonanBtn").addEventListener("click", function(event) {
                         var fileInput = document.getElementById("fileInput"); // Ambil input file
@@ -407,92 +367,75 @@
                         }
                     });
                 </script>
-                    
-               
 
+                <!-- Alert Tombol Kirim -->
                 <script>
-                   document.getElementById("swal-2").addEventListener("click", function() {
+                    document.getElementById("swal-2").addEventListener("click", function() {
                         Swal.fire({
                             title: 'Data Berhasil Dikirim!',
-                            text: 'Silahkan klik tombol "OK"',
+                            text: 'Anda akan dialihkan dalam beberapa detik...',
                             icon: 'success',
-                            confirmButtonText: 'OK',
-                            confirmButtonColor: '#4CAF50',
+                            timer: 3000, // Alert akan hilang setelah 3 detik
+                            showConfirmButton: false, // Menghilangkan tombol "OK"
                             allowOutsideClick: false,
                             allowEscapeKey: false,
                             allowEnterKey: false,
-                            showCloseButton: false,
-                            showCancelButton: false,
-                            showDenyButton: false,
-                            showConfirmButton: true,
-                            showLoaderOnConfirm: true,
-                            preConfirm: () => {
-                                return new Promise((resolve) => {
-                                    setTimeout(() => {
-                                        resolve();
-                                    }, 2000);
-                                });
-                            }
-                        }).then((result) => {
-                            if (result.isConfirmed) {
-                                // alert("Redirecting to detail_ticket.html");
-                                window.location.href = "data_ticket_login.html";
-                            }
-                            
+                            timerProgressBar: true // Menampilkan progress bar waktu
                         });
-
-                    });
-               </script>
-               <script>
-                document.getElementById("notificationIcon").addEventListener("click", function () {
-                    var dropdown = document.getElementById("notificationDropdown");
-                    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-                });
-
-                // Menutup dropdown jika klik di luar elemen
-                document.addEventListener("click", function (event) {
-                    var dropdown = document.getElementById("notificationDropdown");
-                    var icon = document.getElementById("notificationIcon");
-                    if (!icon.contains(event.target) && !dropdown.contains(event.target)) {
-                        dropdown.style.display = "none";
-                    }
-                });
-
-               </script>
-
-                <script>
-                        document.addEventListener("DOMContentLoaded", function () {
-                            let labels = document.querySelectorAll("label");
-                            let categorySelect = document.getElementById("category");
-                            let lampiranBintang = document.getElementById("lampiranBintang");
-                            let fileInput = document.getElementById("fileInput");
-
-                            // Fungsi untuk menambahkan tanda * ke semua input yang wajib diisi, kecuali "Lampiran"
-                            labels.forEach(label => {
-                                if (label.textContent.trim().endsWith(" *") || label.id === "lampiranLabel") return; // Cegah duplikasi bintang pada "Lampiran"
-                                let star = document.createElement("span");
-                                star.innerHTML = " *";
-                                star.style.color = "red";
-                                label.appendChild(star);
-                            });
-
-                            // Fungsi untuk cek apakah kategori "Permohonan" dipilih
-                            function checkCategory() {
-                                if (categorySelect.value === "3") { // "3" adalah kode untuk Permohonan
-                                    lampiranBintang.style.display = "inline"; // Tampilkan tanda bintang
-                                } else {
-                                    lampiranBintang.style.display = "none"; // Sembunyikan tanda bintang
-                                }
-                            }
-
-                            // Jalankan saat dropdown kategori berubah
-                            categorySelect.addEventListener("change", checkCategory);
-                            checkCategory(); // Panggil sekali saat halaman pertama kali dimuat
-                        });
-
-                    </script>
-    
-
                 
+                        // Redirect setelah alert menghilang
+                        setTimeout(() => {
+                            window.location.href = "data_ticket_login.html";
+                        }, 3000); // Waktu harus sama dengan `timer` di atas
+                    });
+                </script>
+                
+        <script>
+            document.getElementById("notificationIcon").addEventListener("click", function () {
+                var dropdown = document.getElementById("notificationDropdown");
+                dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        });
+    
+        // Menutup dropdown jika klik di luar elemen
+            document.addEventListener("click", function (event) {
+                var dropdown = document.getElementById("notificationDropdown");
+                var icon = document.getElementById("notificationIcon");
+                if (!icon.contains(event.target) && !dropdown.contains(event.target)) {
+                    dropdown.style.display = "none";
+                }
+            });
+        </script>        
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let labels = document.querySelectorAll("label");
+                let categorySelect = document.getElementById("category");
+                let lampiranBintang = document.getElementById("lampiranBintang");
+                let fileInput = document.getElementById("fileInput");
+
+                // Fungsi untuk menambahkan tanda * ke semua input yang wajib diisi, kecuali "Lampiran"
+                labels.forEach(label => {
+                    if (label.textContent.trim().endsWith(" *") || label.id === "lampiranLabel") return; // Cegah duplikasi bintang pada "Lampiran"
+                    let star = document.createElement("span");
+                    star.innerHTML = " *";
+                    star.style.color = "red";
+                    label.appendChild(star);
+                });
+
+                // Fungsi untuk cek apakah kategori "Permohonan" dipilih
+                function checkCategory() {
+                    if (categorySelect.value === "3") { // "3" adalah kode untuk Permohonan
+                        lampiranBintang.style.display = "inline"; // Tampilkan tanda bintang
+                    } else {
+                        lampiranBintang.style.display = "none"; // Sembunyikan tanda bintang
+                    }
+                }
+
+                // Jalankan saat dropdown kategori berubah
+                categorySelect.addEventListener("change", checkCategory);
+                checkCategory(); // Panggil sekali saat halaman pertama kali dimuat
+            });
+        </script>
+
     </body>
 </html>
