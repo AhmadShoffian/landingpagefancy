@@ -2918,7 +2918,7 @@ blockquote {
 
 .form-control {
   display: block;
-  width: 443px !important;
+  width: 100% !important;
   height: 51px !important;
   line-height: 26px;
   font-size: 14px;
